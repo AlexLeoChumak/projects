@@ -1,0 +1,38 @@
+body {
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+}
+
+.title {
+    text-align: center;
+    padding: 1px;
+    background-color:#add8e6; color: #0000ff;
+}
+
+.footer {
+    padding: 10px;
+}
+
+.menu {
+    font: bold
+    30px Times New Roman;
+    width: 280px; padding:
+    20px; float: left;
+}
+
+.content {
+    margin-left:
+    300px; padding: 30px;
+    font-size: 30px;
+}
+
+.image {
+    width: 25vw;
+    margin-right: 30px;
+    float: left;
+}
