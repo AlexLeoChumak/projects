@@ -1,0 +1,38 @@
+table.CHESS {
+    border-collapse: collapse;
+    background-color: black;
+}
+
+table.CHESS td {
+    width: 50px;
+    height: 50px;
+    border: solid gray 1px;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: white;
+}
+
+table.CHESS td:first-child {
+    width: 20px;
+    background-color: rgb(96, 240, 98);
+}
+
+table.CHESS td:last-child {
+    width: 20px;
+    background-color: rgb(96, 240, 98);
+}
+
+table.CHESS tr:first-child td {
+    height: 20px;
+    background-color: rgb(96, 240, 98);
+}
+
+table.CHESS tr:last-child td {
+    height: 20px;
+    background-color: rgb(96, 240, 98);
+}

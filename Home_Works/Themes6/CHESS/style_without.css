@@ -1,0 +1,47 @@
+html {
+    font-size: 25px;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+p+p {
+    color: green;
+    font-size: 1rem;
+    font-weight: 100;
+    
+}
+
+p+p+p {
+    color: red;
+    font-weight: bold;
+}
+
+p+p+p+p {
+    color: #4800ff;
+    font-size: .8rem;
+    font-style: italic;
+}
+
+a {
+    display: inline-block;
+    margin: 20px 0;
+    
+    color: #4800ff;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.2rem;
+
+    text-decoration: none;
+}
+
+[href*='http'] {
+    display: inline-block;
+    margin: 0;
+    padding: 0 15px;
+    
+    background: url(../CHESS/extref_without.png) left no-repeat;
+}

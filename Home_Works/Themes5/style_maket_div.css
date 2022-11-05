@@ -1,11 +1,17 @@
+@media all and (min-width: 700px) {
+    .content {
+        background: url(../../Медиавложения/MAKET_FOOTBALL/ball.png) repeat-y right;
+    }
+  }
+
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
     text-align: center;
-    font-size: 27px;
-    margin-top: 0px;
+    font-size: 1.2rem;
 }
 
 .title {
@@ -14,25 +20,29 @@ h2 {
     background-color:#add8e6; color: #0000ff;
 }
 
-.footer {
-    padding: 10px;
+.yellowBKG {
+    background: url('../../Медиавложения/MAKET_FOOTBALL/yellowbackground.jpg') left top repeat-y;
 }
 
 .menu {
-    font: bold 30px Times New Roman;
-    width: 280px; 
-    padding: 20px;
+    font: bold 1.2rem Times New Roman;
+    width: 250px;
+    padding: 10px 0 0 10px;
     float: left;
 }
 
 .content {
-    margin-left: 300px;
-    padding: 30px;
-    font-size: 30px;
+    margin-left: 260px;
+    padding: 10px;
+    font-size: 1.2rem;         
 }
 
 .image {
-    width: 450px;
-    margin-right: 30px;
+    margin: 0 20px 10px 0;
     float: left;
 }
+
+.clearfix:after { content: "."; visibility: hidden; display: block;
+    height: 0; clear: both }
+
+

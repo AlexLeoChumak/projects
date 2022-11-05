@@ -1,0 +1,22 @@
+.stars {
+    display: inline-block;
+}
+
+.star {
+    display: inline-block;
+    width: 76px;
+    height: 78px;
+    
+    background: url(star0.png);
+    transition: all 0.3s linear;
+
+    cursor: grab ;
+}
+
+.stars:hover > .star {
+    background-image: url(star1.png);
+}
+
+.star:hover ~ .star {
+    background-image: url(star0.png);
+}
