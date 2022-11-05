@@ -1,23 +1,26 @@
-@media all and (min-width: 700px) {
-    .content {
-        background: url(../../../Media/MAKET_FOOTBALL/ball.png) repeat-y right;
-    }
-  }
-
-body {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 h2 {
+    padding: 15px;
+}
+
+h3 {
     text-align: center;
     font-size: 1.2rem;
+    margin: 10px auto;
 }
 
 .title {
     text-align: center;
     padding: 1px;
-    background-color:#add8e6; color: #0000ff;
+    background-color:#add8e6;
+    color: #0000ff;
 }
 
 .yellowBKG {
@@ -27,17 +30,20 @@ h2 {
 .menu {
     font: bold 1.2rem Times New Roman;
     width: 250px;
-    padding: 10px 0 0 10px;
+    padding: 20px 0 10px 30px;
     float: left;
 }
 
 .content {
     margin-left: 260px;
     padding: 10px;
-    font-size: 1.2rem;         
+    font-size: 1.2rem;
+    background: url(../../../Media/MAKET_FOOTBALL/ball.png) repeat-y right;    
+    overflow: hidden; 
 }
 
-.image {
+.image img {
+    max-width: 406px;
     margin: 0 20px 10px 0;
     float: left;
 }

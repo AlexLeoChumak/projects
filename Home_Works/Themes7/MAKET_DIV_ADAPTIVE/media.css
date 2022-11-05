@@ -1,0 +1,41 @@
+@media all and (max-width: 958px) {
+    .content {
+        background: none;
+    }
+}
+
+@media all and (max-width: 836px) {
+    h2 {
+        font-size: .9rem;
+    }
+}
+
+@media all and (max-width: 684px) {
+    .menu {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        background-color: #e4cc62;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .yellowBKG {
+        background: none;
+    }
+
+    .content {
+        margin-left: 0;
+        font-size: 1.4rem;
+    }
+
+    .image img {
+        float: none;
+        margin: 0;
+        max-width: 100%;
+    }
+}

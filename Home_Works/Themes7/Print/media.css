@@ -1,0 +1,11 @@
+@media print {
+    [href*="http:"]:before {
+        content: '"(ссылка ' ;
+    }
+}
+
+@media print  {
+    [href*="http:"]:after {
+        content: ' на http://chessgames.ru/kasparov-garri-kimovich)"';
+    }
+}
