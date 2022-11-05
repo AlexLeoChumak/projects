@@ -1,6 +1,6 @@
 @media all and (min-width: 700px) {
     .content {
-        background: url(../../Media/MAKET_FOOTBALL/ball.png) repeat-y right;
+        background: url(../../../Media/MAKET_FOOTBALL/ball.png) repeat-y right;
     }
   }
 
@@ -21,7 +21,7 @@ h2 {
 }
 
 .yellowBKG {
-    background: url('../../Media/MAKET_FOOTBALL/yellowbackground.jpg') left top repeat-y;
+    background: url(../../../Media/MAKET_FOOTBALL/yellowbackground.jpg) left top repeat-y;
 }
 
 .menu {

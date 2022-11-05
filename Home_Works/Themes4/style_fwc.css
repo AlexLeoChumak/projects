@@ -2,7 +2,7 @@
     margin: 50px auto;
     border:80px solid;
     background-size: cover;
-    border-image-source: url(../../Медиавложения/ramka/ramka.png);
+    border-image-source: url(../../Media/ramka/ramka.png);
     border-image-slice: 100;
     border-image-repeat: round;
     font-family: 'Comfortaa-VariableFont_wght';

@@ -102,7 +102,7 @@ a:hover {
 }
 
 .red_after span:after {
-    content: url(../../../Медиавложения/links/redline.webp);
+    content: url(../../../Media/links/redline.webp);
     position: relative;
     top: 0.4em;
     left: 0.48em;
@@ -137,7 +137,7 @@ a:hover {
 }
 
 .red_before span:before {
-    content: url(../../../Медиавложения/links/redline.webp);
+    content: url(../../../Media/links/redline.webp);
     position: relative;
     top: 0.4em;
     left: 0.5em;
@@ -178,7 +178,7 @@ a:hover {
 
 
 [href$="a"] {
-    background: url(../../../Медиавложения/links/redline.webp) right repeat-y;
+    background: url(../../../Media/links/redline.webp) right repeat-y;
 }
 
 
@@ -194,7 +194,7 @@ a:hover {
 }
 
 [href*="booka"] {
-    background: url(../../../Медиавложения/links/redline.webp) left repeat-y;
+    background: url(../../../Media/links/redline.webp) left repeat-y;
 }
 
 

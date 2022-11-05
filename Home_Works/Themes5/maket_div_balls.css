@@ -6,7 +6,7 @@
 .banner {
     width: 200px;
     float: right;
-    background: url(../../Медиавложения/MAKET_FOOTBALL/ball3.png) left top no-repeat;
+    background: url(../../Media/MAKET_FOOTBALL/ball3.png) left top no-repeat;
 }
 
 .content {
@@ -21,21 +21,21 @@
 .fons {
     font-size: 16px;
     text-align: center;
-    background: url(../../Медиавложения/MAKET_FOOTBALL/2080ball1.jpg) 20% top no-repeat,
-                url(../../Медиавложения/MAKET_FOOTBALL/2080ball1.jpg) 20% bottom no-repeat,
-                url(../../Медиавложения/MAKET_FOOTBALL/2080ball0.jpg) 20% top repeat-y;
+    background: url(../../Media/MAKET_FOOTBALL/2080ball1.jpg) 20% top no-repeat,
+                url(../../Media/MAKET_FOOTBALL/2080ball1.jpg) 20% bottom no-repeat,
+                url(../../Media/MAKET_FOOTBALL/2080ball0.jpg) 20% top repeat-y;
 }
 
 .fon_rights {
-    background: url(../../Медиавложения/MAKET_FOOTBALL/pinkBall.jpg) right bottom no-repeat,
-                url(../../Медиавложения/MAKET_FOOTBALL/width-200px-pink.jpg) right top repeat-y;
+    background: url(../../Media/MAKET_FOOTBALL/pinkBall.jpg) right bottom no-repeat,
+                url(../../Media/MAKET_FOOTBALL/width-200px-pink.jpg) right top repeat-y;
 }
 
 .ball_four {
-    background: url(../../Медиавложения/MAKET_FOOTBALL/ball3.png) left top no-repeat,
-                url(../../Медиавложения/MAKET_FOOTBALL/ball3.png) right top no-repeat,
-                url(../../Медиавложения/MAKET_FOOTBALL/ball3.png) left bottom no-repeat,
-                url(../../Медиавложения/MAKET_FOOTBALL/ball3.png) right bottom no-repeat;
+    background: url(../../Media/MAKET_FOOTBALL/ball3.png) left top no-repeat,
+                url(../../Media/MAKET_FOOTBALL/ball3.png) right top no-repeat,
+                url(../../Media/MAKET_FOOTBALL/ball3.png) left bottom no-repeat,
+                url(../../Media/MAKET_FOOTBALL/ball3.png) right bottom no-repeat;
 
 }
 
