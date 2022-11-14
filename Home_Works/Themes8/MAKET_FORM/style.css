@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 25px;
+}
+
+body {
+    margin: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+}
+
+[for="article"] {
+    display: inline-block;
+    margin: 0 82px 10px 5px;
+}
+
+[for="heading"] {
+    margin: 0 168.5px 10px 5px;
+}
+
+[for="public"] {
+    margin: 0 122px 10px 5px;
+}
+
+[id="public"] {
+    width: 15px;
+    height: 15px;
+    margin-left: 8px; 
+}
+
+[for="coments"] {
+    margin: 0 5px 10px 5px;
+}
+
+[id="coments"] {
+    width: 16px;
+    height: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 40px;
+    margin-left: 6px;
+    resize: vertical;
+}
+
+[name="article"], [name="heading"] {
+    height: 25px;
+    font-size: 0.7rem;
+}
+
+[for="text"] {
+    margin: 0 5px 0 5px;
+}
+
+[type="submit"] {
+    margin-left: 6px;
+    padding: 3px 6px;
+}
+
+.qqq [id="article"] {
+    width: 100%;
+}
