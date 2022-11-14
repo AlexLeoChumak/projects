@@ -5,17 +5,16 @@
         <title>MAKET_FORM</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media.css">
     </head>
     <body>
         <p>
             Для публикации вашей статьи заполните, пожалуйста, следующую форму:
         </p>
         <form class="main" action="https://fe.it-academy.by/TestForm.php" method="get" target="_blank">
-            <div>
+            <div class="clearfix">
                 <label for="article">Название статьи:</label>
-                <div class="qqq">
-                    <input id="article" type="text" name="article">
-                </div>
+                <input id="article" type="text" name="article">
             </div>
             
             <div>
@@ -29,9 +28,9 @@
                 
             <div>
                 <label for="public">Публикация:</label>
-                <input id="public" type="radio" name="public" value="website"> на сайте
-                <input id="public" type="radio" name="public" value="magazine"> в журнале
-                <input id="public" type="radio" name="public" value="all"> на сайте и в журнале
+                <span><input id="public" type="radio" name="public" value="website"> на сайте</span>
+                <span><input id="public" type="radio" name="public" value="magazine"> в журнале</span>
+                <span><input id="public" type="radio" name="public" value="all"> на сайте и в журнале</span>
             </div>
 
             <div>

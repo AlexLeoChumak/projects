@@ -23,9 +23,10 @@ label {
 }
 
 [for="article"] {
-    display: inline-block;
     margin: 0 82px 10px 5px;
 }
+
+
 
 [for="heading"] {
     margin: 0 168.5px 10px 5px;
@@ -71,6 +72,8 @@ textarea {
     padding: 3px 6px;
 }
 
-.qqq [id="article"] {
-    width: 100%;
-}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
