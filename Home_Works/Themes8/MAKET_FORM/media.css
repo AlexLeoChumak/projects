@@ -13,11 +13,15 @@
     span {
         display: block;
     }
-    [id="article"] {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
+    
+    .article_name {
+        float: none;
     }
+
+    .article_input {
+        margin: 0 0 10px 0;
+    }
+
     [id="heading"] {
         display: block;
         width: 100%;

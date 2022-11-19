@@ -18,6 +18,18 @@ p {
     margin-bottom: 20px;
 }
 
+.article_name {
+    float: left;
+}
+
+.article_input {
+    margin-left: 274px;
+}
+
+[id="article"] {
+    width: 100%;
+}
+
 label {
     display: inline-block;
 }
@@ -25,8 +37,6 @@ label {
 [for="article"] {
     margin: 0 82px 10px 5px;
 }
-
-
 
 [for="heading"] {
     margin: 0 168.5px 10px 5px;
