@@ -136,6 +136,24 @@
     }
 }
 
+@media all and (max-width: 1255px) {
+    .slideshow-container {
+        display: none;
+    }
+    .carousel_lines {
+        display: none;
+    }
+    .main_carousel {
+        display: block;
+    }
+}
+
+@media all and (min-width: 1255px) {
+    .main_carousel {
+        display: none;
+    }
+}
+
 @media all and (max-width: 1206px) {
     .footer_left1 {
         text-align: center;
@@ -269,8 +287,6 @@
         text-align: center;
     }
 }
-
-
 
 @media all and (max-width: 555px) {
     .main_btn {
