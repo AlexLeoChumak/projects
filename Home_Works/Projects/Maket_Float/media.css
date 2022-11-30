@@ -1,0 +1,313 @@
+@media all and (max-width: 1347px) {
+    .catalog_cart {
+        margin: 20px auto;
+        width: 280px;
+    }
+    .catalog_cart > img {
+        padding: 10px;
+        margin-bottom: 10px;
+        transition: 0.3s linear;
+    }
+    .laptops_watch {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    
+    .phones_tables {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .laptops {
+        width: 100%;
+        float: none;
+        margin: 10px auto;
+        border-radius: 32px;
+    }
+    .phones {
+        width: 50%;
+        float: left;
+        margin: 0 auto;
+        border-radius: 32px;
+    }
+    .watch {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        border-radius: 32px;
+    }
+    .tablet {
+        width: 50%;
+        float: left;
+        margin: 0 auto;
+        border-radius: 32px;
+    }
+    .laptops:hover {
+        transform: none;
+    }
+    .phones:hover {
+        transform: none;
+    }
+    .watch:hover {
+        transform: none;
+    }
+    .tablet:hover {
+        transform: none;
+    }
+    .clear {
+        clear: both;
+    }
+    .phones > img {
+        position: none;
+        width: 80%;
+        max-width: 405px;
+    }
+    .tablet span:first-of-type {
+        left: 50px;
+    }
+    .tablet span:last-of-type {
+        width: 50%;
+        max-width: 200px;
+        left: 5px;
+    }
+    .tablet > img {
+        width: 60%;
+        max-width: 467px;
+        bottom: 2px;
+        left: 10px;
+    }
+    
+}
+
+@media all and (max-width: 1316px) {
+    .ideas_link {
+        display: none;
+    }
+    [src="image/Ideas have a place here/IMAGEIdeas have a place here.jpg"] {
+        width: 90%;
+        padding: 30px;
+        margin: 0 auto;
+        float: none;
+        display: block;
+    }
+    .ideas_place p:first-of-type {
+        float: none;
+        max-width: 90%;
+        height: auto;
+        text-align: center;
+        padding: 5px;
+        display: block;
+    }
+    
+    .ideas_place p:nth-of-type(2) {
+        float: none;
+        max-width: 90%;
+        height: auto;
+        text-align: center;
+        padding: 5px;
+        display: block;
+    }
+    
+    .ideas_place p:nth-of-type(3) {
+        float: none;
+        max-width: 90%;
+        height: auto;
+        text-align: center;
+        padding: 5px;
+        display: block;
+    }
+    
+    .ideas_place p:last-of-type {
+        float: none;
+        max-width: 90%;
+        height: auto;
+        text-align: center;
+        padding: 5px;
+        display: block;
+    }
+    .ideas_place_content {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 1206px) {
+    .footer_left1 {
+        text-align: center;
+    }
+    .follow_us {
+        float: none;
+        margin: 20px 0 0 10px;
+    }
+
+}
+
+@media all and (max-width: 1128px) {
+    .big_img {
+        display: none;
+    }
+    .main_carousel_left {
+        float: none;
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    .main_carousel h2 {
+        max-width: 100%;
+        margin: 50px auto;
+        text-align: center;
+    }
+    .main_carousel p {
+        max-width: 100%;
+        height: auto;
+        margin: 50px auto;
+        text-align: center;
+    }
+    .main_btn {
+        margin: 50px auto;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 1097px) {
+    .support {
+        float: none;
+        margin: 20px 0 0 10px;
+    }
+}
+
+@media all and (max-width: 872px) {  
+    .company {
+        float: none;
+        margin: 20px 0 0 10px;
+    }
+}
+
+
+@media all and (max-width: 744px) {
+    .header_logo {
+        display: block;
+        text-align: center;
+        float: none;
+        padding: 10px 0;
+    }
+    .header_nav {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .header_search_basket {
+        display: block;
+        float: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .laptops_watch {
+        margin: 20px 16px -20px 0;
+    }
+    .save_on_our_most > p {
+        margin: 12px auto 10px;
+    }
+    .gallery_best > p {
+        margin: 12px auto 10px;
+    }
+    .ideas_place span {
+        margin: 10px auto 10px;
+    }
+    .never_miss {
+        margin: 10px auto 0;
+    }
+
+@media all and (max-width: 647px) {  
+    .all_products {
+        float: none;
+        margin: 20px 0 0 10px;
+    }
+    .footer_left1 {
+        display: block;
+        float: none;
+        margin: 10px;
+    }
+    .footer_links p {
+        margin: 18px auto;
+    }
+    footer {
+        padding-top: 0;
+    }
+}
+
+@media all and (max-width: 614px) {
+    .watch > img {
+        left: -184px;
+        opacity: .3;
+    }
+    .laptops > img {
+        width: 80%;
+        opacity: .3;
+    }
+    .tablet > img {
+        opacity: .3;
+    }
+    .phones > img {
+        opacity: .3;
+    }
+    .phones span:first-of-type {
+        left: 90px;
+    }
+    .phones span:last-of-type {
+        width: 80%;
+        max-width: 250px;
+        position: none;
+        text-align: center;
+    }
+}
+
+
+
+@media all and (max-width: 555px) {
+    .main_btn {
+        margin: 20px auto;
+    }
+    .main_carousel p {
+        display: none;
+    }
+}
+
+@media all and (max-width: 540px) {
+    div [src="image/footerhor_line.svg"] {
+        display: none;
+    }
+}
+
+@media all and (max-width: 468px) {
+    .gallery_best_item {
+        width: 85%;
+        max-width: 413px;
+        height: auto;
+        margin: 25px 28px 70px 28px;
+    }
+    .gallery_best_item_subtitles {
+        padding: 20px;
+        text-align: center;
+    }
+    .gallery_best_item img:last-of-type {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 421px) {
+    [type="email"] {
+        border-radius: 54px;  
+    }
+    .never_miss_btn {
+        border-radius: 200px;
+    } 
+}
