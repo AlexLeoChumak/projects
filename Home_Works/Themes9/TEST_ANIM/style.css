@@ -1,0 +1,222 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active {
+    outline: none;
+}
+
+a:focus,a:active {
+    outline: none;
+}
+
+nav,footer,header,aside {
+    display: block;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea {
+    font-family:inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding:0;border:0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:inherit;font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------*/
+
+body {
+    font-size: 25px;
+}
+
+.general {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: rgba(180, 182, 184, 0.686);
+    position: relative;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@keyframes Animation
+{
+    from { background: url(image/zombie.png) 0 0; }
+    to { background: url(image/zombie.png) -1773px 0px; }
+}
+
+.zombi
+{
+    width: 104px;
+    height: 203px;
+    animation: Animation 1.5s steps(15) infinite;
+    animation-delay: 2s;
+    position: absolute;
+    top: 297px;
+    left: 0;
+}
+
+h1 {
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@keyframes Animation2 {
+    from { background-color: brown; color: aliceblue; }
+    50% { background-color: magenta; color: red }
+    to { background-color: cyan; color: blue }
+}
+
+.color_background
+{
+    width: 200px;
+    height: 100px;
+    padding: 5px;
+    text-align: center;
+    color: aliceblue;
+    background-color: brown;
+    position: absolute;
+    top: 20px;
+    left: 30px; 
+}
+
+.general:hover > .color_background {
+    animation: Animation2 3s infinite;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@keyframes Animation3 {
+    from {height: 10px;}
+    50% {height: 300px;}
+    to {height: 10px;}
+}
+
+.heights {
+    width: 200px;
+    transition: height 2s;
+    height: 10px;
+    text-align: center;
+    background-color: rgb(78, 246, 40);
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 300px;
+}
+
+.general:hover > .heights {
+    animation: Animation3 2s infinite;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@keyframes Animation4 {
+    from { transform: scale(1); position: absolute; top: 20px; left: 550px; filter: sepia(0);}
+    35% {transform: scale(.7); position: absolute; top: 100px; left: 550px; filter: sepia(1);}
+    to { transform: scale(1); position: absolute; top: 20px; left: 550px; filter: sepia(0);}
+}
+
+.red_stars {
+    width: 50%;
+    position: absolute;
+    top: 20px;
+    left: 550px;
+    margin: 10px;
+    transition: transform .5s;
+}
+
+.general:hover > .red_stars {
+    animation: Animation4 1.5s infinite;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@keyframes Animation5 {
+    from { border: 10px solid yellow; border-radius: 50%; position: absolute; top: 227px; left: 766px; box-shadow: 50px; } 
+    20% { border: 20px dashed rgb(185, 185, 50); border-radius: 40%; position: absolute; top: 300px; left: 556px; box-shadow: 70px;}
+    40% { border: 10px dotted rgb(91, 91, 8); border-radius: 30%; position: absolute; top: 225px; left: 366px; box-shadow: 90px; }
+    60% { border: 10px dashed rgb(138, 138, 131); border-radius: 20%; position: absolute; top: 330px; left: 266px; box-shadow: 800px; }
+    70% { border: 10px dotted rgb(239, 239, 145); border-radius: 40%; position: absolute; top: 200px; left: 166px; box-shadow: 60px; }
+    to { border: 10px solid yellow; border-radius: 50%; position: absolute; top: 227px; left: 766px; box-shadow: 50px; }
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border: 10px solid yellow;
+    background-color: rgb(247, 21, 243);
+    border-radius: 50%;
+    position: absolute;
+    top: 227px;
+    left: 766px;
+    box-shadow: 50px;
+}
+
+.general:hover > .circle {
+    animation: Animation5 4s infinite;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@keyframes Animation6 {
+    from {border: 30px solid blue;}
+    50% {border: 50px solid rgb(255, 0, 4);}
+    to {border: 30px solid blue;}
+}
+
+.always {
+    border: 30px solid blue;
+    position: absolute;
+    top: 430px;
+    left: 132px;
+    animation: Animation6 2s infinite;
+}

@@ -73,10 +73,6 @@ html {
     font-family: 'Readex Pro', sans-serif;
 }
 
-body {
-    background-color: rgb(211, 211, 211);
-}
-
 .wrapper {
     width: 100%;
     max-width: 1440px;

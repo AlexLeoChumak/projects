@@ -45,6 +45,6 @@ body {
 
 .small:active {
     bottom: 68px;
-    transition: 1s;
+    transition-duration: 1s;
 
 }

@@ -1,0 +1,52 @@
+@media all and (max-width: 837px) {
+    .main {
+        background: none;
+    }
+
+    html {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 751px) {
+    .header_footer {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .image {
+        float: none;
+        width: 100%;
+    }
+
+    img {
+        width: 100vw;
+        padding: 5px;
+    }
+
+    .main {
+        order: 1;
+        flex: 1 1 100%;
+        width: 100vw;
+    }
+
+    .aside {
+        order: 2;
+        flex: 1 1 100%;
+        background-color: #FFF;
+        padding: 20px;
+        text-align: center;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    p {
+        padding: 10px;
+    }
+    
+}

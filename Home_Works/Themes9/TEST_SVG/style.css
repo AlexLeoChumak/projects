@@ -1,0 +1,115 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active {
+    outline: none;
+}
+
+a:focus,a:active {
+    outline: none;
+}
+
+nav,footer,header,aside {
+    display: block;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea {
+    font-family:inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding:0;border:0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:inherit;font-weight: 400;
+}
+
+/* -----------------------------------------------------------------------------------------------*/
+
+[id="svg_1"]:hover {
+    height: 350px;
+    fill: #22f649;
+    transition: .5s linear;
+}
+
+[id="svg_2"]:hover {
+    stroke: rgb(255, 0, 0);
+    fill: #08f7f7;
+    transition: .5s linear;
+}
+
+[id="svg_3"]:hover {
+    stroke: rgb(249, 246, 246);
+    fill: #8213f2;
+    transition: .5s linear;
+}
+
+[id="svg_6"]:hover {
+    height: 100px;
+    width: 50px;
+    fill: rgb(255, 0, 0, 0.5);
+    transition: .5s linear;
+}
+
+text:hover {
+    font-size: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    fill: #0b0b0b;
+    transition: .5s linear;
+}
+
+audio {
+    position: absolute;
+    top: 293px;
+    left: 368px;
+    opacity: 0;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    margin-left: 20px;
+}
