@@ -688,7 +688,7 @@ img {vertical-align: middle;}
     font-size: 22px;
     line-height: 28px;
     color: #000000;
-    margin-bottom: 10px;
+    padding: 0 0 10px 30px;
 }
 
 .catalog_cart p {
@@ -699,8 +699,7 @@ img {vertical-align: middle;}
     font-size: 14px;
     line-height: 17px;
     color: #4B4B4B;
-    margin-bottom: 25px;
-
+    padding: 0 0 10px 30px;
 }
 
 .catalog_cart span:last-of-type {
@@ -710,6 +709,7 @@ img {vertical-align: middle;}
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+    padding: 0 0 0 30px;
 }
 
 /* See the best around here --------------------------------------------------------------------------------------*/
