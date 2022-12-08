@@ -81,6 +81,12 @@ html {
     background-color: #fff;
 }
 
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 
 
 /* Header ---------------------------------------------------------------------------*/
@@ -176,7 +182,7 @@ img {vertical-align: middle;}
     max-width: 1294px;
     height: 550px;
     position: relative;
-    margin: auto;
+    margin: 0 auto;
     background: #DCE5E2;
     border-radius: 32px;
 }
@@ -208,7 +214,7 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-    width: 565px;
+    width: 465px;
     height: 39px;
     font-family: 'Inter';
     font-weight: 400;
@@ -286,6 +292,7 @@ img {vertical-align: middle;}
     border-radius: 32px;
     position: relative;
     margin: 0 auto;
+    display: none;
 }
 
 .main_carousel_left {
@@ -417,14 +424,12 @@ img {vertical-align: middle;}
     text-align: left;
     color: #000000;
 }
-
 .latest_offers_categories {
     width: 100%;
     max-width: 1440px;
     height: 1018px;
     margin: 28px auto;
 }
-
 .latest_offers_categories > p {
     width: 100%;
     max-width: 628px;
@@ -437,7 +442,6 @@ img {vertical-align: middle;}
     margin: 10px auto 0;
     color: #000000;
 }
-
 .laptops_watch {
     margin: 55px 16px 0 45px;
     float: left;
@@ -630,6 +634,7 @@ img {vertical-align: middle;}
     max-width: 1350px;
     height: 580px;
     margin: 0 auto;
+    padding: 27px 0 0 0;
 }
 
 .save_on_our_most_catalog {
