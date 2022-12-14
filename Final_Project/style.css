@@ -1,0 +1,256 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active {
+    outline: none;
+}
+
+a:focus,a:active {
+    outline: none;
+}
+
+nav,footer,header,aside {
+    display: block;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea {
+    font-family:inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding:0;border:0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:inherit;font-weight: 400;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Header-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    margin: 24px 0 32px 0;
+}
+
+/*header_logo----------------------------------------------------------------------------------*/
+
+.header_logo {
+    margin: 0 0 38px 0;
+}
+
+.header_logo svg:first-of-type {
+    margin: 0 15px 0 0;
+}
+
+.header_logo svg:nth-of-type(2) {
+    margin: 0 10px 0 0;
+}
+
+/*header_link----------------------------------------------------------------------------------*/
+
+.header_link {
+    display: flex;
+}
+
+.header_link svg:first-of-type {
+    margin: 0 23px 0 0;
+}
+
+.header_link ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header_link a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0 20px;
+}
+
+.header_link svg:last-child {
+    margin: 0 16px 0 0;
+}
+
+/*header_contacts----------------------------------------------------------------------------------*/
+
+.header_col_right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+}
+
+.header_contacts {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 18px 0;
+}
+
+.header_contacts p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+}
+
+[href="tel:+74993212063"] {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+[href="tel:+74993212063"] > span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #878B90;
+}
+
+.header_contacts p:first-of-type,
+.header_contacts p:nth-of-type(2) {
+    text-align: right;
+}
+
+.header_contacts p:nth-of-type(2) {
+    margin: 0 0 0 57px;
+}
+
+.header_contacts p:nth-of-type(3) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 0 29px;
+}
+
+.header_contacts p:nth-of-type(3) > span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.header_contacts p:last-of-type {
+    margin: 0 0 0 57px;
+}
+
+.header_contacts p:last-of-type > span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 0 17px;
+}
+
+/*header_order----------------------------------------------------------------------------------*/
+
+.header_order {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header_order button:first-of-type {
+    position: relative;
+}
+
+.header_order_five_variants {
+    position: absolute;
+    top: 32px;
+    left: 20px;
+    padding: 0 10px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #B17955;
+    border-radius: 5px;
+}
+
+.header_order a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.header_order a:last-of-type {
+    text-align: right;
+}
+
+.header_btn {
+    background: #fff;
+    border: solid 1px #E4E4E4;
+    border-radius: 7px;
+    min-height: 40px;
+    margin: 0 10px 0 0;
+}
+
+.header_btn:last-of-type {
+    margin: 0;
+}
+
+.header_btn a {
+    padding: 17px 20px 17px 0;
+}
+
+
+
+/*header_order---------------------------------------------------------------------------------------------------------------------------------------------------*/
