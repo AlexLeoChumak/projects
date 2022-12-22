@@ -332,6 +332,29 @@ body{
     z-index: 1;
 }
 
+/* mobile_header*/
+.wrapper_mobile_header{
+    display: none;
+    max-height: 64px;
+    background: #cecccc;
+}
+.navbar>.container-fluid {
+    flex-direction: row-reverse;
+}
+.navbar-light .navbar-toggler {
+    color:#343434;
+    border-color: rgba(0,0,0,.1);
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar>.container-fluid{
+    flex-direction: row-reverse;
+}
+.navbar-collapse {
+    text-align: right;
+}
+
 /*go_katalog------------------------------------------------------------*/
 .btn{
     font-weight: 700;

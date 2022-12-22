@@ -3,13 +3,12 @@
         display: none;
     }
 }
-
 @media (max-width: 1401px){
     .container{
         max-width: 1210px;
     }
 }
-@media (max-width: 1300px){
+@media (max-width: 1200px){
     .container{
         max-width: 992px;
     }
@@ -64,6 +63,18 @@
         padding: 20px 225px 30px 0;
     }
 }
-@media (max-width: 1230px){
-    
+@media (max-width: 768px){
+    .wrapper_header,
+    .wrapper_main_go_katalog,
+    .wrapper_main_new_items,
+    .wrapper_main_individual_furniture,
+    .wrapper_our_story,
+    .wrapper_latest_publications,
+    .wrapper_have_questions,
+    .wrapper_footer {
+        display: none;
+    }
+    .wrapper_mobile_header{
+        display: block;
+    }
 }
