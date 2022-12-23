@@ -63,7 +63,7 @@
         padding: 20px 225px 30px 0;
     }
 }
-@media (max-width: 768px){
+/* @media (max-width: 768px){
     .wrapper_header,
     .wrapper_main_go_katalog,
     .wrapper_main_new_items,
@@ -77,4 +77,4 @@
     .wrapper_mobile_header{
         display: block;
     }
-}
+} */

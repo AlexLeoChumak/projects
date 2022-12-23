@@ -80,7 +80,7 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 .container{
-    width: 1210px;
+    max-width: 1210px;
     margin: 0 auto;
     padding: 0 20px;
     /* background: rgb(240, 203, 203); */
@@ -335,24 +335,35 @@ body{
 /* mobile_header*/
 .wrapper_mobile_header{
     display: none;
-    max-height: 64px;
-    background: #cecccc;
+    height: 64px;/* 
+    background: #e7e4e4; */
 }
-.navbar>.container-fluid {
-    flex-direction: row-reverse;
+.container_mobile_header{
+
 }
-.navbar-light .navbar-toggler {
-    color:#343434;
-    border-color: rgba(0,0,0,.1);
+.mobile_header_logo{
+    flex: 1 1 50%;
+    align-items: center;
+    padding: 15px 0 15px 18px;
 }
-.navbar-toggler {
-    border: none;
+.mobile_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
 }
-.navbar>.container-fluid{
-    flex-direction: row-reverse;
+.mobile_header_nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 50%;
+    height: 64px;
+    ul{
+        display: flex;
+    }
 }
-.navbar-collapse {
-    text-align: right;
+[href="111"] {
+    color: rgba(52, 52, 52, 0.7);
 }
 
 /*go_katalog------------------------------------------------------------*/
@@ -446,6 +457,10 @@ body{
     .carousel-indicators .active{
         background-color: #FF9619;
     }
+/*mobile_go_katalog*/
+.wrapper_mobile_go_katalog{
+    background: #CCB2A3;
+}
 
 /*new_items------------------------------------------------------------*/
 .title{
