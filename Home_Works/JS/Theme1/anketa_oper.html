@@ -17,9 +17,10 @@
             var gender=confirm ('Ваш пол - мужской?');
             var days=parseInt(years)*365;
             var five=parseInt(years)+5;
+            
             /* Тернарные */
-            var result = (gender==true) ? 'мужской' : 'женский';
-            var retired = (gender==true && parseInt(years) >= 63) ? 'да' : (gender==false && parseInt(years) >= 58) ? 'да' : 'нет';
+            var result = (gender) ? 'мужской' : 'женский';
+            var retired = (gender && parseInt(years) >= 63) ? 'да' : (!gender && parseInt(years) >= 58) ? 'да' : 'нет';
 
             alert ('ваше ФИО: ' + last_name + ' ' + name + ' ' + second_name + '\n' +
                    'ваш возраст в годах: ' + years + '\n' + 

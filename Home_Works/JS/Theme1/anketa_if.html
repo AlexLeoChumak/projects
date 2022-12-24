@@ -17,20 +17,21 @@
             var gender=confirm ('Ваш пол - мужской?');
             var days=parseInt(years)*365;
             var five=parseInt(years)+5;
-            
-            if (gender==true) {
-                var result='мужской'
+            var result='';
+
+            if (gender) {
+                result='мужской'
                 if (parseInt(years)>=63)
                     var retired='да';
                 else
                     var retired='нет';
             }
             else {
-                var result='женский'
+                result='женский'
                 if (parseInt(years)>=58)
                     var retired='да';
                 else
-                var retired='нет';
+                    var retired='нет';
             }
 
             alert ('ваше ФИО: ' + last_name + ' ' + name + ' ' + second_name + '\n' +

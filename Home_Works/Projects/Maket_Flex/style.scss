@@ -332,40 +332,6 @@ body{
     z-index: 1;
 }
 
-/* mobile_header*/
-.wrapper_mobile_header{
-    display: none;
-    height: 64px;/* 
-    background: #e7e4e4; */
-}
-.container_mobile_header{
-
-}
-.mobile_header_logo{
-    flex: 1 1 50%;
-    align-items: center;
-    padding: 15px 0 15px 18px;
-}
-.mobile_header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-.mobile_header_nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex: 1 1 50%;
-    height: 64px;
-    ul{
-        display: flex;
-    }
-}
-[href="111"] {
-    color: rgba(52, 52, 52, 0.7);
-}
-
 /*go_katalog------------------------------------------------------------*/
 .btn{
     font-weight: 700;
@@ -457,10 +423,6 @@ body{
     .carousel-indicators .active{
         background-color: #FF9619;
     }
-/*mobile_go_katalog*/
-.wrapper_mobile_go_katalog{
-    background: #CCB2A3;
-}
 
 /*new_items------------------------------------------------------------*/
 .title{
