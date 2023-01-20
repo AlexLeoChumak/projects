@@ -185,19 +185,13 @@ body {
   /* font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif; */
   font-family: 'Raleway', sans-serif;
-  background: #A9C2BE;
 }
 
 .container {
-  width: 100%;
   max-width: 1210px;
   margin: 0 auto;
   /* padding: 0 20px; */
   /* background: rgb(240, 203, 203); */
-}
-
-.wrapper_header {
-  min-width: 1210px;
 }
 
 .header {
@@ -545,7 +539,6 @@ body {
 }
 
 .wrapper_main_go_katalog {
-  min-width: 1210px;
   max-height: 590px;
   margin: 0 0 140px 0;
   background-color: #CCB2A3;
@@ -654,9 +647,6 @@ body {
   line-height: 39px;
 }
 
-.wrapper_main_new_items {
-  min-width: 1210px;
-}
 .wrapper_main_new_items a {
   width: 210px;
   height: 43px;
@@ -732,7 +722,6 @@ body {
 
 /*individual_furniture------------------------------------------------------------*/
 .wrapper_main_individual_furniture {
-  min-width: 1210px;
   min-height: 390px;
   background: url(image/individual_furniture/Vector\ 13turquoise\ tiles.png) no-repeat, repeating-linear-gradient(90deg, #A9C2BE 0%, #A9C2BE 54.9%, #5B5B5B 54.9%, #5B5B5B 100%);
   margin: 195px 0 182px 0;
@@ -834,10 +823,6 @@ body {
 }
 
 /*our_story------------------------------------------------------------*/
-.wrapper_our_story {
-  min-width: 1210px;
-}
-
 .title_our_story_line_height {
   line-height: 52px;
 }
@@ -906,10 +891,6 @@ body {
 }
 
 /*latest_publications------------------------------------------------------------*/
-.wrapper_latest_publications {
-  min-width: 1210px;
-}
-
 .container_latest_publications {
   padding: 110px 0 160px 0;
 }
@@ -939,7 +920,6 @@ body {
 
 /*have_questions------------------------------------------------------------*/
 .wrapper_have_questions {
-  min-width: 1210px;
   background: #A9C2BE;
 }
 
@@ -1142,7 +1122,6 @@ form div {
 
 /*footer------------------------------------------------------------*/
 .wrapper_footer {
-  min-width: 1210px;
   background: #5B5B5B;
   min-height: 365px;
   margin: 95px 0 0 0;
