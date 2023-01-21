@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <meta name="HandheldFriendly" content="True">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gid.Group Проекты</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/favicon/logo_facicon512px.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/media.css">
+    </head>
+    <body>
+        <!-- preloader -->
+        <div class="preloader">
+            <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+            </path>
+            </svg>
+        </div>
+        <!-- header -->
+        <header class="header_all" id="go_up">
+            <div class="container">
+                <div class="header_menu">
+                    <!-- меню-бургер -->
+                    <div class="menu_icon">
+                        <span></span>
+                    </div>
+                    <nav class="menu_body">
+                        <ul class="menu_list">
+                            <li><a href="index.html" title="home" class="menu_link">Главная</a></li>
+                            <li><a href="design.html" title="3D_design" class="menu_link">3D-Дизайн</a></li>
+                            <li><a href="error404.html" title="repair" class="menu_link">Ремонт</a></li>
+                            <li><a href="error404.html" title="building" class="menu_link">Строительство</a></li>
+                            <li><a href="projects.html" title="projects" class="menu_link  a_disabled">Проекты</a></li>
+                            <li><a href="contacts.html" title="contacts" class="menu_link">Контакты</a></li>
+                            <li>
+                                <a href="https://t.me/s/interdizru" title="telegram" target="_blank">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="41" height="41" rx="5" fill="#BDBDBD"/>
+                                        <path d="M34.9202 11.1844L30.6948 31.5513C30.3757 32.9885 29.5446 33.3463 28.3635 32.6696L21.9248 27.8203L18.8185 30.8746C18.4745 31.2263 18.1874 31.5196 17.5244 31.5196L17.9874 24.8182L29.9197 13.7981C30.4387 13.3258 29.8067 13.0631 29.1136 13.5364L14.362 23.0304L8.01134 20.9983C6.6302 20.5578 6.6052 19.5867 8.29938 18.909L33.139 9.12773C34.2891 8.68717 35.2952 9.38941 34.9202 11.1854V11.1844Z" fill="#333333"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/explore/tags/interiordesign/" title="instagram" target="_blank">
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.9944 13.997C17.1383 13.997 13.9915 17.1439 13.9915 21C13.9915 24.8561 17.1383 28.003 20.9944 28.003C24.8504 28.003 27.9972 24.8561 27.9972 21C27.9972 17.1439 24.8504 13.997 20.9944 13.997ZM41.9977 21C41.9977 18.1 42.0239 15.2263 41.8611 12.3316C41.6982 8.96937 40.9312 5.98536 38.4726 3.52669C36.0087 1.06278 33.03 0.301015 29.6678 0.138155C26.7679 -0.0247052 23.8943 0.00156264 20.9996 0.00156264C18.0997 0.00156264 15.2261 -0.0247052 12.3314 0.138155C8.9692 0.301015 5.98524 1.06803 3.52663 3.52669C1.06276 5.99061 0.301009 8.96937 0.138152 12.3316C-0.0247047 15.2316 0.00156261 18.1053 0.00156261 21C0.00156261 23.8947 -0.0247047 26.7737 0.138152 29.6684C0.301009 33.0306 1.06801 36.0146 3.52663 38.4733C5.9905 40.9372 8.9692 41.699 12.3314 41.8618C15.2313 42.0247 18.105 41.9984 20.9996 41.9984C23.8995 41.9984 26.7732 42.0247 29.6678 41.8618C33.03 41.699 36.014 40.932 38.4726 38.4733C40.9365 36.0094 41.6982 33.0306 41.8611 29.6684C42.0292 26.7737 41.9977 23.9 41.9977 21ZM20.9944 31.775C15.0317 31.775 10.2195 26.9628 10.2195 21C10.2195 15.0372 15.0317 10.225 20.9944 10.225C26.957 10.225 31.7692 15.0372 31.7692 21C31.7692 26.9628 26.957 31.775 20.9944 31.775ZM32.2105 12.3001C30.8183 12.3001 29.6941 11.1759 29.6941 9.78367C29.6941 8.39148 30.8183 7.26722 32.2105 7.26722C33.6026 7.26722 34.7269 8.39148 34.7269 9.78367C34.7273 10.1143 34.6625 10.4417 34.5362 10.7472C34.4099 11.0527 34.2245 11.3302 33.9908 11.564C33.757 11.7978 33.4794 11.9831 33.174 12.1094C32.8685 12.2357 32.541 12.3005 32.2105 12.3001Z" fill="#BDBDBD"/>
+                                    </svg>    
+                                </a>
+                                <a href="https://ru-ru.facebook.com/groups/105282062940472/?mibextid=6NoCDW" title="facebook" target="_blank">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.48635 0C3.33924 0 0 3.33924 0 7.48634V33.5136C0 37.6607 3.33924 41 7.48635 41H21.5929V24.9715H17.3546V19.2008H21.5929V14.2706C21.5929 10.3971 24.0972 6.84059 29.866 6.84059C32.2016 6.84059 33.9288 7.06482 33.9288 7.06482L33.793 12.4538C33.793 12.4538 32.0315 12.4371 30.1094 12.4371C28.0291 12.4371 27.6955 13.3956 27.6955 14.9868V19.2008H33.9583L33.6854 24.9716H27.6955V41H33.5136C37.6608 41 41 37.6608 41 33.5137V7.48638C41 3.33928 37.6608 4.09999e-05 33.5136 4.09999e-05H7.48631L7.48635 0Z" fill="#BDBDBD"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCtORu6mNAoGAcj0rwdspJFA" title="youtube" target="_blank">
+                                    <svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 0C0.3784 0 0 2.32688 0 20.5C0 38.6731 0.3784 41 22 41C43.6216 41 44 38.6731 44 20.5C44 2.32688 43.6216 0 22 0ZM29.051 21.3892L19.173 26.9695C18.3084 27.454 17.6 26.9109 17.6 25.7555V15.2445C17.6 14.0918 18.3084 13.546 19.173 14.0305L29.051 19.6108C29.9156 20.1006 29.9156 20.8993 29.051 21.3892Z" fill="#BDBDBD"/>
+                                    </svg>    
+                                </a>
+                                <a href="https://www.tiktok.com/@tatiana.tbdesign/video/7092773692039531781?lang=ru-RU" title="tiktok" target="_blank">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="41" height="41" rx="5" fill="#BDBDBD"/>
+                                        <path d="M21.0811 7.02278C22.5248 7 23.9602 7.0135 25.3939 7C25.4808 8.72219 26.088 10.4764 27.324 11.694C28.5575 12.942 30.3024 13.5133 32 13.7065V18.2368C30.4091 18.1837 28.8107 17.8461 27.367 17.1475C26.7383 16.8572 26.1525 16.4834 25.5792 16.1012C25.5718 19.3886 25.5925 22.6718 25.5585 25.9457C25.4725 27.5186 24.9637 29.0838 24.0669 30.3799C22.624 32.5375 20.1198 33.9441 17.5476 33.9879C15.97 34.0799 14.3939 33.6411 13.0495 32.8328C10.8216 31.4928 9.25382 29.0399 9.02548 26.4073C8.99672 25.8497 8.9923 25.2911 9.01225 24.7332C9.2108 22.5925 10.2491 20.5446 11.8607 19.1515C13.6874 17.5289 16.2463 16.756 18.6422 17.2133C18.6645 18.8798 18.5992 20.5446 18.5992 22.2111C17.5046 21.8499 16.2256 21.9512 15.2692 22.6288C14.5695 23.0989 14.0407 23.7906 13.7643 24.5973C13.536 25.1677 13.6014 25.8014 13.6146 26.4073C13.8769 28.2535 15.6175 29.8052 17.4757 29.6373C18.7075 29.6238 19.8881 28.8948 20.5301 27.8274C20.7378 27.4536 20.9702 27.0714 20.9827 26.6317C21.091 24.6193 21.048 22.6153 21.0613 20.6028C21.0704 16.0674 21.048 11.5447 21.0819 7.02363L21.0811 7.02278Z" fill="#333333"/>
+                                    </svg>
+                                </a>
+                                <a href="https://invite.viber.com/?g2=AQBkti7%2BVLh%2BEkk6sz%2FL9xyc%2FXrY0bBjYRdwlTDifB%2BvYDtHDtVs0DA9dZnEK0jD&lang=ru" title="viber" target="_blank">
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 8.5125C14.1844 8.5125 8.64375 14.0531 8.63437 20.8688C8.63437 23.2031 9.29063 25.4813 10.5281 27.4406L10.8188 27.9094L9.57187 32.4656L14.25 31.2375L14.7 31.5094C16.5938 32.6344 18.7687 33.2344 20.9906 33.2344H21C27.8062 33.2344 33.4969 27.6937 33.4969 20.8781C33.4969 17.5781 32.0719 14.475 29.7375 12.1406C27.3938 9.79688 24.3 8.5125 21 8.5125ZM28.2656 26.175C27.9562 27.0469 26.475 27.8344 25.7625 27.9375C24.5812 28.1156 23.6625 28.0219 21.3094 27.0094C17.5875 25.3969 15.15 21.6469 14.9625 21.4031C14.775 21.1594 13.4437 19.3875 13.4437 17.5594C13.4437 15.7313 14.4 14.8312 14.7469 14.4562C15.0844 14.0812 15.4875 13.9875 15.7406 13.9875C15.9844 13.9875 16.2375 13.9875 16.4531 13.9969C16.6781 14.0063 16.9875 13.9125 17.2875 14.6344C17.5969 15.375 18.3375 17.2031 18.4313 17.3906C18.525 17.5781 18.5906 17.7937 18.4594 18.0375C17.7469 19.4625 16.9875 19.4062 17.3719 20.0625C18.8062 22.5281 20.2406 23.3813 22.425 24.4781C22.8 24.6656 23.0156 24.6375 23.2313 24.3844C23.4469 24.1406 24.1594 23.2969 24.4031 22.9313C24.6469 22.5563 24.9 22.6219 25.2375 22.7438C25.575 22.8656 27.4031 23.7656 27.7781 23.9531C28.1531 24.1406 28.3969 24.2344 28.4906 24.3844C28.575 24.5625 28.575 25.3125 28.2656 26.175ZM37.5 0H4.5C2.01562 0 0 2.01562 0 4.5V37.5C0 39.9844 2.01562 42 4.5 42H37.5C39.9844 42 42 39.9844 42 37.5V4.5C42 2.01562 39.9844 0 37.5 0ZM20.9906 35.7375C18.4969 35.7375 16.05 35.1094 13.8844 33.9281L6 36L8.10938 28.2937C6.80625 26.0437 6.12188 23.4844 6.12188 20.8594C6.13125 12.6656 12.7969 6 20.9906 6C24.9656 6 28.6969 7.54688 31.5094 10.3594C34.3125 13.1719 36 16.9031 36 20.8781C36 29.0719 29.1844 35.7375 20.9906 35.7375Z" fill="#BDBDBD"/>
+                                    </svg> 
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--  -->
+                    <div class="header_logo_all">
+                        <svg width="185" height="77" viewBox="0 0 185 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.336 24.312C20.4587 23.288 18.2613 22.776 15.744 22.776C12.8 22.776 10.1333 23.5227 7.744 25.016C5.35467 26.5094 3.456 28.6427 2.048 31.416C0.682667 34.1894 0 37.4107 0 41.08C0 44.7494 0.682667 47.992 2.048 50.808C3.456 53.5814 5.35467 55.736 7.744 57.272C10.1333 58.7654 12.8 59.512 15.744 59.512C18.2613 59.512 20.4587 59 22.336 57.976C24.2133 56.9094 25.6853 55.544 26.752 53.88V58.936C26.752 61.7947 26.0693 63.864 24.704 65.144C23.3813 66.4667 21.5893 67.128 19.328 67.128C17.4507 67.128 15.872 66.7227 14.592 65.912C13.312 65.144 12.5013 64.0774 12.16 62.712H1.344C1.81333 66.9787 3.69067 70.3494 6.976 72.824C10.2613 75.3414 14.5493 76.6 19.84 76.6C23.808 76.6 27.1147 75.8107 29.76 74.232C32.448 72.6534 34.432 70.52 35.712 67.832C37.0347 65.1867 37.696 62.2214 37.696 58.936V23.288H26.752V28.344C25.728 26.68 24.256 25.336 22.336 24.312ZM24.448 34.68C25.984 36.2587 26.752 38.4134 26.752 41.144C26.752 43.8747 25.984 46.0294 24.448 47.608C22.9547 49.1867 21.12 49.976 18.944 49.976C16.768 49.976 14.912 49.1867 13.376 47.608C11.8827 45.9867 11.136 43.8107 11.136 41.08C11.136 38.3494 11.8827 36.216 13.376 34.68C14.912 33.1014 16.768 32.312 18.944 32.312C21.12 32.312 22.9547 33.1014 24.448 34.68ZM46.3815 17.912C47.6188 19.0214 49.1975 19.576 51.1175 19.576C52.9948 19.576 54.5308 19.0214 55.7255 17.912C56.9628 16.76 57.5815 15.352 57.5815 13.688C57.5815 11.9814 56.9628 10.5734 55.7255 9.46402C54.5308 8.31202 52.9948 7.73602 51.1175 7.73602C49.1975 7.73602 47.6188 8.31202 46.3815 9.46402C45.1868 10.5734 44.5895 11.9814 44.5895 13.688C44.5895 15.352 45.1868 16.76 46.3815 17.912ZM45.6135 59H56.5575V23.288H45.6135V59ZM64.3605 31.416C62.9952 34.1894 62.3125 37.4107 62.3125 41.08C62.3125 44.7494 62.9952 47.992 64.3605 50.808C65.7685 53.5814 67.6672 55.736 70.0565 57.272C72.4458 58.7654 75.1125 59.512 78.0565 59.512C80.5738 59.512 82.7712 59 84.6485 57.976C86.5685 56.952 88.0405 55.5867 89.0645 53.88V59H100.008V21.7925L94.716 16.5L89.856 11.64H89.0645V28.216C87.9552 26.552 86.4192 25.2294 84.4565 24.248C82.5365 23.2667 80.4032 22.776 78.0565 22.776C75.1125 22.776 72.4458 23.5227 70.0565 25.016C67.6672 26.5094 65.7685 28.6427 64.3605 31.416ZM86.7605 34.68C88.2965 36.2587 89.0645 38.4134 89.0645 41.144C89.0645 43.8747 88.2965 46.0294 86.7605 47.608C85.2672 49.1867 83.4325 49.976 81.2565 49.976C79.0805 49.976 77.2245 49.1867 75.6885 47.608C74.1952 45.9867 73.4485 43.8107 73.4485 41.08C73.4485 38.3494 74.1952 36.216 75.6885 34.68C77.2245 33.1014 79.0805 32.312 81.2565 32.312C83.4325 32.312 85.2672 33.1014 86.7605 34.68ZM105.59 58.568C106.054 58.984 106.646 59.192 107.366 59.192C108.07 59.192 108.646 58.984 109.094 58.568C109.558 58.136 109.79 57.608 109.79 56.984C109.79 56.344 109.558 55.808 109.094 55.376C108.646 54.944 108.07 54.728 107.366 54.728C106.646 54.728 106.054 54.944 105.59 55.376C105.142 55.808 104.918 56.344 104.918 56.984C104.918 57.608 105.142 58.136 105.59 58.568ZM119.779 45.992C119.075 45.608 118.251 45.416 117.307 45.416C116.203 45.416 115.203 45.696 114.307 46.256C113.411 46.816 112.699 47.616 112.171 48.656C111.659 49.696 111.403 50.904 111.403 52.28C111.403 53.656 111.659 54.872 112.171 55.928C112.699 56.968 113.411 57.776 114.307 58.352C115.203 58.912 116.203 59.192 117.307 59.192C118.251 59.192 119.075 59 119.779 58.616C120.483 58.216 121.035 57.704 121.435 57.08V58.976C121.435 60.048 121.179 60.824 120.667 61.304C120.171 61.8 119.499 62.048 118.651 62.048C117.947 62.048 117.355 61.896 116.875 61.592C116.395 61.304 116.091 60.904 115.963 60.392H111.907C112.083 61.992 112.787 63.256 114.019 64.184C115.251 65.128 116.859 65.6 118.843 65.6C120.331 65.6 121.571 65.304 122.563 64.712C123.571 64.12 124.315 63.32 124.795 62.312C125.291 61.32 125.539 60.208 125.539 58.976V45.608H121.435V47.504C121.051 46.88 120.499 46.376 119.779 45.992ZM120.571 49.88C121.147 50.472 121.435 51.28 121.435 52.304C121.435 53.328 121.147 54.136 120.571 54.728C120.011 55.32 119.323 55.616 118.507 55.616C117.691 55.616 116.995 55.32 116.419 54.728C115.859 54.12 115.579 53.304 115.579 52.28C115.579 51.256 115.859 50.456 116.419 49.88C116.995 49.288 117.691 48.992 118.507 48.992C119.323 48.992 120.011 49.288 120.571 49.88ZM134.413 46.112C133.693 46.528 133.092 47.104 132.613 47.84V45.608H128.508V59H132.613V52.784C132.613 51.68 132.868 50.912 133.38 50.48C133.893 50.032 134.661 49.808 135.684 49.808H136.812V45.464C135.932 45.464 135.133 45.68 134.413 46.112ZM141.318 58.352C142.374 58.912 143.558 59.192 144.87 59.192C146.182 59.192 147.366 58.912 148.422 58.352C149.494 57.792 150.334 56.992 150.942 55.952C151.566 54.896 151.878 53.68 151.878 52.304C151.878 50.928 151.574 49.72 150.966 48.68C150.358 47.624 149.526 46.816 148.47 46.256C147.414 45.696 146.23 45.416 144.918 45.416C143.606 45.416 142.422 45.696 141.366 46.256C140.31 46.816 139.478 47.624 138.87 48.68C138.262 49.72 137.958 50.928 137.958 52.304C137.958 53.696 138.254 54.912 138.846 55.952C139.454 56.992 140.278 57.792 141.318 58.352ZM146.862 54.776C146.318 55.352 145.654 55.64 144.87 55.64C144.086 55.64 143.43 55.352 142.902 54.776C142.39 54.2 142.134 53.376 142.134 52.304C142.134 51.216 142.398 50.392 142.926 49.832C143.454 49.256 144.118 48.968 144.918 48.968C145.702 48.968 146.358 49.256 146.886 49.832C147.43 50.408 147.702 51.232 147.702 52.304C147.702 53.376 147.422 54.2 146.862 54.776ZM167.279 59V45.608H163.175V52.88C163.175 53.776 162.943 54.472 162.479 54.968C162.015 55.464 161.383 55.712 160.583 55.712C159.799 55.712 159.175 55.464 158.711 54.968C158.247 54.472 158.015 53.776 158.015 52.88V45.608H153.935V53.432C153.935 54.6 154.151 55.616 154.583 56.48C155.015 57.344 155.623 58.008 156.407 58.472C157.191 58.92 158.095 59.144 159.119 59.144C159.983 59.144 160.767 58.968 161.471 58.616C162.191 58.248 162.759 57.768 163.175 57.176V59H167.279ZM175.987 45.992C175.283 46.376 174.731 46.88 174.331 47.504V45.608H170.227V65.384H174.331V57.128C174.731 57.736 175.283 58.232 175.987 58.616C176.707 59 177.531 59.192 178.459 59.192C179.563 59.192 180.563 58.912 181.459 58.352C182.355 57.776 183.059 56.968 183.571 55.928C184.099 54.872 184.363 53.656 184.363 52.28C184.363 50.904 184.099 49.696 183.571 48.656C183.059 47.616 182.355 46.816 181.459 46.256C180.563 45.696 179.563 45.416 178.459 45.416C177.515 45.416 176.691 45.608 175.987 45.992ZM179.323 49.88C179.899 50.456 180.187 51.256 180.187 52.28C180.187 53.304 179.899 54.12 179.323 54.728C178.747 55.32 178.051 55.616 177.235 55.616C176.419 55.616 175.723 55.32 175.147 54.728C174.587 54.136 174.307 53.328 174.307 52.304C174.307 51.28 174.587 50.472 175.147 49.88C175.723 49.288 176.419 48.992 177.235 48.992C178.067 48.992 178.763 49.288 179.323 49.88Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M111.216 32V0H79.2158L89.2158 10H101.208V21.992L111.216 32Z" fill="#FAFF09"/>
+                        </svg>       
+                    </div>
+                    <!-- модалка в шапке "обратный звонок" -->
+                    <div class="telephone">
+                        <a href="#" title="modal" class="open-popup">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3346 20.6101L21.8317 18.1119C22.1681 17.7796 22.5936 17.5521 23.0567 17.4571C23.5198 17.3621 24.0005 17.4036 24.4404 17.5766L27.4839 18.7922C27.9284 18.9728 28.3097 19.2809 28.5795 19.6779C28.8493 20.0748 28.9956 20.5428 29 21.0228V26.5991C28.9974 26.9256 28.9288 27.2482 28.7983 27.5475C28.6678 27.8468 28.4781 28.1166 28.2406 28.3406C28.0031 28.5646 27.7228 28.7383 27.4165 28.8511C27.1102 28.9638 26.7842 29.0134 26.4582 28.9969C5.13184 27.6697 0.82866 9.60246 0.0148465 2.68783C-0.0229313 2.34827 0.0115853 2.00456 0.116125 1.67931C0.220665 1.35405 0.39286 1.05463 0.62138 0.800733C0.8499 0.546836 1.12957 0.344221 1.44198 0.206217C1.7544 0.0682136 2.09248 -0.00205115 2.43399 4.55797e-05H7.81854C8.29904 0.00146842 8.76812 0.146666 9.16545 0.416964C9.56279 0.687261 9.87021 1.0703 10.0482 1.5168L11.2633 4.56147C11.442 4.99985 11.4875 5.48116 11.3944 5.9453C11.3012 6.40944 11.0734 6.83582 10.7394 7.17119L8.24217 9.66938C8.24217 9.66938 9.68028 19.4056 19.3346 20.6101Z" fill="#BDBDBD"/>
+                            </svg>
+                        </a>  
+                        <div class="popup__bg"> 
+                            <form class="popup" method="get" name="contact_form">
+                                <img src="images/header/close_window.svg" alt="close" title="close" class="close-popup">
+                                <span>Обратный звонок</span>
+                                    <input id="name" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="30">
+                                    <input id="phone" type="tel" name="tel" placeholder="Номер телефона" minlength="9" maxlength="13">
+                                <button type="submit">Позвонить мне</button>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <main>
+            <div class="our_projects our_projects_projects">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html" title="general">Главная</a></li>
+                            <li>&nbsp;/&nbsp;</li>
+                            <li>Проекты</li>
+                        </ul>
+                    </div>
+                    <div class="projects_link_btn">
+                        <div><a href="error404.html" title="projects_link">Архитектура</a></div>
+                        <div><a href="design.html" title="projects_link">3D-дизайн</a></div>
+                        <div><a href="error404.html" title="projects_link">Ремонт</a></div>
+                        <div><a href="error404.html" title="projects_link">Строительство</a></div>
+                    </div>
+                    <div class="our_projects_katalog">
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                <span class="our_projects_katalog_size">130 м2</span>
+                            </div>
+                        </div>
+                        <div class="grey_border">
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                <span class="our_projects_katalog_size">94 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                <span class="our_projects_katalog_size">68 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                <span class="our_projects_katalog_size">130 м2</span>
+                            </div>
+                        </div>
+                        <div class="grey_border">
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                <span class="our_projects_katalog_size">94 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                <span class="our_projects_katalog_size">68 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                <span class="our_projects_katalog_size">130 м2</span>
+                            </div>
+                        </div>
+                        <div class="grey_border">
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                <span class="our_projects_katalog_size">94 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                <span class="our_projects_katalog_size">68 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                <span class="our_projects_katalog_size">130 м2</span>
+                            </div>
+                        </div>
+                        <div class="grey_border">
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                <span class="our_projects_katalog_size">94 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                <span class="our_projects_katalog_size">68 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                <span class="our_projects_katalog_size">130 м2</span>
+                            </div>
+                        </div>
+                        <div class="grey_border">
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                <span class="our_projects_katalog_size">94 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                <span class="our_projects_katalog_size">68 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                <span class="our_projects_katalog_size">130 м2</span>
+                            </div>
+                        </div>
+                        <div class="grey_border">
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                <span class="our_projects_katalog_size">94 м2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                            <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                            <div class="text_over_image">
+                                <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                <span class="our_projects_katalog_size">68 м2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects_show_more">
+                        <input type=radio class="read-more-radio" name="poem" id="poem1" value=1>
+                        <label for="poem1">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.65907 0H9.9924V8.33811H8.32573V2.48976C6.01685 3.45651 4.1136 5.19314 2.93925 7.40469C1.76489 9.61624 1.39184 12.1663 1.88345 14.6219C2.37506 17.0774 3.70103 19.287 5.63614 20.8753C7.57124 22.4636 9.99617 23.3327 12.4991 23.335C15.1568 23.3376 17.7227 22.3626 19.7087 20.5955C21.6947 18.8284 22.9622 16.3925 23.2701 13.7512C23.5779 11.1099 22.9047 8.44748 21.3784 6.27051C19.8522 4.09353 17.5794 2.55387 14.9924 1.94445V0.236803C17.8579 0.820193 20.4282 2.39029 22.2563 4.67391C24.0843 6.95754 25.0544 9.81015 24.9976 12.7354C24.9409 15.6607 23.861 18.4736 21.9458 20.6845C20.0306 22.8955 17.4013 24.3646 14.5154 24.8363C11.6294 25.3081 8.66958 24.7525 6.15072 23.2664C3.63187 21.7802 1.71346 19.4575 0.729271 16.7024C-0.254918 13.9472 -0.242593 10.934 0.7641 8.18702C1.77079 5.44003 3.70814 3.1331 6.23907 1.66762H1.65907V0Z" fill="#F2F2F2"/>
+                            </svg>&nbsp;&nbsp;Еще проекты
+                        </label>
+                        <div class="our_projects_katalog">
+                            <div>
+                                <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                                <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                                <div class="text_over_image">
+                                    <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                    <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                    <span class="our_projects_katalog_size">130 м2</span>
+                                </div>
+                            </div>
+                            <div class="grey_border">
+                                <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                                <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                                <div class="text_over_image">
+                                    <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                    <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                    <span class="our_projects_katalog_size">94 м2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                                <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                                <div class="text_over_image">
+                                    <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                    <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                    <span class="our_projects_katalog_size">68 м2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                                <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_1.jpg" alt="our_projects_1" title="our_projects_1"></a> 
+                                <div class="text_over_image">
+                                    <span class="our_projects_katalog_name">Квартира на Академической</span>
+                                    <span class="our_projects_katalog_style">Стиль - Лофт</span>
+                                    <span class="our_projects_katalog_size">130 м2</span>
+                                </div>
+                            </div>
+                            <div class="grey_border">
+                                <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                                <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_2.jpg" alt="our_projects_2" title="our_projects_2"></a>
+                                <div class="text_over_image">
+                                    <span class="our_projects_katalog_name">Квартира на Рижской</span>
+                                    <span class="our_projects_katalog_style">Стиль - Скандинавский</span>
+                                    <span class="our_projects_katalog_size">94 м2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="popup_button" href="project_one.html" title="project_one">Смотреть проект</a>
+                                <a href="project_one.html" title="project_one"><img src="images/our_projects/our_projects_3.jpg" alt="our_projects_3" title="our_projects_3"></a>
+                                <div class="text_over_image">
+                                    <span class="our_projects_katalog_name">Квартира на Чистых прудах</span>
+                                    <span class="our_projects_katalog_style">Стиль  Лофт</span>
+                                    <span class="our_projects_katalog_size">68 м2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type=radio class="read-more-radio" name="poem" id="poem2" checked value=2>
+                        <label for="poem2">скрыть</label>
+                    </div>
+                    <div class="projects_submit_application">
+                        <p>
+                            Оставьте заявку и мы поможем вам с проектом
+                        </p>
+                        <div>
+                            <a href="#" title="modal" class="open-popup">Оставить заявку</a>
+                            <div class="popup__bg"> 
+                                <form class="popup" method="get" name="contact_form">
+                                    <img src="images/header/close_window.svg" alt="close" title="close" class="close-popup">
+                                    <span>Обратный звонок</span>
+                                        <input id="name1" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="30">
+                                        <input id="phone1" type="tel" name="tel" placeholder="Номер телефона" minlength="9" maxlength="13">
+                                    <button type="submit">Позвонить мне</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_content">
+                    <div class="footer_link_up">
+                        <a href="#go_up" title="go_up">Наверх<img src="images/six_stages/arrow_right.png" alt="arrow_up" title="arrow_up"></a>
+                    </div>
+                    <div class="footer_logo_social_network">
+                        <div>
+                            <svg width="185" height="77" viewBox="0 0 185 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.336 24.312C20.4587 23.288 18.2613 22.776 15.744 22.776C12.8 22.776 10.1333 23.5227 7.744 25.016C5.35467 26.5094 3.456 28.6427 2.048 31.416C0.682667 34.1894 0 37.4107 0 41.08C0 44.7494 0.682667 47.992 2.048 50.808C3.456 53.5814 5.35467 55.736 7.744 57.272C10.1333 58.7654 12.8 59.512 15.744 59.512C18.2613 59.512 20.4587 59 22.336 57.976C24.2133 56.9094 25.6853 55.544 26.752 53.88V58.936C26.752 61.7947 26.0693 63.864 24.704 65.144C23.3813 66.4667 21.5893 67.128 19.328 67.128C17.4507 67.128 15.872 66.7227 14.592 65.912C13.312 65.144 12.5013 64.0774 12.16 62.712H1.344C1.81333 66.9787 3.69067 70.3494 6.976 72.824C10.2613 75.3414 14.5493 76.6 19.84 76.6C23.808 76.6 27.1147 75.8107 29.76 74.232C32.448 72.6534 34.432 70.52 35.712 67.832C37.0347 65.1867 37.696 62.2214 37.696 58.936V23.288H26.752V28.344C25.728 26.68 24.256 25.336 22.336 24.312ZM24.448 34.68C25.984 36.2587 26.752 38.4134 26.752 41.144C26.752 43.8747 25.984 46.0294 24.448 47.608C22.9547 49.1867 21.12 49.976 18.944 49.976C16.768 49.976 14.912 49.1867 13.376 47.608C11.8827 45.9867 11.136 43.8107 11.136 41.08C11.136 38.3494 11.8827 36.216 13.376 34.68C14.912 33.1014 16.768 32.312 18.944 32.312C21.12 32.312 22.9547 33.1014 24.448 34.68ZM46.3815 17.912C47.6188 19.0214 49.1975 19.576 51.1175 19.576C52.9948 19.576 54.5308 19.0214 55.7255 17.912C56.9628 16.76 57.5815 15.352 57.5815 13.688C57.5815 11.9814 56.9628 10.5734 55.7255 9.46402C54.5308 8.31202 52.9948 7.73602 51.1175 7.73602C49.1975 7.73602 47.6188 8.31202 46.3815 9.46402C45.1868 10.5734 44.5895 11.9814 44.5895 13.688C44.5895 15.352 45.1868 16.76 46.3815 17.912ZM45.6135 59H56.5575V23.288H45.6135V59ZM64.3605 31.416C62.9952 34.1894 62.3125 37.4107 62.3125 41.08C62.3125 44.7494 62.9952 47.992 64.3605 50.808C65.7685 53.5814 67.6672 55.736 70.0565 57.272C72.4458 58.7654 75.1125 59.512 78.0565 59.512C80.5738 59.512 82.7712 59 84.6485 57.976C86.5685 56.952 88.0405 55.5867 89.0645 53.88V59H100.008V21.7925L94.716 16.5L89.856 11.64H89.0645V28.216C87.9552 26.552 86.4192 25.2294 84.4565 24.248C82.5365 23.2667 80.4032 22.776 78.0565 22.776C75.1125 22.776 72.4458 23.5227 70.0565 25.016C67.6672 26.5094 65.7685 28.6427 64.3605 31.416ZM86.7605 34.68C88.2965 36.2587 89.0645 38.4134 89.0645 41.144C89.0645 43.8747 88.2965 46.0294 86.7605 47.608C85.2672 49.1867 83.4325 49.976 81.2565 49.976C79.0805 49.976 77.2245 49.1867 75.6885 47.608C74.1952 45.9867 73.4485 43.8107 73.4485 41.08C73.4485 38.3494 74.1952 36.216 75.6885 34.68C77.2245 33.1014 79.0805 32.312 81.2565 32.312C83.4325 32.312 85.2672 33.1014 86.7605 34.68ZM105.59 58.568C106.054 58.984 106.646 59.192 107.366 59.192C108.07 59.192 108.646 58.984 109.094 58.568C109.558 58.136 109.79 57.608 109.79 56.984C109.79 56.344 109.558 55.808 109.094 55.376C108.646 54.944 108.07 54.728 107.366 54.728C106.646 54.728 106.054 54.944 105.59 55.376C105.142 55.808 104.918 56.344 104.918 56.984C104.918 57.608 105.142 58.136 105.59 58.568ZM119.779 45.992C119.075 45.608 118.251 45.416 117.307 45.416C116.203 45.416 115.203 45.696 114.307 46.256C113.411 46.816 112.699 47.616 112.171 48.656C111.659 49.696 111.403 50.904 111.403 52.28C111.403 53.656 111.659 54.872 112.171 55.928C112.699 56.968 113.411 57.776 114.307 58.352C115.203 58.912 116.203 59.192 117.307 59.192C118.251 59.192 119.075 59 119.779 58.616C120.483 58.216 121.035 57.704 121.435 57.08V58.976C121.435 60.048 121.179 60.824 120.667 61.304C120.171 61.8 119.499 62.048 118.651 62.048C117.947 62.048 117.355 61.896 116.875 61.592C116.395 61.304 116.091 60.904 115.963 60.392H111.907C112.083 61.992 112.787 63.256 114.019 64.184C115.251 65.128 116.859 65.6 118.843 65.6C120.331 65.6 121.571 65.304 122.563 64.712C123.571 64.12 124.315 63.32 124.795 62.312C125.291 61.32 125.539 60.208 125.539 58.976V45.608H121.435V47.504C121.051 46.88 120.499 46.376 119.779 45.992ZM120.571 49.88C121.147 50.472 121.435 51.28 121.435 52.304C121.435 53.328 121.147 54.136 120.571 54.728C120.011 55.32 119.323 55.616 118.507 55.616C117.691 55.616 116.995 55.32 116.419 54.728C115.859 54.12 115.579 53.304 115.579 52.28C115.579 51.256 115.859 50.456 116.419 49.88C116.995 49.288 117.691 48.992 118.507 48.992C119.323 48.992 120.011 49.288 120.571 49.88ZM134.413 46.112C133.693 46.528 133.092 47.104 132.613 47.84V45.608H128.508V59H132.613V52.784C132.613 51.68 132.868 50.912 133.38 50.48C133.893 50.032 134.661 49.808 135.684 49.808H136.812V45.464C135.932 45.464 135.133 45.68 134.413 46.112ZM141.318 58.352C142.374 58.912 143.558 59.192 144.87 59.192C146.182 59.192 147.366 58.912 148.422 58.352C149.494 57.792 150.334 56.992 150.942 55.952C151.566 54.896 151.878 53.68 151.878 52.304C151.878 50.928 151.574 49.72 150.966 48.68C150.358 47.624 149.526 46.816 148.47 46.256C147.414 45.696 146.23 45.416 144.918 45.416C143.606 45.416 142.422 45.696 141.366 46.256C140.31 46.816 139.478 47.624 138.87 48.68C138.262 49.72 137.958 50.928 137.958 52.304C137.958 53.696 138.254 54.912 138.846 55.952C139.454 56.992 140.278 57.792 141.318 58.352ZM146.862 54.776C146.318 55.352 145.654 55.64 144.87 55.64C144.086 55.64 143.43 55.352 142.902 54.776C142.39 54.2 142.134 53.376 142.134 52.304C142.134 51.216 142.398 50.392 142.926 49.832C143.454 49.256 144.118 48.968 144.918 48.968C145.702 48.968 146.358 49.256 146.886 49.832C147.43 50.408 147.702 51.232 147.702 52.304C147.702 53.376 147.422 54.2 146.862 54.776ZM167.279 59V45.608H163.175V52.88C163.175 53.776 162.943 54.472 162.479 54.968C162.015 55.464 161.383 55.712 160.583 55.712C159.799 55.712 159.175 55.464 158.711 54.968C158.247 54.472 158.015 53.776 158.015 52.88V45.608H153.935V53.432C153.935 54.6 154.151 55.616 154.583 56.48C155.015 57.344 155.623 58.008 156.407 58.472C157.191 58.92 158.095 59.144 159.119 59.144C159.983 59.144 160.767 58.968 161.471 58.616C162.191 58.248 162.759 57.768 163.175 57.176V59H167.279ZM175.987 45.992C175.283 46.376 174.731 46.88 174.331 47.504V45.608H170.227V65.384H174.331V57.128C174.731 57.736 175.283 58.232 175.987 58.616C176.707 59 177.531 59.192 178.459 59.192C179.563 59.192 180.563 58.912 181.459 58.352C182.355 57.776 183.059 56.968 183.571 55.928C184.099 54.872 184.363 53.656 184.363 52.28C184.363 50.904 184.099 49.696 183.571 48.656C183.059 47.616 182.355 46.816 181.459 46.256C180.563 45.696 179.563 45.416 178.459 45.416C177.515 45.416 176.691 45.608 175.987 45.992ZM179.323 49.88C179.899 50.456 180.187 51.256 180.187 52.28C180.187 53.304 179.899 54.12 179.323 54.728C178.747 55.32 178.051 55.616 177.235 55.616C176.419 55.616 175.723 55.32 175.147 54.728C174.587 54.136 174.307 53.328 174.307 52.304C174.307 51.28 174.587 50.472 175.147 49.88C175.723 49.288 176.419 48.992 177.235 48.992C178.067 48.992 178.763 49.288 179.323 49.88Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M111.216 32V0H79.2158L89.2158 10H101.208V21.992L111.216 32Z" fill="#FAFF09"/>
+                            </svg> 
+                        </div>
+                        <div class="footer_social_network">
+                            <a href="https://t.me/s/interdizru" title="telegram" target="_blank">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" rx="5" fill="black"/>
+                                    <path d="M34.9202 11.1844L30.6948 31.5513C30.3757 32.9885 29.5446 33.3463 28.3635 32.6696L21.9248 27.8203L18.8185 30.8746C18.4745 31.2263 18.1874 31.5196 17.5244 31.5196L17.9874 24.8182L29.9197 13.7981C30.4387 13.3258 29.8067 13.0631 29.1136 13.5364L14.362 23.0304L8.01134 20.9983C6.6302 20.5578 6.6052 19.5867 8.29938 18.909L33.139 9.12773C34.2891 8.68717 35.2952 9.38941 34.9202 11.1854V11.1844Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/explore/tags/interiordesign/" title="instagram" target="_blank">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9944 13.997C17.1383 13.997 13.9915 17.1439 13.9915 21C13.9915 24.8561 17.1383 28.003 20.9944 28.003C24.8504 28.003 27.9972 24.8561 27.9972 21C27.9972 17.1439 24.8504 13.997 20.9944 13.997ZM41.9977 21C41.9977 18.1 42.0239 15.2263 41.8611 12.3316C41.6982 8.96937 40.9312 5.98536 38.4726 3.52669C36.0087 1.06278 33.03 0.301015 29.6678 0.138155C26.7679 -0.0247052 23.8943 0.00156264 20.9996 0.00156264C18.0997 0.00156264 15.2261 -0.0247052 12.3314 0.138155C8.9692 0.301015 5.98524 1.06803 3.52663 3.52669C1.06276 5.99061 0.301009 8.96937 0.138152 12.3316C-0.0247047 15.2316 0.00156261 18.1053 0.00156261 21C0.00156261 23.8947 -0.0247047 26.7737 0.138152 29.6684C0.301009 33.0306 1.06801 36.0146 3.52663 38.4733C5.9905 40.9372 8.9692 41.699 12.3314 41.8618C15.2313 42.0247 18.105 41.9984 20.9996 41.9984C23.8995 41.9984 26.7732 42.0247 29.6678 41.8618C33.03 41.699 36.014 40.932 38.4726 38.4733C40.9365 36.0094 41.6982 33.0306 41.8611 29.6684C42.0292 26.7737 41.9977 23.9 41.9977 21ZM20.9944 31.775C15.0317 31.775 10.2195 26.9628 10.2195 21C10.2195 15.0372 15.0317 10.225 20.9944 10.225C26.957 10.225 31.7692 15.0372 31.7692 21C31.7692 26.9628 26.957 31.775 20.9944 31.775ZM32.2105 12.3001C30.8183 12.3001 29.6941 11.1759 29.6941 9.78367C29.6941 8.39148 30.8183 7.26722 32.2105 7.26722C33.6026 7.26722 34.7269 8.39148 34.7269 9.78367C34.7273 10.1143 34.6625 10.4417 34.5362 10.7472C34.4099 11.0527 34.2245 11.3302 33.9908 11.564C33.757 11.7978 33.4794 11.9831 33.174 12.1094C32.8685 12.2357 32.541 12.3005 32.2105 12.3001Z" fill="black"/>
+                                </svg>    
+                            </a>
+                            <a href="https://ru-ru.facebook.com/groups/105282062940472/?mibextid=6NoCDW" title="facebook" target="_blank">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.48635 0C3.33924 0 0 3.33924 0 7.48634V33.5136C0 37.6607 3.33924 41 7.48635 41H21.5929V24.9715H17.3546V19.2008H21.5929V14.2706C21.5929 10.3971 24.0972 6.84059 29.866 6.84059C32.2016 6.84059 33.9288 7.06482 33.9288 7.06482L33.793 12.4538C33.793 12.4538 32.0315 12.4371 30.1094 12.4371C28.0291 12.4371 27.6955 13.3956 27.6955 14.9868V19.2008H33.9583L33.6854 24.9716H27.6955V41H33.5136C37.6608 41 41 37.6608 41 33.5137V7.48638C41 3.33928 37.6608 4.09999e-05 33.5136 4.09999e-05H7.48631L7.48635 0Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCtORu6mNAoGAcj0rwdspJFA" title="youtube" target="_blank">
+                                <svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 0C0.3784 0 0 2.32688 0 20.5C0 38.6731 0.3784 41 22 41C43.6216 41 44 38.6731 44 20.5C44 2.32688 43.6216 0 22 0ZM29.051 21.3892L19.173 26.9695C18.3084 27.454 17.6 26.9109 17.6 25.7555V15.2445C17.6 14.0918 18.3084 13.546 19.173 14.0305L29.051 19.6108C29.9156 20.1006 29.9156 20.8993 29.051 21.3892Z" fill="black"/>
+                                </svg>    
+                            </a>
+                            <a href="https://www.tiktok.com/@tatiana.tbdesign/video/7092773692039531781?lang=ru-RU" title="tiktok" target="_blank">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" rx="5" fill="black"/>
+                                    <path d="M21.0811 7.02278C22.5248 7 23.9602 7.0135 25.3939 7C25.4808 8.72219 26.088 10.4764 27.324 11.694C28.5575 12.942 30.3024 13.5133 32 13.7065V18.2368C30.4091 18.1837 28.8107 17.8461 27.367 17.1475C26.7383 16.8572 26.1525 16.4834 25.5792 16.1012C25.5718 19.3886 25.5925 22.6718 25.5585 25.9457C25.4725 27.5186 24.9637 29.0838 24.0669 30.3799C22.624 32.5375 20.1198 33.9441 17.5476 33.9879C15.97 34.0799 14.3939 33.6411 13.0495 32.8328C10.8216 31.4928 9.25382 29.0399 9.02548 26.4073C8.99672 25.8497 8.9923 25.2911 9.01225 24.7332C9.2108 22.5925 10.2491 20.5446 11.8607 19.1515C13.6874 17.5289 16.2463 16.756 18.6422 17.2133C18.6645 18.8798 18.5992 20.5446 18.5992 22.2111C17.5046 21.8499 16.2256 21.9512 15.2692 22.6288C14.5695 23.0989 14.0407 23.7906 13.7643 24.5973C13.536 25.1677 13.6014 25.8014 13.6146 26.4073C13.8769 28.2535 15.6175 29.8052 17.4757 29.6373C18.7075 29.6238 19.8881 28.8948 20.5301 27.8274C20.7378 27.4536 20.9702 27.0714 20.9827 26.6317C21.091 24.6193 21.048 22.6153 21.0613 20.6028C21.0704 16.0674 21.048 11.5447 21.0819 7.02363L21.0811 7.02278Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://invite.viber.com/?g2=AQBkti7%2BVLh%2BEkk6sz%2FL9xyc%2FXrY0bBjYRdwlTDifB%2BvYDtHDtVs0DA9dZnEK0jD&lang=ru" title="viber" target="_blank">
+                                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 8.5125C14.1844 8.5125 8.64375 14.0531 8.63437 20.8688C8.63437 23.2031 9.29063 25.4813 10.5281 27.4406L10.8188 27.9094L9.57187 32.4656L14.25 31.2375L14.7 31.5094C16.5938 32.6344 18.7687 33.2344 20.9906 33.2344H21C27.8062 33.2344 33.4969 27.6937 33.4969 20.8781C33.4969 17.5781 32.0719 14.475 29.7375 12.1406C27.3938 9.79688 24.3 8.5125 21 8.5125ZM28.2656 26.175C27.9562 27.0469 26.475 27.8344 25.7625 27.9375C24.5812 28.1156 23.6625 28.0219 21.3094 27.0094C17.5875 25.3969 15.15 21.6469 14.9625 21.4031C14.775 21.1594 13.4437 19.3875 13.4437 17.5594C13.4437 15.7313 14.4 14.8312 14.7469 14.4562C15.0844 14.0812 15.4875 13.9875 15.7406 13.9875C15.9844 13.9875 16.2375 13.9875 16.4531 13.9969C16.6781 14.0063 16.9875 13.9125 17.2875 14.6344C17.5969 15.375 18.3375 17.2031 18.4313 17.3906C18.525 17.5781 18.5906 17.7937 18.4594 18.0375C17.7469 19.4625 16.9875 19.4062 17.3719 20.0625C18.8062 22.5281 20.2406 23.3813 22.425 24.4781C22.8 24.6656 23.0156 24.6375 23.2313 24.3844C23.4469 24.1406 24.1594 23.2969 24.4031 22.9313C24.6469 22.5563 24.9 22.6219 25.2375 22.7438C25.575 22.8656 27.4031 23.7656 27.7781 23.9531C28.1531 24.1406 28.3969 24.2344 28.4906 24.3844C28.575 24.5625 28.575 25.3125 28.2656 26.175ZM37.5 0H4.5C2.01562 0 0 2.01562 0 4.5V37.5C0 39.9844 2.01562 42 4.5 42H37.5C39.9844 42 42 39.9844 42 37.5V4.5C42 2.01562 39.9844 0 37.5 0ZM20.9906 35.7375C18.4969 35.7375 16.05 35.1094 13.8844 33.9281L6 36L8.10938 28.2937C6.80625 26.0437 6.12188 23.4844 6.12188 20.8594C6.13125 12.6656 12.7969 6 20.9906 6C24.9656 6 28.6969 7.54688 31.5094 10.3594C34.3125 13.1719 36 16.9031 36 20.8781C36 29.0719 29.1844 35.7375 20.9906 35.7375Z" fill="black"/>
+                                </svg> 
+                            </a>                                                                                                                                                         
+                        </div>
+                        <div class="footer_social_network_834">
+                            <a href="https://t.me/s/interdizru" title="telegram" target="_blank">
+                                <svg width="17.19" height="17.19" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" rx="5" fill="black"/>
+                                    <path d="M34.9202 11.1844L30.6948 31.5513C30.3757 32.9885 29.5446 33.3463 28.3635 32.6696L21.9248 27.8203L18.8185 30.8746C18.4745 31.2263 18.1874 31.5196 17.5244 31.5196L17.9874 24.8182L29.9197 13.7981C30.4387 13.3258 29.8067 13.0631 29.1136 13.5364L14.362 23.0304L8.01134 20.9983C6.6302 20.5578 6.6052 19.5867 8.29938 18.909L33.139 9.12773C34.2891 8.68717 35.2952 9.38941 34.9202 11.1854V11.1844Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/explore/tags/interiordesign/" title="instagram" target="_blank">
+                                <svg width="17.91" height="17.91" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9944 13.997C17.1383 13.997 13.9915 17.1439 13.9915 21C13.9915 24.8561 17.1383 28.003 20.9944 28.003C24.8504 28.003 27.9972 24.8561 27.9972 21C27.9972 17.1439 24.8504 13.997 20.9944 13.997ZM41.9977 21C41.9977 18.1 42.0239 15.2263 41.8611 12.3316C41.6982 8.96937 40.9312 5.98536 38.4726 3.52669C36.0087 1.06278 33.03 0.301015 29.6678 0.138155C26.7679 -0.0247052 23.8943 0.00156264 20.9996 0.00156264C18.0997 0.00156264 15.2261 -0.0247052 12.3314 0.138155C8.9692 0.301015 5.98524 1.06803 3.52663 3.52669C1.06276 5.99061 0.301009 8.96937 0.138152 12.3316C-0.0247047 15.2316 0.00156261 18.1053 0.00156261 21C0.00156261 23.8947 -0.0247047 26.7737 0.138152 29.6684C0.301009 33.0306 1.06801 36.0146 3.52663 38.4733C5.9905 40.9372 8.9692 41.699 12.3314 41.8618C15.2313 42.0247 18.105 41.9984 20.9996 41.9984C23.8995 41.9984 26.7732 42.0247 29.6678 41.8618C33.03 41.699 36.014 40.932 38.4726 38.4733C40.9365 36.0094 41.6982 33.0306 41.8611 29.6684C42.0292 26.7737 41.9977 23.9 41.9977 21ZM20.9944 31.775C15.0317 31.775 10.2195 26.9628 10.2195 21C10.2195 15.0372 15.0317 10.225 20.9944 10.225C26.957 10.225 31.7692 15.0372 31.7692 21C31.7692 26.9628 26.957 31.775 20.9944 31.775ZM32.2105 12.3001C30.8183 12.3001 29.6941 11.1759 29.6941 9.78367C29.6941 8.39148 30.8183 7.26722 32.2105 7.26722C33.6026 7.26722 34.7269 8.39148 34.7269 9.78367C34.7273 10.1143 34.6625 10.4417 34.5362 10.7472C34.4099 11.0527 34.2245 11.3302 33.9908 11.564C33.757 11.7978 33.4794 11.9831 33.174 12.1094C32.8685 12.2357 32.541 12.3005 32.2105 12.3001Z" fill="black"/>
+                                </svg>    
+                            </a>
+                            <a href="https://ru-ru.facebook.com/groups/105282062940472/?mibextid=6NoCDW" title="facebook" target="_blank">
+                                <svg width="17.49" height="17.49" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.48635 0C3.33924 0 0 3.33924 0 7.48634V33.5136C0 37.6607 3.33924 41 7.48635 41H21.5929V24.9715H17.3546V19.2008H21.5929V14.2706C21.5929 10.3971 24.0972 6.84059 29.866 6.84059C32.2016 6.84059 33.9288 7.06482 33.9288 7.06482L33.793 12.4538C33.793 12.4538 32.0315 12.4371 30.1094 12.4371C28.0291 12.4371 27.6955 13.3956 27.6955 14.9868V19.2008H33.9583L33.6854 24.9716H27.6955V41H33.5136C37.6608 41 41 37.6608 41 33.5137V7.48638C41 3.33928 37.6608 4.09999e-05 33.5136 4.09999e-05H7.48631L7.48635 0Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCtORu6mNAoGAcj0rwdspJFA" title="youtube" target="_blank">
+                                <svg width="18.77" height="17.49" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 0C0.3784 0 0 2.32688 0 20.5C0 38.6731 0.3784 41 22 41C43.6216 41 44 38.6731 44 20.5C44 2.32688 43.6216 0 22 0ZM29.051 21.3892L19.173 26.9695C18.3084 27.454 17.6 26.9109 17.6 25.7555V15.2445C17.6 14.0918 18.3084 13.546 19.173 14.0305L29.051 19.6108C29.9156 20.1006 29.9156 20.8993 29.051 21.3892Z" fill="black"/>
+                                </svg>    
+                            </a>
+                            <a href="https://www.tiktok.com/@tatiana.tbdesign/video/7092773692039531781?lang=ru-RU" title="tiktok" target="_blank">
+                                <svg width="17.49" height="17.49" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" rx="5" fill="black"/>
+                                    <path d="M21.0811 7.02278C22.5248 7 23.9602 7.0135 25.3939 7C25.4808 8.72219 26.088 10.4764 27.324 11.694C28.5575 12.942 30.3024 13.5133 32 13.7065V18.2368C30.4091 18.1837 28.8107 17.8461 27.367 17.1475C26.7383 16.8572 26.1525 16.4834 25.5792 16.1012C25.5718 19.3886 25.5925 22.6718 25.5585 25.9457C25.4725 27.5186 24.9637 29.0838 24.0669 30.3799C22.624 32.5375 20.1198 33.9441 17.5476 33.9879C15.97 34.0799 14.3939 33.6411 13.0495 32.8328C10.8216 31.4928 9.25382 29.0399 9.02548 26.4073C8.99672 25.8497 8.9923 25.2911 9.01225 24.7332C9.2108 22.5925 10.2491 20.5446 11.8607 19.1515C13.6874 17.5289 16.2463 16.756 18.6422 17.2133C18.6645 18.8798 18.5992 20.5446 18.5992 22.2111C17.5046 21.8499 16.2256 21.9512 15.2692 22.6288C14.5695 23.0989 14.0407 23.7906 13.7643 24.5973C13.536 25.1677 13.6014 25.8014 13.6146 26.4073C13.8769 28.2535 15.6175 29.8052 17.4757 29.6373C18.7075 29.6238 19.8881 28.8948 20.5301 27.8274C20.7378 27.4536 20.9702 27.0714 20.9827 26.6317C21.091 24.6193 21.048 22.6153 21.0613 20.6028C21.0704 16.0674 21.048 11.5447 21.0819 7.02363L21.0811 7.02278Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://invite.viber.com/?g2=AQBkti7%2BVLh%2BEkk6sz%2FL9xyc%2FXrY0bBjYRdwlTDifB%2BvYDtHDtVs0DA9dZnEK0jD&lang=ru" title="viber" target="_blank">
+                                <svg width="17.91" height="17.91" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 8.5125C14.1844 8.5125 8.64375 14.0531 8.63437 20.8688C8.63437 23.2031 9.29063 25.4813 10.5281 27.4406L10.8188 27.9094L9.57187 32.4656L14.25 31.2375L14.7 31.5094C16.5938 32.6344 18.7687 33.2344 20.9906 33.2344H21C27.8062 33.2344 33.4969 27.6937 33.4969 20.8781C33.4969 17.5781 32.0719 14.475 29.7375 12.1406C27.3938 9.79688 24.3 8.5125 21 8.5125ZM28.2656 26.175C27.9562 27.0469 26.475 27.8344 25.7625 27.9375C24.5812 28.1156 23.6625 28.0219 21.3094 27.0094C17.5875 25.3969 15.15 21.6469 14.9625 21.4031C14.775 21.1594 13.4437 19.3875 13.4437 17.5594C13.4437 15.7313 14.4 14.8312 14.7469 14.4562C15.0844 14.0812 15.4875 13.9875 15.7406 13.9875C15.9844 13.9875 16.2375 13.9875 16.4531 13.9969C16.6781 14.0063 16.9875 13.9125 17.2875 14.6344C17.5969 15.375 18.3375 17.2031 18.4313 17.3906C18.525 17.5781 18.5906 17.7937 18.4594 18.0375C17.7469 19.4625 16.9875 19.4062 17.3719 20.0625C18.8062 22.5281 20.2406 23.3813 22.425 24.4781C22.8 24.6656 23.0156 24.6375 23.2313 24.3844C23.4469 24.1406 24.1594 23.2969 24.4031 22.9313C24.6469 22.5563 24.9 22.6219 25.2375 22.7438C25.575 22.8656 27.4031 23.7656 27.7781 23.9531C28.1531 24.1406 28.3969 24.2344 28.4906 24.3844C28.575 24.5625 28.575 25.3125 28.2656 26.175ZM37.5 0H4.5C2.01562 0 0 2.01562 0 4.5V37.5C0 39.9844 2.01562 42 4.5 42H37.5C39.9844 42 42 39.9844 42 37.5V4.5C42 2.01562 39.9844 0 37.5 0ZM20.9906 35.7375C18.4969 35.7375 16.05 35.1094 13.8844 33.9281L6 36L8.10938 28.2937C6.80625 26.0437 6.12188 23.4844 6.12188 20.8594C6.13125 12.6656 12.7969 6 20.9906 6C24.9656 6 28.6969 7.54688 31.5094 10.3594C34.3125 13.1719 36 16.9031 36 20.8781C36 29.0719 29.1844 35.7375 20.9906 35.7375Z" fill="black"/>
+                                </svg> 
+                            </a>                                                                                                                                                         
+                        </div>
+                    </div>
+                    <nav class="footer_nav">
+                        <div>
+                            <h6>Компания gid</h6>
+                            <ul>
+                                <li><a href="error404.html" title="footer_link">О нас</a></li>
+                                <li><a href="error404.html" title="footer_link">Наша команда</a></li>
+                                <li><a href="error404.html" title="footer_link">История</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Проекты</h6>
+                            <ul>
+                                <li><a href="project_one.html" title="footer_link">Квартиры</a></li>
+                                <li><a href="error404.html" title="footer_link">Коттеджы</a></li>
+                                <li><a href="error404.html" title="footer_link">Офисы</a></li>
+                                <li><a href="error404.html" title="footer_link">Рестораны</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Услуги</h6>
+                            <ul>
+                                <li><a href="project_one.html" title="footer_link">Квартиры</a></li>
+                                <li><a href="error404.html" title="footer_link">Коттеджы</a></li>
+                                <li><a href="error404.html" title="footer_link">Офисы</a></li>
+                                <li><a href="error404.html" title="footer_link">Рестораны</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Контакты</h6>
+                            <ul>
+                                <li><a href="tel:+74955551505"  title="footer_link">+(7495) 555-15-05</a></li>
+                                <li><a href="mailto:info@gid.pro"  title="footer_link">info@gid.pro</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div>
+                        <span>Gid.group 2021/ All rights reserved</span>
+                    </div>
+                </div> 
+            </div>   
+        </footer>
+        <script src="js/index.js"></script>
+    </body>
+</html>

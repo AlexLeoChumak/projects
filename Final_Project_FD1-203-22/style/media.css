@@ -1,0 +1,2370 @@
+@media all and (max-width: 1900px){
+    .blog .blog_go {
+        padding: 0 40px;
+    }
+}
+
+@media all and (max-width: 1852px){
+    [src$="h_line.png"] {
+        display: none;
+    }
+    [src$="v_line.png"]{
+        display: none;
+    }
+    .main_services_view p {
+        padding: 0 102px 36px 13px;
+    }
+    .footer .footer_content .footer_logo_social_network {
+        padding: 110px 0 95px 122px;
+    }
+}
+
+@media all and (max-width: 1816px){
+    .footer .footer_content > div:last-of-type {
+        align-self: flex-end;
+    }
+    .apartament_rizhskaya > div {
+        background: none;
+    }
+    .design_progress_more {
+        flex-wrap: wrap;
+        background: #F2F2F2;
+        margin: 35px 31px 0;
+        padding: 60px 0 50px 80px;
+    }
+    .design_progress_more > div {
+        flex: 0 1 50%;
+    }
+    .design_progress {
+        background: #FFFFFF;
+        padding: 0;
+    }
+    .design_progress_more > div h2 {
+        margin: 0 0 15px 0;
+    }
+    .design_progress_more > div:first-of-type,
+    .design_progress_more > div:nth-of-type(2) {
+        margin: 0 0 60px 0;
+    }
+    .design_progress_more > div .design_svg {
+        display: block;
+        margin: 0 0 34px 0;
+    }
+}
+
+@media all and (max-width: 1757px){
+    .our_projects_katalog .popup_button {
+        left: 20%;
+        top: 35%; 
+    }
+    .get_katalog_content > div:last-of-type h4 {
+        padding: 0 0px 41px 0;
+    }
+    .get_katalog_content > div:last-of-type p {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 35px;
+        color: #4F4F4F;
+        padding: 0 0px 73px 0;
+    }
+    .get_katalog_content > div:last-of-type form input[placeholder="Введите ваш E-mail"] {
+        padding: 26px 0 20px 30px;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 0 18px 0;
+    }
+    .get_katalog_content > div:last-of-type form input[value="Получить каталог"] {
+        width: 100%;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 23px 0;
+    }
+    .get_katalog_content {
+        display: grid;
+        grid-template: auto auto/ 1fr;
+        padding: 0 20px;
+    }
+    .get_katalog_content > div:last-of-type {
+        padding: 0;
+        order: 1;
+    }
+    .get_katalog_content > div:first-of-type {
+        padding: 0;
+        order: 2;
+    }
+    .get_katalog_content img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .get_katalog_content > div:last-of-type p {
+        padding: 0 0px 40px 0;
+    }
+    .get_katalog_content > div:last-of-type form label {
+        margin: 0 0 42px 0;
+    }
+    .get_katalog_content > div:last-of-type form input[value="Получить каталог"] {
+        margin: 0 0 50px 0;
+    }
+    .our_projects_projects{
+        background: none;
+        background: url(../images/our_projects/gray_repeat_background.png) 0% 92% repeat-x;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description {
+        padding: 30px 20px 46px;
+    }
+    .we_working_type {
+        grid-template: repeat(4, auto)/repeat(2, auto);
+        grid-gap: 55px 110px;
+        padding: 95px 95px 0;
+    }
+    .blog .blog_link {
+        grid-gap: 46px 70px;
+        padding: 55px 50px 52px;
+    }
+}
+
+@media all and (max-width: 1652px){
+    .six_stages_names div:first-of-type, .six_stages_names div:nth-of-type(2), .six_stages_names div:nth-of-type(3), .six_stages_names div:nth-of-type(4), .six_stages_names div:nth-of-type(5), .six_stages_names div:nth-of-type(6) {
+        border-bottom: none;
+        margin: 0 0 68px 0;
+    }
+    .six_stages_names .line_absolut {
+        display: none;
+    }
+    .six_stages_btn {
+        display: inline-block;
+        border: 1px solid #000000;
+        padding: 35px 109px;
+        margin: 43px 0 38px 67px;
+    }
+    .six_stages_position{
+        padding: 46px 0 81px 23px;
+    }
+    .six_stages_names p {
+        padding: 0 40px 0 0;
+    }
+    .projects_submit_application {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px 32px;
+        padding: 0 0 62px 0;
+        text-align: center;
+    }
+    .projects_submit_application p {
+        margin: 87px auto 63px;
+        max-width: 100%;
+    }
+    .contacts .contacts_data > div:nth-of-type(2) p {
+        padding: 0 40px 0 0;
+    }
+    .contacts .contacts_data > div:first-of-type {
+        flex: 0 1 30%;
+        padding: 0 30px 0 0;
+    }
+    .contacts .contacts_data > div:nth-of-type(2),
+    .contacts .contacts_data > div:last-of-type {
+        flex: 0 1 35%;
+    }
+    .contacts .contacts_data {
+        padding: 16px 54px 65px 40px;
+    }
+    .contacts .contacts_data > div:last-of-type a {
+        margin: 0 19px 0 0;
+    }
+    .contacts h2 {
+        padding: 29px 0 16px 40px;
+    }
+    .contacts .contacts_data > div:last-of-type a:last-of-type {
+        margin: 0;
+    }
+    .for_whom .for_whom_text {
+        padding: 40px 25px 24px;
+    }
+    .for_whom_article {
+        padding: 0 25px 6px;
+    }
+    .for_whom_article > div {
+        padding: 0 30px 0 0;
+    }
+    .design_submit_application{
+        margin: 40px 20px 32px;
+    }
+}
+
+@media all and (max-width: 1617px){
+    .our_projects_katalog .popup_button {
+        left: 18%;
+        top: 35%; 
+    }
+}
+
+@media all and (max-width: 1568px){
+    .achievements_conditions{
+        flex-wrap: wrap;
+        justify-content: start;
+        background: #F9F9F9;
+        margin: 26px 20px 66px;
+        padding: 1% 4% 0 5%;
+    }
+    .achievements_conditions > div {
+        flex: 1 1 100%;
+        max-width: 50%;
+        padding: 10px 35px 35px 20px;
+    }
+    .achievements_conditions > div:nth-child(3){
+        max-width: 50%;
+    }
+    .main_services_view p {
+        padding: 0 13px 68px;
+    }
+    .main_services_view {
+        padding: 151px 0 0 0;
+        flex: 0 1 50%;
+        max-width: 100%;
+    }
+    .main_services_all{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .main_services_view img {
+        max-width: 100%;
+    }
+    .title_position{
+        top: 70px;
+        left: 61px;
+        padding: 0;
+    }
+    .main_services_view:nth-of-type(3),
+    .main_services_view:last-of-type {
+        padding: 0;
+    }
+    .main_services_view span:first-of-type {
+        display: none;
+    }
+    .our_projects_katalog {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        padding: 0 20px;
+    }
+    .our_projects_katalog img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .our_projects_katalog .grey_border {
+        border-left: none;
+        border-right: none;
+    }
+    .our_projects_btn {
+        display: none;
+    }
+    .our_projects_btn_adaptiv{
+        display: inline-block;
+    }
+    .our_projects {
+        border-bottom: 1px solid #BDBDBD;
+        background: -webkit-gradient(linear, left top, right top, color-stop(39%, white), color-stop(39%, whitesmoke));
+        background: url(../images/our_projects/white_repeat_background.png) repeat-x,
+                    linear-gradient(90deg, white 39%, whitesmoke 39%);
+    }
+    .our_projects_katalog .popup_button {
+        left: 29.5%;
+        top: 37%; 
+    }
+    .our_projects_projects{
+        background: none;
+    }
+    .our_projects_more_projects_projects{
+        grid-column: 1/3;
+        grid-row: 17/18;
+    }
+    .projects_show_more .read-more-radio:checked + label + div + input + label {
+        margin: 0 0 20px 0;
+    }
+    .design_progress {
+        margin: 0 0 70px 0;
+    }
+    .projects_show_more_display_none{
+        display: block;
+    }
+    .projects_show_more_display_none label a{
+        color: #FFFFFF;
+    }
+    .you_get .you_get_items {
+        grid-template: repeat(2, auto) / repeat(2, auto);
+        padding: 46px 68px 70px;
+        margin: 46px 41px 32px;
+        grid-gap: 103px 30px;
+    }
+    .our_team_container {
+        grid-gap: 56px 150px;
+        padding: 78px 136px 57px;
+        text-align: center;
+    }
+    .our_team_container_hidden{
+        padding: 5px 136px 72px;
+    }
+}
+
+@media all and (max-width: 1440px){
+    .our_projects_katalog .popup_button {
+        left: 24%;
+        top: 36%; 
+    }
+    .we_are_where h2 {
+        padding: 0 0 50px 0;
+    }
+    .we_are_where .we_are_where_text {
+        left: 25%;
+    }
+    .footer .footer_content .footer_logo_social_network > .footer_social_network svg {
+        margin: 0 15px;
+    }
+    .footer .footer_content .footer_link_up [href="#go_up"] {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 7px 12px 7px 11px;
+    }
+    .footer .footer_content .footer_link_up [href="#go_up"] img {
+        width: 17px;
+        margin: 0 0 0 7px;
+    }
+}
+
+@media all and (max-width: 1344px){
+    .breadcrumbs ul {
+        padding: 0;
+        margin: 29px 0 37px 24px;
+    }
+    .design_progress_more > div .design_svg {
+        margin: 0 0 25px 0;
+    }
+}
+
+@media all and (max-width: 1272px){
+    .portfolio_carousel .carousel{
+        display: none;
+    }
+    .our_projects_katalog_display_none{
+        display: grid;
+    }
+}
+
+@media all and (max-width: 1260px){
+    .radio-folder + label:first-of-type {
+        margin-left: calc(52% - 240px);
+    }
+    .contacts_svg_big{
+        display: none;
+    }
+    .contacts_svg_small{
+        display: block;
+    }
+    .reviews_text a {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 15px 0;
+        width: 162px;
+    }
+    .reviews_text .reviews_contact span:first-of-type {
+        margin: 0 0 8px 0;
+    }
+    .reviews_text p {
+        margin: 5px 25px 20px 0;
+    }
+    .slideshow-container {
+        margin: 57px auto 0;
+    }
+    .you_get {
+        margin: 0 0 40px 0;
+    }
+    .dot {
+        height: 9px;
+        width: 9px;
+        margin: 0 6px;
+    }
+    .reviews_carousel_indicator {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .reviews svg[width="50"]{
+		display: none;
+	}
+    .reviews svg[width="22"]{
+		display: block;
+	}
+    .reviews_text .reviews_contact > div:last-of-type {
+        margin: 0 25px 0 15px;
+    }
+    .mySlides {
+        padding: 0 43px;
+    }
+    .reviews{
+        border-bottom: none;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .footer{
+        background: url(../images/footer/footer_background_1000.png) 0% 100% no-repeat;
+        margin: 0 auto;
+    }
+    .footer .footer_content .footer_logo_social_network {
+        padding: 110px 0 45px 122px;
+    }
+    .our_team_container .our_team_contact{
+        display: grid;
+        grid-template: repeat(2, auto) / auto;
+    }
+    .our_team_container .our_team_contact img{
+        width: 60%;
+    }
+    .our_team_container .our_team_contact > div:last-of-type {
+        margin: 0;
+    }
+    .footer .footer_content .footer_nav div {
+        margin: 0px 99px 0px 0px;
+    }
+}
+
+@media all and (max-width: 1179px){
+    .btn_big_color_padding {
+        padding: 15px 39px;
+    }
+    .btn_big{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .project_cost .project_cost_content > div:first-of-type {
+        padding: 0 6% 0 1.3%;
+    }
+    .project_cost{
+        background: url(../images/project_cost/thick_horizontal_line.svg) 0% 12% no-repeat;
+    }
+    .title_chapter {
+        padding: 0 0 0 60px;
+    }
+    .title_position{
+        top: 70px;
+        left: 61px;
+        padding: 0;
+    }
+    .our_projects_position{
+        padding: 49px 0 46px 61px;
+    }
+    .project_cost h5 {
+        padding: 4% 0 2% 10%;
+    }
+    .project_cost p:before {
+        content: url(../images/project_cost/black_square_min.svg);
+    }
+    .menu_body li:last-of-type {
+        padding: 50px 30px;
+    }
+    .menu_body{
+        background: #000000;
+    }
+    .main_services_view span:last-of-type {
+        width: 15px;
+        height: 15px;
+        margin: 23px 0 5px 0;
+    }
+    .main_services_view h3 {
+        padding: 0 0 7px 13px;
+    }
+    .main_services_view p {
+        padding: 0 70px 36px 14px;
+    }
+    .our_projects_katalog .popup_button {
+        left: 21%;
+        top: 34%; 
+    }
+    .six_stages_position{
+        padding: 46px 0 81px 61px;
+    }
+    .six_stages_names {
+        grid-template-columns: repeat(2, auto 1fr);
+        grid-template-rows: repeat(3, auto);
+        padding: 0 48px;
+    }
+    .six_stages_names div:nth-of-type(2) p,
+    .six_stages_names div:nth-of-type(6) p,
+    .six_stages_names div:nth-of-type(10) p {
+        padding: 0 30px 0 0;
+    }
+    .six_stages_names div:nth-of-type(4) p,
+    .six_stages_names div:nth-of-type(8) p,
+    .six_stages_names div:last-of-type p {
+        padding: 0 15px 0 0;
+    }
+    .six_stages_btn {
+        border: 1px solid #000000;
+        padding: 21px 50px 21px 74px;
+        margin: 43px 0 38px 48px;
+    }
+    .six_stages_btn img {
+        width: 45%;
+        padding: 0 0 0 35px;
+    }
+    .six_stages_btn a {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .get_katalog_position {
+        padding: 38px 0 61px 61px;
+    }
+    .contacts h2 {
+        padding: 0 0 16px 40px;
+    }
+    .contacts h2:last-of-type{
+        padding: 0 0 0 40px;
+    }
+    .contacts .contacts_form {
+        flex-direction: column;
+        padding: 29px 40px 63px 40px;
+    }
+    .contacts .contacts_form > div:first-of-type {
+        padding: 0;
+    }
+    .contacts .contacts_form span {
+        margin: 0 0 6px 0;
+    }
+    .contacts .contacts_form > div:first-of-type input {
+        margin: 0 0 23px 0;
+    }
+    .contacts .contacts_form input {
+        padding: 21px 0;
+        width: 70%;
+    }
+    .contacts .contacts_form textarea {
+        height: 211px;
+    }
+    .contacts .contacts_form .custom-checkbox + label {
+        margin: 0;
+    }
+    .contacts_map {
+        max-width: 100%;
+        height: 225px;
+        margin: 0 auto 36px;
+        overflow: hidden;
+    }
+    .contacts .contacts_form input[type="submit"] {
+        margin: 0 0 20px 0;
+    }
+    .design_progress_title{
+        display: none;
+    }
+}
+
+@media all and (max-width: 1084px){
+    .we_are_where h2 {
+        padding: 0 0 35px 0;
+    }
+    .we_are_where .we_are_where_text {
+        top: 16%;
+        left: 22%;
+    }
+}
+
+@media all and (max-width: 1059px){
+    .contacts .contacts_form input[type="submit"] {
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 1035px){
+    .our_projects_katalog .popup_button {
+        left: 18%;
+        top: 33%; 
+    }
+    
+    .we_working_type svg:first-of-type {
+        display: none;
+    }
+    .we_working_type svg:last-of-type {
+        display: inline-block;
+    }
+}
+
+@media all and (max-width: 999px){
+    .our_projects_katalog .popup_button {
+        z-index: -1;
+        display: none;
+    }
+    .our_projects_katalog > div:hover img {
+        -webkit-filter: none;
+        filter: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .our_projects_katalog {
+        padding: 0;
+    }
+    .text_over_image{
+        padding: 0 0 0 20px;
+    }
+    .instagram .instagram_foto {
+        grid-template: repeat(3, auto) / repeat(2, auto);
+        grid-gap: 21px;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .instagram svg:first-of-type {
+        display: none;
+    }
+    .instagram svg:nth-of-type(2) {
+        display: block;
+    }
+    .instagram svg {
+        margin: 0 0 80px 48px;
+    }
+    .instagram {
+        border-bottom: 1px solid #BDBDBD;
+        padding: 46px 0 38px 0;
+    }
+    .projects_link_btn div {
+        width: 170px;
+        height: 50px;
+        margin: 0 21px 0 0;
+    }
+    .projects_link_btn {
+        margin: 33px auto 37px;
+    }
+    .projects_link_btn div a {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .foto_3d_design h2 {
+        top: calc(50% - 28px);
+        left: calc(50% - 117.5px);
+        font-size: 48px;
+        line-height: 56px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto {
+        top: 87px;
+    }
+    .reviews {
+        margin: 0 auto 48px;
+    }
+    .blog .blog_link {
+        grid-template: repeat(4, 1fr) / 1fr;
+        grid-gap: 46px;
+    }
+    .our_team {
+        margin: 0 0 49px 0;
+    }
+    .blog .blog_link h4 {
+        margin: 12px 0 13px;
+    }
+    .blog .blog_link p {
+        margin: 0 0 30px;
+    }
+    .blog .blog_go{ 
+		justify-content: center;
+        margin: 0 0 35px 0;
+        padding: 0;
+    }
+    .blog .blog_go button {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 20px 34px;
+    }
+}
+
+@media all and (max-width: 960px){
+    .footer .footer_content .footer_logo_social_network .footer_social_network {
+        display: none;
+    }
+    .footer .footer_content .footer_logo_social_network .footer_social_network_834 {
+        display: block;
+    }
+    .you_get .you_get_items svg {
+        margin: 0 auto 27px;
+    }
+    .you_get .you_get_items svg:last-of-type {
+        display: block;
+    }
+    .you_get .you_get_items svg:first-of-type {
+        display: none;
+    }
+}
+
+@media (max-width: 1920px) and (min-width: 833px){
+    .achievements_conditions h2{
+        font-size: calc(48px + (64 - 48) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(56px + (75 - 56) * ((100vw - 833px) / (1920 - 833)));  
+    }
+    .achievements_conditions span:last-of-type{
+		font-size: calc(24px + (28 - 24) * ((100vw - 833px) / (1920 - 833)));
+		line-height: calc(28px + (33 - 28) * ((100vw - 833px) / (1920 - 833)));
+	}
+    .achievements_conditions p{
+		font-size: calc(14px + (18 - 14) * ((100vw - 833px) / (1920 - 833)));
+		line-height: calc(16px + (21 - 16) * ((100vw - 833px) / (1920 - 833)));
+	}
+    .title_chapter{
+		font-size: calc(24px + (48 - 24) * ((100vw - 833px) / (1920 - 833)));
+		line-height: calc(28px + (56 - 28) * ((100vw - 833px) / (1920 - 833)));
+	}
+    .subtitle_chapter{
+        font-size: calc(18px + (48 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (56 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .text_chapter{
+        font-size: calc(18px + (36 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(26px + (53 - 26) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .text_chapter_min{
+        font-size: calc(14px + (36 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (53 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .project_cost h5{
+        font-size: calc(18px + (36 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(26px + (53 - 26) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .main_services_view h3 {
+        font-size: calc(24px + (48 - 24) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(28px + (56 - 28) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .main_services_view p {
+        font-size: calc(14px + (18 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (26 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .our_projects_katalog_name{
+        font-size: calc(18px + (28 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (33 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .our_projects_katalog_style{
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (28 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .our_projects_katalog_size{
+        font-size: calc(14px + (18 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(16px + (21 - 16) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .six_stages_names p {
+        font-size: calc(18px + (28 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(27px + (41 - 27) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .six_stages_names div:nth-of-type(odd) {
+        font-size: calc(48px + (64 - 48) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(70px + (93 - 70) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .we_are_where h2 {
+        font-size: calc(36px + (48 - 36) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(53px + (70 - 53) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .we_are_where p {
+        font-size: calc(24px + (36 - 24) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(35px + (53 - 35) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .get_katalog_content > div:last-of-type h4 {
+        font-size: calc(24px + (36 - 24) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(35px + (53 - 35) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .get_katalog_content > div:last-of-type p {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(26px + (35 - 26) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .footer .footer_content .footer_nav h6 {
+        font-size: calc(14px + (24 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(20px + (35 - 20) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .footer .footer_content .footer_nav a {
+        font-size: calc(14px + (18 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(20px + (26 - 20) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .footer .footer_content > div:last-of-type span {
+        font-size: calc(12px + (14 - 12) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(18px + (20 - 18) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .projects_submit_application p {
+        font-size: calc(18px + (36 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(26px + (53 - 26) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_title {
+        font-size: calc(18px + (36 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (42 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:first-of-type {
+        font-size: calc(18px + (28 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (33 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:last-of-type {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (28 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_text {
+        font-size: calc(14px + (24 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (35 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .contacts h2 {
+        font-size: calc(24px + (48 - 24) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(28px + (56 - 28) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .contacts .contacts_data span {
+        font-size: calc(14px + (24 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(16px + (28 - 16) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .contacts .contacts_data a {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (28 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .contacts .contacts_data > div:nth-of-type(2) p {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(32px + (43 - 32) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .contacts .contacts_form span {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (28 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .design_progress_more > div h2 {
+        font-size: calc(36px + (48 - 36) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(42px + (56 - 42) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .design_progress_more > div p {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (28 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .for_whom .for_whom_text{
+		font-size: calc(18px + (48 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(26px + (70 - 26) * ((100vw - 833px) / (1920 - 833)));
+	}
+    .for_whom_article > div span:last-of-type {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(26px + (35 - 26) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .for_whom_article > div p {
+        font-size: calc(14px + (20 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (29 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .we_working_type span {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (28 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .we_working_type p {
+        font-size: calc(14px + (20 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(28px + (40 - 28) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .you_get .you_get_items span {
+        font-size: calc(18px + (28 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(27px + (41 - 27) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .reviews_text .reviews_contact h6 {
+        font-size: calc(18px + (28 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(27px + (41 - 27) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .reviews_text .reviews_contact span:first-of-type {
+        font-size: calc(14px + (18 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (27 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .reviews_text .reviews_contact span:last-of-type {
+        font-size: calc(12px + (28 - 12) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(18px + (41 - 18) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .reviews_text p {
+        font-size: calc(14px + (24 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(28px + (48 - 28) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .blog .blog_link h4 {
+        font-size: calc(18px + (24 - 18) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(27px + (35 - 27) * ((100vw - 833px) / (1920 - 833)));
+    }
+    .blog .blog_link p {
+        font-size: calc(14px + (24 - 14) * ((100vw - 833px) / (1920 - 833)));
+        line-height: calc(21px + (35 - 21) * ((100vw - 833px) / (1920 - 833)));
+    }
+}
+
+@media (max-width: 1920px) and (min-width: 375px){
+    .title{
+        font-size: calc(36px + (80 - 36) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(42px + (94 - 42) * ((100vw - 375px) / (1920 - 375)));
+    }
+    .six_stages_names h5 {
+        font-size: calc(18px + (32 - 18) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(21px + (38 - 21) * ((100vw - 375px) / (1920 - 375)));
+    } 
+}
+
+@media all and (max-width: 864px){
+    .footer{
+        background: url(../images/footer/footer_background_834.png) no-repeat left bottom;
+    }
+    .footer .footer_content .footer_nav {
+        padding: 0 0 46px 0;
+    }
+    .footer .footer_content .footer_nav div {
+        margin: 0 30px 0 0;
+    }
+    .footer .footer_content .footer_nav h6 {
+        padding: 0 0 12.5px 0;
+    }
+    .footer .footer_content .footer_nav li {
+        margin: 0 0 5.5px 0;
+    }
+    .footer .footer_content .footer_logo_social_network {
+        padding: 27px 0 10px 0px;
+    }
+    .footer .footer_content > div:last-of-type {
+        align-self: center;
+    }
+    .footer .footer_content .footer_link_up {
+        padding: 69px 0 0 0;
+    }
+}
+
+@media all and (max-width: 835px){
+    .first_screen .btn_min_left{
+		padding: 18px 99px 20px;
+        margin: 0 13.5px 14vh 0;
+	}
+	.first_screen .btn_min_right{
+		padding: 19px 47px;
+        margin: 0 0 14vh 13.5px;
+	}
+    .first_screen .btn{
+        font-size: 18px;
+        line-height: 21px;	
+    }
+    .container{
+        max-width: 835px;
+    }
+    .project_cost{
+        background: url(../images/project_cost/thick_horizontal_line.svg) 0% 12% no-repeat;
+    }
+    .project_cost .project_cost_content span {
+        padding: 9% 2% 19% 0;
+    }
+    .project_cost .project_cost_content {
+        padding: 7% 5% 0 8%;
+    }
+    [src$="v_line_834.svg"]{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 55.7%;
+    }
+    [src$="h_line_834.svg"]{
+        display: block;
+        position: absolute;
+        bottom: 17%;
+        left: 51%;
+    }
+    .menu_body li:last-of-type {
+        padding: 40px;
+        text-align: center;
+    }
+    .menu_body li:last-of-type a {
+        margin: 0 25px;
+    }
+    .popup {
+        width: 91%;
+        padding: 9% 17% 10%;
+    }
+    .our_projects_katalog img {
+        filter: brightness(.7);
+        height: 100%;
+    }
+    .text_over_image{
+        position: absolute;
+        top: 350px;
+        left: 61px;
+    }
+    .our_projects_katalog_name{
+        color: #fff;
+    }
+    .our_projects_katalog_style{
+        color: #fff;
+    }
+    .our_projects_katalog_size{
+        color: #fff;
+    }
+    .our_projects_position {
+        padding: 49px 0 31px 61px;
+    }
+    .our_projects_btn_adaptiv {
+        margin: 63px auto 40px;
+    }
+    .our_projects {
+        border-bottom: 22px solid #fff;
+        background: url(../images/our_projects/white_repeat_background.png) repeat-x,
+                    linear-gradient(90deg, white 30%, whitesmoke 30%);
+    }
+    .text_over_image{
+        padding: 0;
+    }
+    /* 2850556 */
+    .six_stages{
+        border-top: 1px solid #BDBDBD;
+    }
+    .we_are_where [src="images/we_are_where/we_are_where_background.jpg"]{
+        display: none;
+    }
+    .we_are_where [src="images/we_are_where/we_are_where_background_834.jpg"]{
+        display: block;
+    }
+    .we_are_where .we_are_where_text {
+        top: 14.5%;
+        left: 17%;
+    }
+    .we_are_where h2 {
+        padding: 0 0 73px 0;
+    }
+    .we_are_where p {
+        padding: 0 0 25px 0;
+    }
+    .we_are_where span {
+        width: 15px;
+        height: 15px;
+        margin: 0 11px 10px 0;
+    }
+    .get_katalog_content > div:last-of-type {
+        padding: 0 296px 0 41px;
+        order: 1;
+    }
+    .get_katalog_content > div:last-of-type h4 {
+        padding: 0 20px 21px 20px;
+    }
+    .get_katalog_content > div:last-of-type p {
+        padding: 0 15px 35px 15px;
+    }
+    .get_katalog_content > div:last-of-type form label {
+        margin: 0 0 51px 0;
+    }
+    .get_katalog_content [src="images/get_katalog/get_katalog_foto_834.jpg"]{
+		display: block;
+	}
+    .get_katalog_content [src="images/get_katalog/get_katalog_foto.jpg"]{
+		display: none;
+	}
+    .footer .footer_content .footer_logo_social_network .footer_social_network_834 {
+        align-self: flex-end;
+    }
+    .footer .footer_content .footer_logo_social_network {
+        padding: 27px 29px 17px 0px;
+    }
+    .footer .footer_content {
+        padding: 0 25px 5px 25px;
+    }
+    .our_projects_projects{
+        background: none;
+    }
+    .projects_show_more .read-more-radio + label {
+        margin: 48px 0 54px;
+        padding: 19px 45px;
+    }
+    .projects_submit_application > div a {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 21px 107px;
+    }
+    .projects_show_more .read-more-radio + label {
+        margin: 48px 0 0 0;
+        padding: 19px 45px;
+    }
+    .our_projects_projects{
+        background: url(../images/our_projects/gray_repeat_background.png) 0% 92.7% repeat-x,
+                    url(../images/our_projects/gray_repeat_background.png) 0% 100% repeat-x;
+    }
+    .projects_show_more .read-more-radio:checked + label + div + input + label {
+        margin: 40px 0 20px 0;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto h3 {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 21px 96px 16px 25px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto > span:first-of-type {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 17px 25px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto > span:last-of-type {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 0 17px 25px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto p {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 27px 25px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_three_photos {
+        grid-gap: 8px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description {
+        padding: 46px 20px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_four_photos {
+        margin: 0;
+        grid-gap: 8px 10px;
+    }
+    .breadcrumbs ul {
+        margin: 29px 0 0 24px;
+    }
+    .contacts .contacts_data {
+        padding: 0 54px 36px 40px;
+    }
+    .contacts .contacts_data > div:first-of-type a:first-of-type {
+        margin: 0 0 29px 0;
+    }
+    .contacts .contacts_data > div:first-of-type a:last-of-type {
+        margin: 0;
+    }
+    .contacts .contacts_data > div:last-of-type span {
+        margin: 0 0 17px 0;
+    }
+    .contacts_wrapper{
+        background: url(../images/contacts/grey_line.svg) no-repeat 0% 18%,
+                    url(../images/contacts/grey_line.svg) no-repeat 0% 66%;
+    }
+    .contacts h2:first-of-type {
+        padding: 30px 0 16px 40px;
+    }
+    .design_progress_more > div .design_svg svg[width="73"]{
+        display: none;
+    }
+    .design_progress_more > div .design_svg svg[width="56"]{
+        display: block;
+        margin: 0 auto;
+    }
+    .design_progress {
+        margin: 0 0 50px 0;
+    }
+    .black_square {
+        width: 15px;
+        height: 15px;
+    }
+    .for_whom_article > div span:last-of-type {
+        margin: 6px 0 12px 0;
+    }
+    .we_working_type > div:last-of-type {
+        margin: 0 0 48px 0;
+    }
+}
+
+@media all and (max-width: 833px){
+    .menu_list a{
+        font-size: calc(24px + (48 - 24) * ((100vw - 375px) / (833 - 375)));
+        line-height: calc(28px + (56 - 28) * ((100vw - 375px) / (833 - 375)));
+    }
+    .achievements_conditions h2{
+        font-size: 48px;
+        line-height: 56px;  
+    }
+    .achievements_conditions span:last-of-type{
+		font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(21px + (28 - 21) * ((100vw - 375px) / (833 - 375)));
+	}
+    .achievements_conditions p{
+        font-size: 14px;
+        line-height: 16px;  
+    }
+    .title_chapter{
+		font-size: 24px;
+		line-height: 28px;
+	}
+    .subtitle_chapter{
+        font-size: 18px;
+        line-height: 21px;
+	}
+    .text_chapter{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .text_chapter_min{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .project_cost h5{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .main_services_view h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .main_services_view p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .our_projects_katalog_name{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .our_projects_katalog_style{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .six_stages_names h5 {
+        font-weight: 500;
+    }
+    .six_stages_names p {
+        font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(21px + (27 - 21) * ((100vw - 375px) / (833 - 375)));
+    }
+    .six_stages_names div:nth-of-type(odd) {
+        font-size: 48px;
+        line-height: 70px;
+    }
+    .we_are_where h2 {
+        font-size: calc(18px + (36 - 18) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(26px + (53 - 26) * ((100vw - 375px) / (833 - 375)));
+    }
+    .we_are_where p {
+        font-size: calc(14px + (24 - 14) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(21px + (35 - 21) * ((100vw - 375px) / (833 - 375)));
+    }
+    .get_katalog_content > div:last-of-type h4 {
+        font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(26px + (35 - 26) * ((100vw - 375px) / (833 - 375)));
+    }
+    .get_katalog_content > div:last-of-type p {
+        font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(20px + (26 - 20) * ((100vw - 375px) / (833 - 375)));
+    }
+    .footer .footer_content .footer_nav h6 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .footer .footer_content .footer_nav a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .footer .footer_content > div:last-of-type span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer .footer_content .footer_logo_social_network {
+        padding: 27px 0px 17px 23px;
+    }
+    .footer .footer_content .footer_logo_social_network .footer_social_network_834 svg {
+        margin: 0 5px;
+    }
+    .footer .footer_content > div:last-of-type {
+        align-self: flex-end;
+    }
+    .projects_submit_application p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .projects_show_more {
+        margin: 0 0 50px 0;
+    }
+    .our_projects_projects {
+        border: none;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:first-of-type {
+        font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(16px + (21 - 16) * ((100vw - 375px) / (833 - 375)));
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:last-of-type {
+        font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(16px + (21 - 16) * ((100vw - 375px) / (833 - 375)));
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .contacts h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .contacts .contacts_data span {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .contacts .contacts_data a {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .contacts .contacts_data > div:nth-of-type(2) p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .contacts .contacts_form span {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .contacts .contacts_data {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacts .contacts_data > div {
+        flex: 0 1 100%;
+        text-align: center;
+    }
+    .contacts h2 {
+        padding: 0;
+        text-align: center;
+    }
+    .contacts{
+        padding: 0 20px 50px;
+    }
+    .contacts h2:first-of-type {
+        padding: 0 0 20px 0;
+    }
+    .contacts .contacts_data > div:first-of-type {
+        padding: 0;
+    }
+    .contacts .contacts_data > div:nth-of-type(2) p {
+        margin: 0 0 65px 0;
+        padding: 0;
+    }
+    .contacts h2:last-of-type {
+        padding: 60px 0 45px 0;
+    }
+    .contacts .contacts_form {
+        padding: 0;
+        text-align: center;
+    }
+    .contacts .contacts_form > div {
+        flex: 0 1 100%;
+    }
+    .contacts .contacts_form input {
+        width: 95%;
+    }
+    .contacts .contacts_data > div:first-of-type a:last-of-type {
+        margin: 0 0 40px 0;
+    }
+    .contacts_wrapper{
+        background: none;
+    }
+    .design_progress_more > div h2 {
+        font-size: calc(24px + (36 - 24) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(28px + (42 - 28) * ((100vw - 375px) / (833 - 375)));
+    }
+    .design_progress_more > div h2 span {
+        font-size: calc(18px + (28 - 18) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(21px + (33 - 21) * ((100vw - 375px) / (833 - 375)));
+    }
+    .design_progress_more > div p {
+        font-size: calc(14px + (18 - 14) * ((100vw - 375px) / (833 - 375)));
+		line-height: calc(16px + (21 - 16) * ((100vw - 375px) / (833 - 375)));
+    }
+    .for_whom .for_whom_text{
+		font-size: 18px;
+        line-height: 26px;
+	}
+    .for_whom_article > div span:last-of-type {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .for_whom_article > div p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .we_working_type span {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .we_working_type p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .we_working_type {
+        grid-template: repeat(7, auto) / auto;
+        grid-gap: 60px;
+        padding: 67px 47px 0;
+        text-align: center;
+    }
+    .we_working_type span {
+        text-align: left;
+    }
+    .we_working_type svg {
+        margin: 0 22px 15px 0;
+    }
+    .you_get .you_get_items span {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .reviews_text .reviews_contact h6 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .reviews_text .reviews_contact span:first-of-type {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .reviews_text .reviews_contact span:last-of-type {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .reviews_text p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .our_team_container {
+        padding: 78px 136px 0;
+    }
+    .our_team .our_team_btn + label{
+        font-size: 14px;
+        line-height: 16px;
+        padding: 12px 21px 12px 14px;
+    }
+    .our_team .our_team_btn + label svg{
+        display: none;
+    }
+    .our_team .our_team_btn:checked + label + div + input + label{
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px 21px;
+    }
+    .blog .blog_link h4 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .blog .blog_link p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+@media all and (max-width: 806px){
+    .text_over_image {
+        position: absolute;
+        top: 50px;
+        left: 61px;
+    }
+    .get_katalog_position {
+        padding: 53px 0 45px 0;
+        text-align: center;
+    }
+    .get_katalog_content > div:last-of-type {
+        padding: 0;
+        text-align: center;
+    }
+    .get_katalog_content {
+        padding: 0 10px;
+    }
+    .get_katalog_content > div:last-of-type form label {
+        margin: 0 0 47px 0;
+    }
+    .our_projects_projects{
+        background: none;
+    }
+}
+
+@media all and (max-width: 774px){
+    .projects_link_btn {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .projects_link_btn div {
+        flex: 0 1 46%;
+        width: 100%;
+        height: 100%;
+        padding: 16px 43px;
+    }
+    .projects_link_btn div {
+        margin: 0;
+    }
+    .projects_link_btn div:first-of-type,
+    .projects_link_btn div:nth-last-of-type(2) {
+        margin: 0 0 15px 0;
+    }  
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto {
+        top: 100px;
+    }
+    .reviews_all {
+        grid-template: repeat(2, 1fr)/1fr;
+    }
+    .reviews_photo{
+        order: 1;
+        margin: 0 0 25px 0;
+    }
+    .reviews_text{
+        order: 2;
+    }
+    .prev1, .next1 {
+        display: none;
+    }
+    .reviews_text .reviews_contact {
+        grid-template: repeat(2, auto) / auto;
+    }
+    .mySlides {
+        padding: 0;
+    }
+    .reviews_text .reviews_contact h6 {
+        margin: 10px 0 10px;
+    }
+    .reviews_text .reviews_contact span:last-of-type {
+        margin: 6px 0 23px;
+    }
+    .reviews_text p {
+        margin: 0 23px 23px;
+    }
+    .reviews_text {
+        text-align: center;
+    }
+    .slideshow-container {
+        margin: 28px auto 0;
+    }
+    .you_get {
+        margin: 0 0 33px 0;
+    }
+    .our_team_container {
+        grid-template: repeat(4, 1fr) / 1fr;
+        grid-gap: 37px;
+        padding: 78px 20px 0;
+        text-align: center;
+    }
+    .our_team_show_more{
+        margin: 0 0 17px 0;
+    }
+    .our_team .our_team_btn + label{
+        margin: 0;
+    }
+    .reviews_text a {
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 738px){
+    [src$="v_line_834.svg"]{
+        display: none;
+    }
+    [src$="h_line_834.svg"]{
+        display: none;
+    }
+    .text_over_image {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+}
+
+@media all and (max-width: 700px){
+    .footer .footer_content .footer_link_up {
+        display: none;
+    }
+    .footer .footer_content {
+        padding: 208px 25px 5px 25px;
+    }
+    .footer .footer_content .footer_logo_social_network .footer_social_network_834 {
+        display: none;
+    }
+    .footer .footer_content .footer_nav div {
+        display: none;
+    }
+    .footer .footer_content .footer_nav div:last-of-type {
+        display: block;
+        flex: 0 1 200px;
+        text-align: center;
+    }
+    .reviews_all {
+        grid-template: repeat(2, auto)/1fr;
+    }
+    .reviews_carousel_indicator {
+        text-align: center;
+        margin: 35px auto 0;
+    }
+}
+
+@media all and (max-width: 644px){
+    .container{
+        max-width: 100%;
+    }
+    .header {
+        background: url(../images/header/header_background_mobile.jpg) no-repeat 65% 0%;
+    }
+    .home_page_first_screen{
+        background: url(../images/main_page/main_page_background.jpg) no-repeat 65% 0%, linear-gradient(164.31deg, rgba(0, 0, 0, 0.4) -9.9%, rgba(0, 0, 0, 0.288) 113.34%);
+    }
+    .menu_icon {
+        margin: 0 0 0 5%;
+    }
+    .telephone{
+        margin: 0 5% 0 0;
+        cursor: pointer;
+    }
+    .title_first_screen {
+        max-width: 277px;
+        margin: 0 auto;
+        padding: 25vh 0 12vh 0;
+    }
+    .first_screen .btn {
+        display: block;
+        width: 65%;
+    }
+    .first_screen .btn_min_left {
+        padding: 18px 50px 20px;
+        margin: 0 auto 26px;
+    }
+    .first_screen .btn_min_right {
+        padding: 19px 30px;
+        margin: 0 auto 30px;
+    }
+    .achievements_conditions > div {
+        text-align: center;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .achievements_conditions > div:nth-child(3) {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .achievements_conditions .black_square {
+        order: 4;
+        align-self: center;
+        width: 10px;
+        height: 10px;
+    }
+    .achievements_conditions p {
+        margin: 10px 0 20px 0;
+    }
+    .achievements_conditions {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 12px 10px 35px;
+        padding: 1% 4% 0 5%;
+    }
+    .title_chapter {
+        padding: 0;
+        text-align: center;
+    }
+    .project_cost_content{
+		position: relative;
+		display: flex;
+        flex-wrap: wrap;
+		padding: 4% 5% 0 8%;
+    }
+    .project_cost .project_cost_content > div:first-of-type {
+        padding: 30px 20px 20px;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .project_cost .project_cost_content {
+        padding: 0;
+    }
+    .btn_big_color_padding {
+        display: none;
+    }
+    .btn_replacement{
+        display: block;
+        margin: 30px auto;
+        width: 65%;
+    }
+    .project_cost .project_cost_content span {
+        padding: 25px 0 20px 0;
+    }
+    .project_cost h5 {
+        padding: 6% 70px 3%;
+    }
+    .project_cost p {
+        padding: 0 70px 5%;
+    }
+    .project_cost .project_cost_content .black_figures img {
+        width: 75%;
+        max-width: 607px;
+        height: 100%;
+    }
+    .project_cost {
+        background: url(../images/project_cost/thick_horizontal_line.svg) 0% 6% no-repeat;
+    }
+    .menu_body li {
+        padding: 22px 50px;
+    }
+    .popup {
+        width: 100%;
+        min-width: 100%;
+        padding: 73px 19px 100px;
+        top: 80%;
+    }
+    .popup input {
+        width: 100%;
+        height: 57px;
+    }
+    .close-popup {
+        top: 27px;
+        right: 30px;
+        width: 30px;
+    }
+    .popup button {
+        height: 81px;
+    }
+    .popup span {
+        padding: 0 0 73px 0;
+    }
+    .main_services_all{
+        display: flex;
+        padding: 0;
+        position: static;
+    }
+    .main_services_view {
+        padding: 0;
+        flex: 0 1 100%;
+        text-align: center;
+    }
+    .main_services_view p {
+        padding: 0 40px 16px;
+    }
+    .main_services_view h3 {
+        padding: 0 0 18px 0;
+    }
+    .main_services {
+        border-top: none;
+        border-bottom: none;
+    }
+    .main_services_view span:last-of-type {
+        width: 10px;
+        height: 10px;
+        margin: 0 auto 60px;
+        order: 4;
+    }
+    .main_services_view img {
+        order: 1;
+    }
+    .main_services_view h3 {
+        order: 2;
+        padding: 17px 0 10px 0;
+    }
+    .main_services_view p {
+        order: 3;
+    }
+    .title_position {
+        position: static;
+        padding: 109px 0 72px 0;
+    }
+    .our_projects {
+        border-bottom: none;
+        background: none;
+    }
+    .our_projects_katalog{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        margin: 42px auto 0;
+    }
+    .six_stages_names {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        padding: 0 20px;
+        text-align: center;
+    }
+    .six_stages_names div:nth-of-type(odd) {
+        display: none;
+    }
+    .six_stages_names .hidden_mobile{
+		display: inline;
+	}
+    .six_stages_names svg {
+        display: inline-block;
+        width: 100%;
+    }
+    .six_stages {
+        border-top: none;
+        border-bottom: none;
+        text-align: center;
+    }
+    .our_projects_btn_adaptiv {
+        margin: 30px auto 78px;
+    }
+    .six_stages_position {
+        padding: 0 10px 67px 20px;
+    }
+    .six_stages_names h5 {
+        margin: 11px auto 8px;
+        padding: 7px 30px 7px 10px;
+    }
+    .six_stages_names div:nth-of-type(2) p, 
+    .six_stages_names div:nth-of-type(6) p, 
+    .six_stages_names div:nth-of-type(10) p {
+        padding: 0;
+    }
+    .six_stages_names a {
+        padding: 5px 0 30px 0;
+    }
+    .six_stages_names div:first-of-type, 
+    .six_stages_names div:nth-of-type(2), 
+    .six_stages_names div:nth-of-type(3), 
+    .six_stages_names div:nth-of-type(4), 
+    .six_stages_names div:nth-of-type(5), 
+    .six_stages_names div:nth-of-type(6) {
+        margin: 0;
+    }
+    .six_stages_names div:nth-of-type(4) p, 
+    .six_stages_names div:nth-of-type(8) p, 
+    .six_stages_names div:last-of-type p {
+        padding: 0;
+    }
+    .six_stages_btn {
+        padding: 17px 57px 17px 57px;
+        margin: 39px auto 22px;
+        max-width: 276px;
+    }
+    .six_stages_btn img {
+        width: 45%;
+        padding: 0 0 0 14px;
+    }
+    .instagram svg:nth-of-type(2) {
+        display: none;
+    }
+    .instagram svg:last-of-type {
+        display: block;
+    }
+    .instagram {
+        border-bottom: none;
+        padding: 0 0 53px 0;
+    }
+    .instagram svg {
+        margin: 0 auto 17px;  
+    }
+    .instagram .instagram_foto {
+        grid-gap: 10px;
+        padding: 0 12px;
+    }
+    .get_katalog_position {
+        padding: 0 20px 45px;
+    }
+    .our_projects_more_projects_projects{
+        grid-column: 1/2;
+        grid-row: 19/20;
+    }
+    .our_projects_katalog {
+        margin: 0;
+    }
+    .our_projects_position {
+        padding: 0 0 31px 0;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description {
+        flex-direction: column;
+        text-align: center;
+        padding: 11px 30px 26px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description div {
+        flex: 0 1 100%;
+        padding: 0;
+        order: 1;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_text {
+        flex: 0 1 100%;
+        order: 2;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_three_photos {
+        grid-template: repeat(3, auto) / auto;
+        grid-gap: 6px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_three_photos img:last-of-type {
+        grid-column: 1;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_four_photos {
+        margin: 0;
+        grid-gap: 6px;
+        grid-template: repeat(4, auto) / auto;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_four_photos img:last-of-type {
+        grid-column: 1;
+    }
+    .breadcrumbs ul {
+        display: none;
+    }
+    .radio-folder + label:first-of-type {
+        margin: 23px 10px 0 0;
+        margin-left: calc(50% - 175px);
+        padding: 16px 42px;
+        width: 170px;
+    }
+    .radio-folder + label {
+        padding: 16px 42px;
+        width: 170px;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 23px 0 0 0;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto {
+        top: 100px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:first-of-type {
+        margin: 4px 0 11px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_text {
+        margin: 26px 0 0 0;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_three_photos img {
+        margin: 0;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_four_photos img {
+        margin: 0;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_title_width {
+        max-width: 100%;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto h3 {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 10px 45px 4px 18px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto > span:first-of-type {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 0 5px 18px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto > span:last-of-type {
+        font-size: 10px;
+        line-height: 12px;
+        margin: 0 0 8px 18px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto p {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 0 12px 18px;
+    }
+    .radio-folder:checked + label + div {
+        top: 90px;
+    }
+    .radio-folder:checked + label {
+        width: 170px;
+    }
+    .contacts h2:first-of-type {
+        padding: 60px 0 20px 0;
+    }
+    .contacts h2:last-of-type {
+        padding: 74px 0 45px 0;
+    }
+    .design_progress_more {
+        margin: 30px 23px 0;
+        padding: 40px 0 0;
+        text-align: center;
+    }
+    .design_progress_more > div {
+        flex: 0 1 100%;
+        padding: 0;
+    }
+    .design_progress_more > div p {
+        display: block;
+        margin: 15px 0 50px;
+    }
+    .design_progress_more > div:first-of-type, .design_progress_more > div:nth-of-type(2) {
+        margin: 0;
+    }
+    .design_progress {
+        margin: 0 0 30px 0;
+    }
+    .our_projects_katalog_display_none{
+        margin: 59px 0 0;
+    }
+    .portfolio_carousel{
+        border-bottom: 1px solid #BDBDBD;
+        background: none;
+        margin: 0 0 45px 0;
+    }
+    .for_whom .for_whom_text {
+        padding: 40px 25px 45px;
+        text-align: center;
+    }
+    .for_whom_article {
+        padding: 0 25px 8px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .for_whom_article > div {
+        padding: 0 0 55px 0;
+        flex: 0 1 100%;
+    }
+    .for_whom_article > div span:first-of-type {
+        margin: 0 auto;
+    }
+    .for_whom_article > div span:last-of-type {
+        margin: 6px 0 20px 0;
+    }
+    .for_whom_article > div:last-of-type {
+        padding: 0;
+    }
+    .you_get .you_get_items {
+        grid-template: repeat(4, auto) / auto;
+        padding: 46px 58px 39px;
+        margin: 46px 33px 25px;
+        grid-gap: 66px;
+    }
+    .we_working{
+        border-bottom: none;
+        margin: 0;
+    }
+    .our_team {
+        margin: 0 0 38px 0;
+    }
+    .blog .blog_link {
+        grid-gap: 69px;
+        padding: 54px 31px 41px;
+        text-align: center;
+    }
+    .blog .blog_go {
+        margin: 0 0 29px 0;
+    }
+    .blog{
+        margin: 0 0 46px 0;
+    }
+}
+
+@media all and (max-width: 572px){
+    .we_are_where h2 {
+        padding: 0 0 37px 0;
+    }
+    .we_are_where .we_are_where_text {
+        left: 10%;
+    }
+}
+
+@media all and (max-width: 514px){
+    .footer{
+        background: url(../images/footer/footer_background_375.png) left bottom no-repeat;
+    }
+    .footer .footer_content {
+        padding: 138px 25px 5px 25px;
+    }
+    .footer .footer_content .footer_nav {
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 475px){
+    .we_are_where h2 {
+        padding: 0 0 20px 0;
+    }
+    .we_are_where p {
+        padding: 0 0 5px 0;
+    }
+    .we_are_where span {
+        display: none;
+    }
+    .we_are_where .we_are_where_white_square{
+		display: block;
+        margin: 0 auto 15px;
+	}
+    .we_are_where {
+        margin: 0;
+    }
+    .we_are_where .we_are_where_text {
+        left: 13%;
+        text-align: center;
+    }
+    .get_katalog_content [src="images/get_katalog/get_katalog_foto_834.jpg"]{
+		display: none;
+	}
+    .get_katalog_content > div:last-of-type form input[value="Получить каталог"] {
+        margin: 0;
+    }
+    .we_are_where .we_are_where_text {
+        left: 11%;
+    }
+    .get_katalog_content > div:last-of-type form label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .get_katalog_content >div:last-of-type form input::placeholder{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .projects_link_btn div {
+        padding: 16px 33px;
+    }
+    .projects_submit_application > div a {
+        padding: 21px 67px;
+    }
+    .projects_submit_application {
+        padding: 0 0 57px 0;
+    }
+    .contacts .contacts_btn_375{
+        display: block;
+        margin: 65px auto;
+        text-align: center;
+    }
+    .contacts_wrapper .contacts .contacts_without_btn{
+        display: none;
+    }
+    .contacts .contacts_form .custom-checkbox + label {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+    }
+    .contacts .contacts_form input::placeholder {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .contacts .contacts_form textarea{
+        text-align: center;
+        padding: 20px 0 0;
+        height: 419px;
+        width: 95%;
+    }
+    .reviews_text .reviews_contact img {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 406px){
+    .footer .footer_content .footer_logo_social_network {
+        padding: 0 0 17px 12px;
+    }
+    .footer .footer_content {
+        padding: 220px 21px 25px 10px;
+    }
+    .footer .footer_content > div:last-of-type span {
+        color: #BDBDBD;
+    }
+    .footer .footer_content > div:last-of-type {
+        align-self: flex-start;
+    }
+    .footer .footer_content .footer_nav li:last-of-type {
+        margin: 0 0 27px 0;
+    }
+    .footer .footer_content .footer_nav h6 {
+        padding: 0 0 3px 0;
+    }
+    .projects_submit_application p {
+        margin: 42px 20px 57px; 
+        max-width: 100%;
+    }
+    .foto_3d_design h2 {
+        top: calc(50% - 14px);
+        left: calc(50% - 59px);
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media all and (max-width: 385px){
+    [src$="v_line_834.svg"]{
+        display: block;
+        bottom: 130px;
+        left: 34px;
+        height: 141px;
+    }
+    [src$="h_line_834.svg"]{
+        display: block;
+        bottom: 186px;
+        left: 0;
+    }
+    .text_over_image{
+        position: absolute;
+        top: 300px;
+        left: 24px;  
+    }
+    .we_are_where [src="images/we_are_where/we_are_where_background_834.jpg"]{
+		display: none;
+	}
+	.we_are_where [src="images/we_are_where/we_are_where_background_375.jpg"]{
+		display: block;
+	}
+    .we_are_where .we_are_where_text {
+        top: 25%;
+        left: 8%;
+    }
+    .we_are_where h2 {
+        padding: 0 0 14px 0;
+    }
+    .we_are_where p {
+        padding: 0 0 2px 0;
+    }
+    .get_katalog_content >div:last-of-type form input::placeholder{
+        padding: 20px 102px 20px 60px;
+    }
+    .get_katalog_content > div:last-of-type form input[value="Получить каталог"] {
+        width: 80%;
+        padding: 20px 0;
+    }
+    .projects_link_btn div:first-of-type, .projects_link_btn div:nth-last-of-type(2) {
+        margin: 0 0 9px 0;
+    }
+    .projects_show_more .read-more-radio + label {
+        margin: 40px 0 0 0;
+    }
+    .our_projects_projects{
+        background: url(../images/our_projects/gray_repeat_background.png) 0% 96.4% repeat-x;
+    }
+    .projects_show_more {
+        margin: 0 0 60px 0;
+    }
+    .projects_submit_application {
+        margin: 0 20px;
+    }
+    .footer .footer_content {
+        padding: 170px 21px 25px 10px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_three_photos img:last-of-type {
+        object-fit: cover;
+        max-width: 375px;
+        height: 250px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_four_photos img {
+        object-fit: cover;
+        max-width: 375px;
+        max-height: 387px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_four_photos img:last-of-type {
+        object-fit: cover;
+        max-width: 375px;
+        height: 469px;
+    }
+    .contacts h2:last-of-type {
+        padding: 56px 0 22px 0;
+    }
+    .contacts .contacts_data > div:last-of-type a {
+        margin: 0 13px 0 0;
+    }
+    .contacts .contacts_data > div:nth-of-type(2) p {
+        padding: 0 60px;
+    }
+    .contacts {
+        padding: 0 20px;
+    }
+    .design_progress_more > div .design_svg svg[width="56"]{
+        display: none;
+    }
+    .design_progress_more > div .design_svg svg[width="45"]{
+        display: block;
+        margin: 0 auto;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_over_foto {
+        top: 94px;
+    }
+    .our_team_show_more{
+        margin: 0 0 17px 0;
+    }
+    .design_submit_application{
+        margin: 59px 10px 0;
+    }
+}
+
+@media all and (max-width: 374px){
+    .achievements_conditions span:last-of-type{
+		font-size: 18px;
+        line-height: 21px;
+	}
+    .title{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .menu_body li:last-of-type a {
+        margin: 0 15px 30px;
+    }
+    .our_projects_katalog_size{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .six_stages_names h5 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .six_stages_names p {
+        font-size: 14px;
+		line-height: 21px;
+    }
+    .we_are_where h2 {
+        font-size: 18px;
+		line-height: 26px;
+    }
+    .we_are_where p {
+        font-size: 14px;
+		line-height: 21px;
+    }
+    .get_katalog_content > div:last-of-type h4 {
+        font-size: 18px;
+		line-height: 26px;
+    }
+    .get_katalog_content > div:last-of-type p {
+        font-size: 14px;
+		line-height: 20px;
+    }
+    .projects_link_btn div {
+        padding: 16px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:first-of-type {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .apartament_rizhskaya .apartament_rizhskaya_description span:last-of-type {
+        font-size: 14px;
+		line-height: 16px;
+    }
+    .radio-folder + label:first-of-type {
+        margin-left: calc(50% - 155px);
+        padding: 16px 30px;
+        width: 150px;
+    }
+    .radio-folder + label {
+        padding: 16px 30px;
+        width: 150px;
+    }
+    .radio-folder:checked + label {
+        padding: 16px 30px;
+        width: 150px;
+    }
+    .contacts .contacts_form .custom-checkbox + label {
+        flex-direction: column;
+    }
+    .design_progress_more > div h2 {
+        font-size: 24px;
+		line-height: 28px;
+    }
+    .design_progress_more > div h2 span {
+        font-size: 18px;
+		line-height: 21px;
+    }
+    .design_progress_more > div p {
+        font-size: 14px;
+		line-height: 16px;
+    }
+    .we_working_type svg {
+        margin: 0 0 15px 0;
+    }
+    .we_working_type span {
+        margin: 0 0 15px 0;
+    }
+    .you_get .you_get_items {
+        padding: 46px 30px 39px;
+        grid-gap: 30px;
+    }
+}
+
+@media all and (max-width: 363px){
+    .text_over_image{
+        position: absolute;
+        top: 250px;
+        left: 24px;  
+    }
+    .get_katalog_content > div:last-of-type form label {
+        font-size: 10px;
+        line-height: 16px;
+    }
+}
+
+@media all and (max-width: 355px){
+    [src$="h_line_834.svg"]{
+        display: block;
+        bottom: 200px;
+        left: 0;
+        width: 70%;
+    }
+    .we_are_where .we_are_where_text {
+        top: 11%;
+        left: 2%;
+    }
+    .get_katalog_content > div:last-of-type form input[placeholder="Введите ваш E-mail"] {
+        padding: 26px 0 20px 10px;
+    }
+}
+
+@media all and (max-width: 319px){
+    .we_are_where .we_are_where_text {
+        display: none;
+    }
+    .text_over_image {
+        display: none;
+    }
+}
