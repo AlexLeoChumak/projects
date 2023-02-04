@@ -1,4 +1,5 @@
-/* 'use strict';
+'use strict';
+/*
 
 const length = prompt('Введите длину прямоугольника');
 const width = prompt('Введите ширину прямоугольника');
@@ -114,24 +115,21 @@ switch (month) {
 
 /*  */
 
-const num = Number(prompt('Введите любое число'));
+let num = Number(prompt('Введите любое число'));
 
-function showError(num) {
+function showErrorZero(num) {
     if (isNaN(num)) {
-        console.log('Неверное значение или пустая строка');
-    } else if (num == null) {
-        console.log('Отменено');
-    } else {
-        console.log
-          (`Это ${checkEvenOdd(num)} ${checkWholeFractional(num)} ${checkNigativPositiv(num)} число!`);
+      console.log('Ошибка! Неверный набор!');
+    } else if (num === 0) {
+      console.log('Это чётное целое ни положительное ни отрицательное число!');
+    }  else {
+      console.log
+        (`Это ${checkEvenOdd(num)} ${checkWholeFractional(num)} ${checkNigativPositiv(num)} число!`);
     }
 }
 
-showError(num);
+showErrorZero(num);
 
-/* let evenOdd;
-let wholeFractional;
-let nigativPositiv; */
 
 function checkWholeFractional(num) {
     if (num % 1 == 0) {
@@ -153,12 +151,37 @@ function checkEvenOdd(num) {
 function checkNigativPositiv(num) {
     if (num < 0) {
         return 'отрицательное';
-    } else if (num === 0) {
-        return 'ни положительное, ни отрицательное';
+    } else if (num > 0) {
+        return 'положительное';
     }
-    return 'положительное';
+}
+    
+
+/*  */
+
+/* let symbols = '|_';
+let counter = 1;
+
+while (counter <= 9) {
+  console.log(symbols);
+  symbols += '|_';
+  counter++;
+} */
+
+/*  */
+
+/* let whiteBlackSquare = '\u2B1C \u2B1B \u2B1C \u2B1B \u2B1C \u2B1B \u2B1C \u2B1B \u000A';
+let blackWhiteSquare = '\u2B1B \u2B1C \u2B1B \u2B1C \u2B1B \u2B1C \u2B1B \u2B1C \u000A';
+let result = '';
+let i;
+let j;
+
+for (i = 1; i < 5; i++) {
+  result += whiteBlackSquare;
+  
+  for (j = 1; j < 2 ; j++) {
+    result += blackWhiteSquare;
+  } 
 }
 
-
-
-
+console.log(result); */
