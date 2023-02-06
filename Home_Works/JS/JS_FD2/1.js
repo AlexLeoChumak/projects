@@ -115,14 +115,15 @@ switch (month) {
 
 /*  */
 
-let num = Number(prompt('Введите любое число'));
+/* let numStr = prompt('Введите любое число');
+let num = Number(numStr);
 
 function showErrorZero(num) {
     if (isNaN(num)) {
       console.log('Ошибка! Неверный набор!');
     } else if (num === 0) {
-      console.log('Это чётное целое ни положительное ни отрицательное число!');
-    }  else {
+      checkEscEmptyStr();
+    } else {
       console.log
         (`Это ${checkEvenOdd(num)} ${checkWholeFractional(num)} ${checkNigativPositiv(num)} число!`);
     }
@@ -130,6 +131,15 @@ function showErrorZero(num) {
 
 showErrorZero(num);
 
+function checkEscEmptyStr(numStr) { //перепробовал много способов - функция работает неверно
+  if (numStr === '0' || typeof(numStr) === 'string') {
+    console.log('Это целое чётное не положительное и не отрицательное число');
+  } else if (numStr === '' || typeof(numStr) === 'string') {
+    console.log('Пустая строка');
+  } else {
+    console.log('Отмена');
+  }
+}
 
 function checkWholeFractional(num) {
     if (num % 1 == 0) {
@@ -154,7 +164,7 @@ function checkNigativPositiv(num) {
     } else if (num > 0) {
         return 'положительное';
     }
-}
+} */
     
 
 /*  */
@@ -185,3 +195,4 @@ for (i = 1; i < 5; i++) {
 }
 
 console.log(result); */
+
