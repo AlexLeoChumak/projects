@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #3 (fizzbuzz)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            function fizzBuzz() {
+              
+              for (i = 1; i < 101; i++) {
+              let FizzBuzz = i % 3 === 0 && i % 5 === 0 && 'FizzBuzz';
+              let Fizz = i % 3 === 0 && 'Fizz';
+              let Buzz = i % 5 === 0 && 'Buzz';
+
+              console.log(FizzBuzz || Fizz || Buzz || i);
+              }
+            }
+            fizzBuzz();
+        </script>
+    </body> 
+</html>

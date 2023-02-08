@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #4 (quadratic)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            'use strict';
+
+            const firstValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
+            const secondValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
+            const thirdValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
+
+            function quadraticEquation(firstValue, secondValue, thirdValue) {
+              if(firstValue === 0) {
+                console.log('Неверное значение, первый аргумент не может быть равным 0');
+              } else {
+                getQuadraticEquation(firstValue, secondValue, thirdValue);
+              }
+
+              function getQuadraticEquation() {
+
+                const D = secondValue * secondValue - 4 * firstValue * thirdValue;
+                let x1;
+                let x2;
+
+                if (D > 0) {
+                  x1 = (-secondValue + Math.sqrt(D)) / (2 * firstValue);
+                  x2 = (-secondValue - Math.sqrt(D)) / (2 * firstValue);
+                  firstValue = (firstValue === 1) ? '' : firstValue;
+                  console.log
+                    (`уравнение ${firstValue}x\u005E2 - ${Math.abs(secondValue)}x + ${thirdValue} = 0 имеет корни x1 = ${x1} и x2 = ${x2}`);
+                } else if (D === 0) {
+                    x1 = -secondValue / (2 * firstValue);
+                    firstValue = (firstValue === 1) ? '' : firstValue;
+                    console.log
+                      (`уравнение ${firstValue}x\u005E2 + ${Math.abs(secondValue)}x + ${thirdValue} = 0 имеет один корень x = ${x1}`);
+                } else {
+                    firstValue = (firstValue === 1) ? '' : firstValue;
+                    console.log
+                      (`уравнение ${firstValue}x\u005E2 - ${Math.abs(secondValue)}x + ${thirdValue} = 0 не имеет вещественных корней`);
+                }
+              }
+            }
+
+            quadraticEquation(firstValue, secondValue, thirdValue);
+        </script>
+    </body> 
+</html>
