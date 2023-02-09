@@ -13,6 +13,8 @@
             const secondValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
             const thirdValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
 
+            quadraticEquation(firstValue, secondValue, thirdValue);
+
             function quadraticEquation(firstValue, secondValue, thirdValue) {
               if(firstValue === 0) {
                 console.log('Неверное значение, первый аргумент не может быть равным 0');
@@ -44,8 +46,6 @@
                 }
               }
             }
-
-            quadraticEquation(firstValue, secondValue, thirdValue);
         </script>
     </body> 
 </html>
