@@ -9,11 +9,7 @@
         <script>
             'use strict';
 
-            const firstValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
-            const secondValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
-            const thirdValue = Number(prompt('Введите первый коэффициент квадратного уравнения', ''));
-
-            quadraticEquation(firstValue, secondValue, thirdValue);
+            quadraticEquation(-1, -8, 1);
 
             function quadraticEquation(firstValue, secondValue, thirdValue) {
               if(firstValue === 0) {
@@ -31,21 +27,21 @@
                 if (D > 0) {
                   x1 = (-secondValue + Math.sqrt(D)) / (2 * firstValue);
                   x2 = (-secondValue - Math.sqrt(D)) / (2 * firstValue);
-                  firstValue = (firstValue === 1) ? '' : firstValue;
+                  firstValue = (firstValue === 1 || firstValue === -1) ? '' : firstValue;
                   console.log
                     (`уравнение ${firstValue}x\u005E2 - ${Math.abs(secondValue)}x + ${thirdValue} = 0 имеет корни x1 = ${x1} и x2 = ${x2}`);
                 } else if (D === 0) {
                     x1 = -secondValue / (2 * firstValue);
-                    firstValue = (firstValue === 1) ? '' : firstValue;
+                    firstValue = (firstValue === 1 || firstValue === -1) ? '' : firstValue;
                     console.log
                       (`уравнение ${firstValue}x\u005E2 + ${Math.abs(secondValue)}x + ${thirdValue} = 0 имеет один корень x = ${x1}`);
                 } else {
-                    firstValue = (firstValue === 1) ? '' : firstValue;
+                    firstValue = (firstValue === 1 || firstValue === -1) ? '' : firstValue;
                     console.log
                       (`уравнение ${firstValue}x\u005E2 - ${Math.abs(secondValue)}x + ${thirdValue} = 0 не имеет вещественных корней`);
                 }
               }
-            }
+            } 
         </script>
     </body> 
 </html>

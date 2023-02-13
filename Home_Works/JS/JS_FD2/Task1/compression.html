@@ -9,51 +9,56 @@
         <script>
             'use strict';
 
-            function compress(str) {
-                let counter = 1;
-                let result = '';
+      
+
+
+
+
+            // function compress(str) {
+            //     let counter = 1;
+            //     let result = '';
               
-                for (let i = 0; i < str.length; i++) 
+            //     for (let i = 0; i < str.length; i++) 
 
-                    if (str[i] == str[i+1] && i < str.length) {
-                        counter++;
-                    } else {
-                        result += str[i] + counter;
-                        counter = 1;
-                    }
-                    return `"${str}" => "${result}"`;
-                }
+            //         if (str[i] == str[i+1] && i < str.length) {
+            //             counter++;
+            //         } else {
+            //             result += str[i] + counter;
+            //             counter = 1;
+            //         }
+            //         return `"${str}" => "${result}"`;
+            //     }
 
-            console.log(compress('fffdccbbb'));
+            // console.log(compress('fffdccbbb'));
 
 
-            function uncompress(str2) {
-                let result2 = '';
+            // function uncompress(str2) {
+            //     let result2 = '';
                 
-                for (let i = 0; i < str2.length; i++) {
+            //     for (let i = 0; i < str2.length; i++) {
 
-                    if (!isNaN(parseInt(str2[i])) && !isNaN(parseInt(str2[i+1]))) {
-                        let nums = str2[i] + str2[i+1];
+            //         if (!isNaN(parseInt(str2[i])) && !isNaN(parseInt(str2[i+1]))) {
+            //             let nums = str2[i] + str2[i+1];
 
-                        for (let k = 1; k < Number(nums); k++)
-                        result2 += str2[i-1];
+            //             for (let k = 1; k < Number(nums); k++)
+            //             result2 += str2[i-1];
 
-                        continue;
-                    } else if (!isNaN(parseInt(str2[i]))) {
-                        continue;
-                    }
+            //             continue;
+            //         } else if (!isNaN(parseInt(str2[i]))) {
+            //             continue;
+            //         }
                           
-                    if (i < str2.length && !isNaN(parseInt(str2[i + 1]))) {
-                        for (let j = 0; j < str2[i+1]; j++)
-                        result2 += str2[i];
-                    } else {
-                        result2 += str2[i];
-                    }
-                }
-                return `"${str2}" => "${result2}"`;
-            }
+            //         if (i < str2.length && !isNaN(parseInt(str2[i + 1]))) {
+            //             for (let j = 0; j < str2[i+1]; j++)
+            //             result2 += str2[i];
+            //         } else {
+            //             result2 += str2[i];
+            //         }
+            //     }
+            //     return `"${str2}" => "${result2}"`;
+            // }
 
-            console.log(uncompress('a12b1c3'));
+            // console.log(uncompress('a12b1c3'));
             
         </script>
     </body> 
