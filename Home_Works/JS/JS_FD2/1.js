@@ -185,3 +185,4 @@ function checkNigativPositiv(num) {
 //   result = '';
 //   oddEvenValue += 1;
 // }
+
