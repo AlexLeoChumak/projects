@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #8 (pow and calculate)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            'use strict';
+            
+            function pow(x) {
+                let finalValue = 1;
+                return function(y) {
+                    if (y < 0) {
+                        for (let i = y; i < 0; i++) {
+                            finalValue /= x;
+                        }
+                    return `${x}^(${y}) = ${finalValue}`;
+                    } else {
+                        for (let i = 0; i < y; i++) {
+                        finalValue *= x;
+                        }
+                    }
+                    return `${x}^${y} = ${finalValue}`;
+                }
+            }
+
+            console.log(pow(2)(-3));
+
+
+            function powRecursion(x) {
+                return function(y) {
+                    if (y === 1) {
+                        return x;
+                    } else {
+                        return x * powRecursion(x)(y - 1);
+                    }
+                }
+            }
+
+            console.log(powRecursion(2)(3));
+
+            
+            function calculate(a) {
+                return function(sign) {
+                    return function(b) {
+                        if (sign === '+' && !isNaN(a) && !isNaN(b)) {
+                            return `${a}${sign}${b} = ${Number(a) + Number(b)}`;
+                        } else if (sign === '-' && !isNaN(a) && !isNaN(b)) {
+                            return `${a}${sign}${b} = ${a - b}`;
+                        } else if (sign === '*' && !isNaN(a) && !isNaN(b)) {
+                            return `${a}${sign}${b} = ${a * b}`;
+                        } else if (sign === '/' && b === 0 || b === '0') {
+                            return `${a}${sign}${b} = Ошибка (на ноль делить нельзя)`;
+                        } else if (sign === '/' && !isNaN(a) && !isNaN(b)) {
+                            return `${a}${sign}${b} = ${a / b}`;
+                        } else {
+                            return `Неверное значение`;
+                        } 
+                    }
+                }
+            }
+
+            console.log(calculate('15')('/')(0));
+        </script>
+    </body> 
+</html>
