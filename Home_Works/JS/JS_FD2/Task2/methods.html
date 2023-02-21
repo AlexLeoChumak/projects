@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #9 (string and array)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            'use strict';
+
+            function currentSums(numbers) {
+                let result = [numbers[0]];
+                let result2 = [];
+                let space = '  ';
+
+                numbers.reduce(function(sum, current, i) {  
+                    return result[i] = `${result[i - 1]}+${current}`, result2[i] = sum + current;
+                });
+
+                console.log( `[${result}] = [${numbers[0]+result2}]` );
+            }
+
+            currentSums([2, 3, 5, 7, 11, 13, 17]);
+
+
+            
+            function firstLettersFromString(str) {
+                const newArr = str.split(' ');
+
+                return newArr.map(item => item[0]);
+            }
+
+            console.log(firstLettersFromString("Каждый охотник желает знать, где сидит фазан."));
+
+
+
+            function filteredArray(startArray) {
+                return startArray.filter(function(item) {
+                    return item % 1 == 0 && item > 0;
+                });
+            }
+
+            console.log(filteredArray([-1, 2, 3.5, -12, 4, 1.25, 16]));
+
+
+
+            function moveZeros(sortArray) {
+                return sortArray.sort((a, b) => {
+                    if (a === 0 && b !== 0)
+                        return 1;
+                    else if (a !== 0 && b === 0) 
+                        return -1;
+                    else
+                        return 0;
+                });   
+            }
+
+            console.log(moveZeros([false, 1, 0, NaN, 2, 0, null, 3, 4, 0, 5]));
+            console.log(moveZeros([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
+            console.log(moveZeros([0, 2, 0, 4, 0, 6]));
+
+            
+            
+            function changeArray(startArray) {
+                const lengthArr = startArray.length;
+                let newEvenArr = [];
+                let newOddArr = [];
+
+                if (lengthArr % 2 === 0) {
+                    const evenSecondPart = lengthArr / 2;
+
+                    newEvenArr = startArray.splice(evenSecondPart, evenSecondPart);
+                    return newEvenArr.concat(startArray);
+                } else {
+                    const oddSecondPart = lengthArr / 2;
+                    const roundOddSecondPart = Math.floor(oddSecondPart);
+                    
+                    newOddArr = startArray.splice(roundOddSecondPart + 1, roundOddSecondPart);
+                    const middleValue = startArray.splice([roundOddSecondPart], 1);
+                    return newOddArr.concat(middleValue, startArray);
+                }  
+            }
+            
+            console.log(changeArray([1, 2, 3, 4, 5 ]));
+            console.log(changeArray([1, 2]));
+            console.log(changeArray([1, 2, 3, 4, 5, 6, 7, 8]));
+
+        </script>
+    </body> 
+</html>
