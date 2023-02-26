@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #11 (chaining)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            'use strict';
+
+            function getCounter(arg = 0) {
+
+                function Obj(arg) {
+                    this.arg = arg;
+
+                    this.log = function() {
+                        console.log(this.arg);
+                        return this;
+                    }
+                    this.count = function(value) {
+                        this.arg += value;
+                        return this;
+                    }
+                    this.reset = function() {
+                        this.arg *= 0;
+                        return this;
+                    }
+                }
+
+                const obj = new Obj(arg);
+                return obj;
+            }
+
+            const counter = getCounter();
+           
+            counter.log().count(4).log().count(3).log().reset().log().count(8).log();
+            
+        </script>
+    </body> 
+</html>
