@@ -7,62 +7,70 @@
     </head>
     <body>
         <script>
-            'use strict';
+             'use strict';
             
             function pow(x) {
-                let finalValue = 1;
-                return function(y) {
+                let result = x;
+                    let fn = function(y) {
+
                     if (y < 0) {
-                        for (let i = y; i < 0; i++) {
-                            finalValue /= x;
-                        }
-                    return `${x}^(${y}) = ${finalValue}`;
+                        result = 0.5 / (result * x);
+                    } else if (y === 0) {
+                        result = 1;
                     } else {
-                        for (let i = 0; i < y; i++) {
-                        finalValue *= x;
+                        for (let i = 1; i < y; i++) {
+                            result = result * x;
                         }
                     }
-                    return `${x}^${y} = ${finalValue}`;
+
+                    console.log(`${x}^${y} = ${result}`);
                 }
+
+                return fn;
             }
 
-            console.log(pow(2)(-3));
-
-
-            function powRecursion(x) {
-                return function(y) {
-                    if (y === 1) {
-                        return x;
-                    } else {
-                        return x * powRecursion(x)(y - 1);
-                    }
-                }
-            }
-
-            console.log(powRecursion(2)(3));
-
-            
             function calculate(a) {
                 return function(sign) {
-                    return function(b) {
-                        if (sign === '+' && !isNaN(a) && !isNaN(b)) {
-                            return `${a}${sign}${b} = ${Number(a) + Number(b)}`;
-                        } else if (sign === '-' && !isNaN(a) && !isNaN(b)) {
-                            return `${a}${sign}${b} = ${a - b}`;
-                        } else if (sign === '*' && !isNaN(a) && !isNaN(b)) {
-                            return `${a}${sign}${b} = ${a * b}`;
-                        } else if (sign === '/' && b === 0 || b === '0') {
-                            return `${a}${sign}${b} = Ошибка (на ноль делить нельзя)`;
-                        } else if (sign === '/' && !isNaN(a) && !isNaN(b)) {
-                            return `${a}${sign}${b} = ${a / b}`;
-                        } else {
-                            return `Неверное значение`;
-                        } 
-                    }
-                }
-            }
+                    return function op(b) {
 
-            console.log(calculate('15')('/')(0));
+                    let result;
+
+                    if (sign === "/" && b === 0) {
+                        return console.log(`${a}${sign}${b} = Ошибка (на ноль делить нельзя)`);
+                    } 
+                    switch (sign) {
+                        case "+":
+                            result = a + b;
+                            return console.log(`${a}${sign}${b} = ${result}`);
+                            break;
+
+                        case "-":
+                            result = a - b;
+                            return console.log(`${a}${sign}${b} = ${result}`);
+                            break;
+
+                        case "/":
+                            result = a / b;
+                            return console.log(`${a}${sign}${b} = ${result}`);
+                            break;
+
+                        case "*":
+                            result = a * b;
+                            return console.log(`${a}${sign}${b} = ${result}`);
+                            break;
+                        }
+                    }
+                }    
+            };
+
+            pow(-2)(3);
+            calculate(1)("+")(2);
+            pow(4)(2);
+            calculate(3)("*")(7);
+            pow(16)(0);
+            calculate(15)("/")(3);
+            pow(2)(-3);
+            calculate(2)("/")(0);
         </script>
     </body> 
 </html>
