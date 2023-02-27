@@ -14,7 +14,9 @@
                     let fn = function(y) {
 
                     if (y < 0) {
-                        result = 0.5 / (result * x);
+                        for (let i = 0; i >= y; i--) {
+                            result = result / x;
+                        }
                     } else if (y === 0) {
                         result = 1;
                     } else {

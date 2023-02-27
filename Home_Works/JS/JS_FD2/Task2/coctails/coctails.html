@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #12 (drinks)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                padding-top: 50px;
+                text-align: center;
+            }
+            button{
+                width: 200px;
+                height: 60px;
+                margin: 10px;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id='add-coctail'>Добавить</button>
+            <button id='delete-coctail'>Удалить</button>
+            <button id='get-coctail'>Рецепт</button>
+            <button id='all-coctails'>Список рецептов</button>
+        </div>
+        
+
+        <script src="HashStorage.js"></script>
+
+        <script>
+             'use strict';
+
+            //  // Дальше буду описываться кнопки
+            // const addButton = document.getElementById('add-coctail');
+            // addButton.onclick = function () {
+            // const coctail = {};
+            // // получаем данные от пользовател
+            // const name = window.prompt('Введите название коктеля');
+            // const isAlcohol = window.prompt('Напиток алкогольный?');
+            
+            // // Добавляем значение в наше хранилище
+            // coctailsStorage.add(name, {name, isAlcohol});
+            // console.log('Coctail was added', coctailsStorage.getValue(name));
+            // }
+
+         
+            
+	// var drinkStorage = new tHashStorage();
+	// //key   - название напитка
+	// //value - информация о напитке
+
+
+	// var drinkName = document.getElementById("drinkName");
+
+	// drinkName.onclick = function() {
+	// 	var keyP = prompt("напишите название напитка");
+	// 	var valueC = {};
+
+	// 	valueC.alcohol = confirm(keyP + " - алкогольный напиток или нет?\nok - алкогольный\nотмена - без алкогольный");
+	// 	valueC.recipe = prompt("напишите рецепт напитка - " + keyP);
+	// 	drinkStorage.addValue(keyP, valueC);
+	// }
+
+	// var drinkInfo = document.getElementById("drinkInfo");
+
+	// drinkInfo.onclick = function() {
+	// 	var drinkInf = prompt("Напишите название напитка");
+	// 	var drinkInfoP = document.getElementById("drinkInfoP");
+
+	// 	var answer = drinkStorage.getValue(drinkInf);
+
+	// 	if (drinkStorage.getValue(drinkInf) !== undefined) {
+	// 		drinkInfoP.innerHTML = "напиток: " + drinkInf + 
+	// 							   "<br>" + "алкогольный: " + (answer.alcohol === true ? "да" : "нет") + 
+	// 							   "<br>" + "Рецепт: " + (answer.recipe ? answer.recipe : "к сожалению РЕЦЕПТА НЕТ");
+	// 	} else {
+	// 		drinkInfoP.innerHTML = "В хранилище такой напиток ОТСУТСТВУЕТ!";
+	// 	}
+	// }
+	
+	// var drinkInfoDel = document.getElementById("drinkInfoDel");
+
+	// drinkInfoDel.onclick = function() {
+	// 	var drinkInfoDel = prompt("Напишите название напитка");
+	// 	var drinkInfoP = document.getElementById("drinkInfoP");
+
+	// 	if (drinkStorage.deleteValue(drinkInfoDel) === true) {
+	// 		drinkInfoP.innerHTML = "информация о напитке УДАЛЕНО!";
+	// 	} else {
+	// 		drinkInfoP.innerHTML = "В хранилище такой напиток отсутствует";
+	// 	}
+
+	// }
+
+	// var drinkList = document.getElementById("drinkList");
+	
+	// drinkList.onclick = function() {
+	// 	var drinkInfoP = document.getElementById("drinkInfoP");
+	// 	drinkInfoP.innerHTML = drinkStorage.getKeys();
+	// }
+        </script>
+    </body> 
+</html>
