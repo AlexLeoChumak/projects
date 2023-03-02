@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 	<title>Practical task #12 (drinks)</title>
 	<style>
 		body{
@@ -8,12 +8,13 @@
 			text-align: center;
 			font-size: 20px;
 			font-family: Arial, Helvetica, sans-serif;
+			font-style: italic;
 			background: url(https://w-dog.ru/wallpapers/1/16/350127848110593/apelsinovyj-koktejl-i-morskaya-zvezda.jpg) top center;
 		}
 		button{
 			width: 200px;
-			height: 60px;
-			margin: 10px;
+			height: 50px;
+			margin: 16px;
 		}
 		button:hover{
 			cursor: pointer;
@@ -32,9 +33,12 @@
 		ul{
 			padding: 0;
 		}
+		h2{
+			font-weight: normal;
+		}
 	</style>
-</head>
-<body>
+  </head>
+  <body>
 	<div>
 		<button type="button" id="drinkName">ввод рецепта</button>
 		<button type="button" id="drinkInfo">рецепт напитка</button>
@@ -50,6 +54,11 @@
 		'use strict';
 
 		const coctailsStorage = new HashStorage();
+
+		coctailsStorage.addValue('Маргарита', {alcohol: true, ingridients: ['Водка Finlandia 50мл', 'Кофейный ликер 25мл', 'Лед в кубиках 120 г'], recipe: 'Наполни стакан кубиками льда доверху, затем налей кофейный ликер 25 мл, водку 50 мл и размешай коктейльной ложкой.'});
+		coctailsStorage.addValue('Пеликан', {alcohol: false, ingridients: ['Гренадин Monin 10мл', 'Клубничный сироп Monin 10мл', 'Персиковый сок 150мл', 'Лимонный сок 15мл', 'Банан 110г', 'Клубника 50г', 'Дробленый лед 60г'], recipe: 'Положи в блендер очищенную и нарезанную половинку банана и клубнику 2 ягоды. Налей лимонный сок 15 мл, гренадин 10 мл, клубничный сироп 10 мл и персиковый сок 150 мл. Добавь в блендер совок дробленого льда и взбей. Перелей в хайбол. Укрась кружком банана и половинкой клубники на коктейльной шпажке.'});
+		coctailsStorage.addValue('Камикадзе в сифоне', {alcohol: true, ingridients: ['Водка Царская 100мл', 'Трипл секFruko Schulz 100мл', 'Лимонный сок 45мл', 'Спрайт 750мл', 'Лимонная цедра 5шт', 'Лед в кубиках'], recipe: 'Наполни рокс кубиками льда доверху. Налей в сифон лимонный сок 45 мл, спрайт 750 мл, ликер трипл сек 100 мл и водку 100 мл. Закрой сифон и взбей 3–4 раза. Налей в рокс коктейль из сифона и укрась лимонной цедрой'});
+		
 		const drinkName = document.querySelector("#drinkName");
 
 		drinkName.onclick = function() {
@@ -64,7 +73,7 @@
 				const ingridientOne = prompt('Напишите названия ингридиентов и их количество ПО ОДНОМУ ЗА РАЗ');   
 
 					if (ingridientOne != '' && ingridientOne != null) {
-						ingridients.push(ingridientOne); // ...информация заносится в объект movies, иначе...
+						ingridients.push(ingridientOne);
 						i--;
 					} else {
 						i++;
@@ -74,23 +83,23 @@
 			}());
 
 			infoCoctail.recipe = prompt("Напишите рецепт коктейля");
+
 			coctailsStorage.addValue(nameCoctail, infoCoctail);
 		}
 
 		const drinkInfo = document.querySelector("#drinkInfo");
 
 		drinkInfo.onclick = function() {
-			const drinkInf = prompt("Напишите название коктейля");
+			const nameCoctail = prompt("Напишите название коктейля");
 			const layout = document.querySelector("#layout");
+			const answer = coctailsStorage.getValue(nameCoctail);
 
-			const answer = coctailsStorage.getValue(drinkInf);
+			if (coctailsStorage.getValue(nameCoctail) !== undefined) {
+				let valueLi = (function() {
+					return answer.ingridients.join("</li><li>\u00B7");
+				}());
 
-			let valueLi = (function() {
-				return answer.ingridients.join("</li><li>\u00B7");
-			}());
-
-			if (coctailsStorage.getValue(drinkInf) !== undefined) {
-				layout.innerHTML = `<h2>\u00B7 Коктейль <strong>"${drinkInf}"</strong> (алкогольный: ${answer.alcohol === true ? "да" : "нет"})</h2>
+				layout.innerHTML = `<h2>\u00B7 Коктейль <strong>"${nameCoctail}"</strong> (алкогольный: ${answer.alcohol === true ? "да" : "нет"})</h2>
 				<h3>Необходимые ингридиенты:</h3>
 				<ul><li>\u00B7${valueLi}</li></ul>
 				<h3>рецепт приготовления:</h3>
@@ -111,16 +120,15 @@
 			} else {
 				layout.innerHTML = "В хранилище такого коктейля нет или неверное значение";
 			}
-
 		}
 
 		const drinkList = document.querySelector("#drinkList");
 
 		drinkList.onclick = function() {
 			const layout = document.querySelector("#layout");
+			
 			layout.innerHTML = coctailsStorage.getKeys();
 		}
 	</script>
-
-</body>
+  </body>
 </html>

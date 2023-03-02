@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #13 (calendar with btns)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background: gray;
+            }
+            .calendar-with-btns {
+                width: 500px;
+                height: 440px;
+                margin: 50px auto;
+                padding: 20px;
+                background: white;
+            }
+            table {
+                width: 100%;
+                border: 1px solid gray;
+                border-radius: 3px;
+                border-collapse: collapse;
+            }
+            td {
+                height: 50px;
+                width: 50px;
+                text-align: center;
+                vertical-align: middle;
+                border-right: 1px solid gray;
+                border-top: 1px solid gray;
+            }
+            td.otherMon {
+                color: #c0c0c0;
+            }
+            h2 {
+                display: inline-block;
+                margin: 20px auto;
+                width: 45%;
+                text-align: center;
+            }
+            button {
+                width: 60px;
+                height: 40px;
+                transition: .3s linear;
+            }
+            button:hover {
+                border: gray;
+                cursor: pointer;
+                background-color: rgb(253, 114, 114);
+            }
+            #btnPrevYear,
+            #btnPrevMonth {
+                float: left;
+                margin-right: 5px;
+            }
+            #btnNextMonth,
+            #btnNextYear {
+                float: right;
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calendar-with-btns">
+            <button id="btnPrevYear" type="button"><<</button>
+            <button id="btnPrevMonth" type="button"><</button>
+            <h2></h2>
+            <button id="btnNextYear" type="button">>></button>
+            <button id="btnNextMonth" type="button">></button>
+            
+            <div id="layout"></div>
+        </div>
+        <script>
+            let today = new Date();
+            let currentY = today.getFullYear();
+            let currentM = today.getMonth();
+            let currentD = today.getDate();
+            const weekArr = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+            const monthsArr = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+            function nextYear() {
+                currentY += 1;
+                showNowValue();
+            }
+
+            function prevYear() {
+                currentY -= 1;
+                showNowValue();
+            }
+
+            // Переход к следующему месяцу
+            function nextMonth() {
+                if ( currentM == 11 ) {
+                    currentM = 0;
+                    currentY += 1;
+                } else {
+                    currentM += 1;
+                }
+                showNowValue();
+            }
+
+            // Переход к предыдущему месяцу
+            function previousMonth() {
+                if ( currentM == 0 ) {
+                    currentM = 11;
+                    currentY -= 1;
+                } else {
+                    currentM -= 1;
+                }
+                showNowValue();
+            }
+
+            function showNowValue() {
+                getTitleCalendar(currentY, currentM);
+            };
+
+            // Показать месяц (год, месяц)
+            function getTitleCalendar(year, month) {
+                let firstDayMonth = new Date(year, month, 7).getDay();
+                let lastDateMonth =  new Date(year, month + 1, 0).getDate();
+                let lastDayPreviousMonth = month == 0 ? new Date(year-1, 11, 0).getDate() : new Date(year, month, 0).getDate();
+                let pasteTitle = monthsArr[month] + ' ' + year;
+
+                let pasteLayout = '<table><tr>';
+
+                for (let i = 0; i < weekArr.length; i++) {
+                    pasteLayout += '<td>' + weekArr[i] + '</td>';
+                }
+
+                pasteLayout += '</tr>';
+
+                // Записываем дни
+                let i = 1;
+                do {
+
+                let dayOnWeek = new Date(year, month, i).getDay();
+
+                // Начать новую строку в понедельник
+                if ( dayOnWeek == 1 ) {
+                    pasteLayout += '<tr>';
+                }
+                
+                // Если первый день недели не понедельник показать последние дни предидущего месяца
+                else if ( i == 1 ) {
+                    pasteLayout += '<tr>';
+                    let yesterday = lastDayPreviousMonth - firstDayMonth + 1;
+
+                    for (let j = 0; j < firstDayMonth; j++) {
+                        pasteLayout += '<td class="otherMon">' + yesterday + '</td>';
+                        yesterday++;
+                    }
+                }
+
+                pasteLayout += '<td>' + i + '</td>';
+                
+                // закрыть строку в воскресенье
+                if ( dayOnWeek == 0 ) {
+                    pasteLayout += '</tr>';
+                }
+                // Если последний день месяца не воскресенье, показать первые дни следующего месяца
+                else if ( i == lastDateMonth ) {
+                    let yesterday = 1;
+                    for (dayOnWeek; dayOnWeek < 7; dayOnWeek++) {
+                        pasteLayout += '<td class="otherMon">' + yesterday + '</td>';
+                        yesterday++;
+                    }
+                }
+
+                i++;
+                } while (i <= lastDateMonth);
+
+                // Конец таблицы
+                pasteLayout += '</table>';
+
+                // Записываем pasteLayout в div
+                document.querySelector("h2").innerHTML = pasteTitle;
+                document.querySelector("#layout").innerHTML = pasteLayout;
+            };
+        
+            showNowValue();
+
+            const next = document.querySelector('#btnNextMonth');
+            const prev = document.querySelector('#btnPrevMonth');
+            const nextY = document.querySelector('#btnNextYear');
+            const prevY = document.querySelector('#btnPrevYear');
+
+            // Привязываем кнопки «Следующий» и «Предыдущий»
+            next.onclick = function() {
+                nextMonth();
+            }
+            prev.onclick = function() {
+                previousMonth();
+            }
+            nextY.onclick = function() {
+                nextYear();
+            }
+            prevY.onclick = function() {
+                prevYear();
+            }
+        </script>
+    </body> 
+</html>

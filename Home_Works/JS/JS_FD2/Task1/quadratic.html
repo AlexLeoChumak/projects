@@ -9,39 +9,59 @@
         <script>
             'use strict';
 
-            quadraticEquation(-1, -8, 1);
-
             function quadraticEquation(firstValue, secondValue, thirdValue) {
-              if(firstValue === 0) {
-                console.log('Неверное значение, первый аргумент не может быть равным 0');
-              } else {
-                getQuadraticEquation(firstValue, secondValue, thirdValue);
+
+              let D, a, b, c;
+              let x1;
+              let x2;
+
+              D = secondValue*secondValue - 4*firstValue*thirdValue;
+
+              if (firstValue === 0) 
+                  { console.log('Неверное значение, первый аргумент не может быть равным 0')};
+
+                  if (firstValue == 1) {
+                      a = "";
+                  } else if (firstValue == -1) {
+                      a = "-";
+                  } else {
+                      a = firstValue;
+                  }
+
+                  if (secondValue > 0) {
+                      b = "+ " + secondValue;
+                  } else {
+                      b =  secondValue;
+                  }
+
+                  if (secondValue == 1) {
+                      b = "+ ";
+                  } else if (secondValue == -1) {
+                      b = "- ";
+                  }
+
+                  if (thirdValue > 0) {
+                      c = "+ " + thirdValue;
+                  } else {
+                      c = thirdValue;
+                  };
+
+                      if (D > 0) {
+                          x1 = (-secondValue - Math.sqrt(D)) / (2*firstValue);
+                          x2 = (-secondValue + Math.sqrt(D)) / (2*firstValue);
+                          console.log("уравнение " + a + "x^2 " + b + " x" + c + " =" + " 0 " + " имеет корни " + "x1= " + x1 + " и " + "x2= " + x2);
+                      } else
+
+                      if (D === 0) {
+                          x1 = -secondValue / (2*firstValue);
+                          console.log(`уравнение ${a}x^2 ${b}x ${c} = 0 имеет один корень x = ${x1}`);
+
+                      } else {
+                          console.log(`уравнение ${a}x^2 ${b}x ${c} = 0 не имеет вещественных корней`)};
+
               }
 
-              function getQuadraticEquation() {
-
-                const D = secondValue * secondValue - 4 * firstValue * thirdValue;
-                let x1;
-                let x2;
-
-                if (D > 0) {
-                  x1 = (-secondValue + Math.sqrt(D)) / (2 * firstValue);
-                  x2 = (-secondValue - Math.sqrt(D)) / (2 * firstValue);
-                  firstValue = (firstValue === 1 || firstValue === -1) ? '' : firstValue;
-                  console.log
-                    (`уравнение ${firstValue}x\u005E2 - ${Math.abs(secondValue)}x + ${thirdValue} = 0 имеет корни x1 = ${x1} и x2 = ${x2}`);
-                } else if (D === 0) {
-                    x1 = -secondValue / (2 * firstValue);
-                    firstValue = (firstValue === 1 || firstValue === -1) ? '' : firstValue;
-                    console.log
-                      (`уравнение ${firstValue}x\u005E2 + ${Math.abs(secondValue)}x + ${thirdValue} = 0 имеет один корень x = ${x1}`);
-                } else {
-                    firstValue = (firstValue === 1 || firstValue === -1) ? '' : firstValue;
-                    console.log
-                      (`уравнение ${firstValue}x\u005E2 - ${Math.abs(secondValue)}x + ${thirdValue} = 0 не имеет вещественных корней`);
-                }
-              }
-            } 
+              quadraticEquation(-1, 8, 1);
         </script>
     </body> 
 </html>
