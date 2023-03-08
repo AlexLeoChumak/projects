@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #14 (editable list)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .body{
+                width: 200px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .button{
+                margin: 10px 10px 10px 0;
+                width: 79.7px;
+                transition: .1s linear;
+                cursor: pointer;
+            }
+            .button:hover{
+                background-color: rgb(214, 212, 212);
+            }
+            .input{
+                transition: .1s linear;
+                cursor: pointer;
+            }
+            .input:hover{
+                background-color: rgb(214, 212, 212);
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>  
+        <script>
+            function createNumerateList(arr) {
+                let editableList = '<div class="divList">' + ' ' + '<ol>';
+                const editableListOver = '</ol> </div>';
+
+                for (let i = 0; i < arr.length; i++) {
+                    editableList += ' ' + '<li>' + arr[i] + '</li>';
+                }
+                const varBody = document.querySelector('body');
+                varBody.insertAdjacentHTML('afterBegin', editableList + editableListOver);
+                varBody.classList.add('body');
+                showLayout();
+
+                function showLayout() {
+                    document.querySelector('.divList').innerHTML = editableList + editableListOver;
+                }
+
+                    function createInputAndBtnsAddRemove() {
+                        let entryFieldAndCheckBtn = '<form><input id="inputString"><button id="add" type="button">Add</button><button id="remove" type="button" disabled>Remove</button></form>';
+                        document.querySelector('body').insertAdjacentHTML('beforeEnd', entryFieldAndCheckBtn);
+
+                        function disabledRemove() {
+                            const btnRemove = document.querySelector('#remove');
+                            const olChild = document.querySelector('ol');
+
+                            btnRemove.classList.add('button');
+                            olChild.hasChildNodes() ? btnRemove.removeAttribute('disabled') : btnRemove.setAttribute('disabled', 'disabled');
+                        };
+                        disabledRemove();
+                        
+                        const inputField = document.querySelector('#inputString');
+                        inputField.classList.add('input');
+   
+                        function checkAndAddRemoveValue() {
+                            const forma = document.querySelector('form');
+                            const btnAdd = document.querySelector('#add');
+                            btnAdd.classList.add('button');
+                            
+                            forma.addEventListener('click', function () {
+                                
+                                if (event.target.id === 'add') {
+                                    inputField.setAttribute('placeholder', "Введите значение");
+                                    
+                                    if (inputField.value) {
+                                        editableList += ' ' + '<li>' + inputField.value + '</li>';
+                                        showLayout();
+                                        disabledRemove();
+                                        inputField.value = null;
+                                    } else {
+                                        return;
+                                    }    
+                                } else if (event.target.id === 'remove') {
+                                    let arr = editableList.split(' ');
+                                    arr.pop();
+                                    editableList = arr.join(' ');
+                                    showLayout();
+                                    disabledRemove();
+                                }
+                            }); 
+                        }
+                        checkAndAddRemoveValue();
+                    }
+                    createInputAndBtnsAddRemove();
+                
+                    function editLi() {
+                        const elemLi = document.querySelector('.divList');
+
+                        elemLi.addEventListener('click', function() {
+                            
+                            if (event.target.tagName === "LI") {
+                                const valueLi = event.target;
+                                const valueLiValue = valueLi.innerHTML;
+                                const editInput = '<input value="' + valueLiValue + '">';
+                                valueLi.innerHTML = editInput;
+                            }
+                        });
+
+                        elemLi.addEventListener('focusout', function() {
+                            if (event.target.tagName == "INPUT") {
+                                const valueInputValue = event.target.value;
+                                const parent = event.target.parentNode;
+                                
+                                parent.innerHTML = valueInputValue;
+                                const collectionLI = document.querySelectorAll('li');
+                                const arrCollection = [];
+
+                                for (let i = 0; i < collectionLI.length; i++) {
+                                    arrCollection.push('<li>' + collectionLI[i].innerHTML + '</li>');
+                                }
+
+                                arr = editableList.split(' ');
+                                arr.splice(3);
+                                arr = arr.concat(arrCollection);
+                                editableList = arr.join(' ');        
+                            } else {
+                                return;
+                            }
+                        });
+                    }
+                    editLi();   
+            }
+            createNumerateList([1, 2, 3]);
+        </script>
+    </body> 
+</html>

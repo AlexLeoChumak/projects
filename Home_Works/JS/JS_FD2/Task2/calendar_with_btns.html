@@ -72,10 +72,10 @@
             <div id="layout"></div>
         </div>
         <script>
-            let today = new Date();
-            let currentY = today.getFullYear();
-            let currentM = today.getMonth();
-            let currentD = today.getDate();
+            let currentM = Number(prompt('Введите номер месяц'));
+            currentM -= 1;
+            let currentY = Math.abs(Number(prompt('Введите год (4 цифры)')));
+            
             const weekArr = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
             const monthsArr = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
@@ -180,24 +180,11 @@
         
             showNowValue();
 
-            const next = document.querySelector('#btnNextMonth');
-            const prev = document.querySelector('#btnPrevMonth');
-            const nextY = document.querySelector('#btnNextYear');
-            const prevY = document.querySelector('#btnPrevYear');
-
             // Привязываем кнопки «Следующий» и «Предыдущий»
-            next.onclick = function() {
-                nextMonth();
-            }
-            prev.onclick = function() {
-                previousMonth();
-            }
-            nextY.onclick = function() {
-                nextYear();
-            }
-            prevY.onclick = function() {
-                prevYear();
-            }
+            btnNextMonth.addEventListener('click', nextMonth);
+            btnPrevMonth.addEventListener('click', previousMonth);
+            btnNextYear.addEventListener('click', nextYear);
+            btnPrevYear.addEventListener('click', prevYear);
         </script>
     </body> 
 </html>
