@@ -55,9 +55,9 @@
                             const btnRemove = document.querySelector('#remove');
                             const olChild = document.querySelector('ol');
 
-                            btnRemove.classList.add('button');
                             olChild.hasChildNodes() ? btnRemove.removeAttribute('disabled') : btnRemove.setAttribute('disabled', 'disabled');
-                        };
+                            olChild.hasChildNodes() ? btnRemove.classList.add('button') : btnRemove.classList.remove('button');
+                        };  
                         disabledRemove();
                         
                         const inputField = document.querySelector('#inputString');
