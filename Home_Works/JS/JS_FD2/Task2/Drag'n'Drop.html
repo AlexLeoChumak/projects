@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Additional task #3 (sortable list)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *, *:before, *:after {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            li{
+                display: block;
+            }
+            .done{
+                border: 5px green solid;
+            }
+            .liRed{
+                background-color: red;
+            }
+            .liOrange{
+                background-color: orange;
+            }
+            .liYellow{
+                background-color: yellow;
+            }
+            .liGreen{
+                background-color: green;
+            }
+            .liLightBlue{
+                background-color: rgb(0, 157, 255);
+            }
+            .liDarkBlue{
+                background-color: blue;
+            }
+            .liPurple{
+                background-color: purple;
+            }
+            .tasks__list{
+                margin: 0 auto;
+                padding: 0;
+                width: 500px;
+                border: 1px solid black;
+                list-style: none;
+            }
+            .tasks__item{
+                padding: 5px;
+                text-align: center;
+                border-radius: 10px;
+                cursor: move;
+                width: 470px;
+                height: 60px;
+                margin: 10px auto;
+            }
+            .selected{
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>  
+        <script>
+            'use strict';
+
+            function createDragNDrop() {
+                const rainbow = ['red', 'orange', 'yellow', 'green', 'lightblue', 'darkblue', 'purple'];
+
+                const divDragDrop = document.createElement('div');
+                const ulColor = document.createElement('ul');
+                const liRed = document.createElement('li');
+                const liOrange = document.createElement('li');
+                const liYellow = document.createElement('li');
+                const liGreen = document.createElement('li');
+                const liLightBlue = document.createElement('li');
+                const liDarkBlue = document.createElement('li');
+                const liPurple = document.createElement('li');
+
+                ulColor.classList.add('tasks__list');
+                liRed.classList.add('liRed', 'tasks__item');
+                liOrange.classList.add('liOrange', 'tasks__item');
+                liYellow.classList.add('liYellow', 'tasks__item');
+                liGreen.classList.add('liGreen', 'tasks__item');
+                liLightBlue.classList.add('liLightBlue', 'tasks__item');
+                liDarkBlue.classList.add('liDarkBlue', 'tasks__item');
+                liPurple.classList.add('liPurple', 'tasks__item');
+
+                divDragDrop.setAttribute('id', 'dragDrop');
+                liRed.setAttribute('data-color', 'red');
+                liOrange.setAttribute('data-color', 'orange');
+                liYellow.setAttribute('data-color', 'yellow');
+                liGreen.setAttribute('data-color', 'green');
+                liLightBlue.setAttribute('data-color', 'lightblue');
+                liDarkBlue.setAttribute('data-color', 'darkblue');
+                liPurple.setAttribute('data-color', 'purple');
+
+                document.body.append(divDragDrop);
+                divDragDrop.append(ulColor);
+                ulColor.append(liGreen, liRed, liDarkBlue, liOrange, liLightBlue, liYellow, liPurple);
+
+                const taskElements = ulColor.querySelectorAll('.tasks__item');
+
+                for (const task of taskElements) {
+                    task.draggable = true;
+                }
+
+                ulColor.addEventListener('dragstart', (event) => {
+                    event.target.classList.add('selected');
+                });
+
+                ulColor.addEventListener('dragend', (event) => {
+                    event.target.classList.remove('selected');
+                });
+
+                const getNextElement = (cursorPosition, currentElement) => {
+                    const currentElementCoord = currentElement.getBoundingClientRect();
+                    const currentElementCenter = currentElementCoord.y + currentElementCoord.height / 2;
+
+                    const nextElement = (cursorPosition < currentElementCenter) ?
+                        currentElement :
+                        currentElement.nextElementSibling;
+
+                        return nextElement;
+                };
+
+                ulColor.addEventListener('dragover', (event) => {
+                    event.preventDefault();
+
+                    const activeElement = ulColor.querySelector('.selected');
+                    const currentElement = event.target;
+                    const isMoveable = activeElement !== currentElement &&
+                     currentElement.classList.contains('tasks__item');
+
+                     if(!isMoveable) {
+                        return;
+                     }
+
+                     const nextElement = getNextElement(event.clientY, currentElement);
+
+                     if (nextElement &&
+                        activeElement === nextElement.previousElementSibling ||
+                        activeElement === nextElement) {
+                            return;
+                        }
+
+                    ulColor.insertBefore(activeElement, nextElement);
+
+                    const getColorOrder = document.getElementsByClassName('tasks__item');
+                    
+                    let valueGetColorOrder = [];
+                    for (let i = 0; i < getColorOrder.length; i++) {
+                        valueGetColorOrder.push(getColorOrder[i].dataset.color);
+                    }
+
+                    const checkrainbow = (rainbow.length === valueGetColorOrder.length) &&
+                        rainbow.every(function(element, index) {
+                            return element === valueGetColorOrder[index];
+                        });
+
+                    if (checkrainbow) {
+                        for (let i = 0; i < getColorOrder.length; i++) {
+                            getColorOrder[i].classList.add('done');
+                            setTimeout(() => {
+                                document.querySelector('#dragDrop').innerHTML = `<img alt="rainbow" title="rainbow" style="width: 1500px; height: 700px" src="https://gas-kvas.com/uploads/posts/2023-01/1673581963_gas-kvas-com-p-raduga-tsveta-risunok-detskii-38.png">`;
+                            }, 1000);
+                        }
+                    }
+                });
+
+            }
+
+            createDragNDrop();
+        </script>
+    </body> 
+</html>

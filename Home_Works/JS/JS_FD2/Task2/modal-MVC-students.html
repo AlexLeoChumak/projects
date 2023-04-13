@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Modal default MVC</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container" id="page-container">
+    <h1>Создание уже и не такого простого модального окошка!</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam fuga sunt voluptas, ullam, sed consequuntur ab illo veniam ad totam alias voluptatibus sequi officiis, unde autem reiciendis magnam labore voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam fuga sunt voluptas, ullam, sed consequuntur ab illo veniam ad totam alias voluptatibus sequi officiis, unde autem reiciendis magnam labore voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam fuga sunt voluptas, ullam, sed consequuntur ab illo veniam ad totam alias voluptatibus sequi officiis, unde autem reiciendis magnam labore voluptatum?</p>
+    <!-- btn Modal Open -->
+    <p class="btn"><a href="#" data-supermodal="my-custom-modal" id="modal-open" class="modal-open" title="Покажите мне модальное окошко">Открыть окно</a></p>
+
+    <div class="modal-data" id="modal-data"></div>
+    <p class="btn"><a href="#" id="clear-data" class="clear-data" style="display: none;">Очистить данные</a></p>
+  </div>
+
+  <div class="modal-overlay modal_closed" id="modal-overlay"></div>
+  <!-- modal -->
+  <div class="modal modal_closed" id="my-custom-modal"> 
+
+    <header class="modal__header">
+      <a href="#" class="modal__close" id="modal-close" title="Закрыть модальное окно">Закрыть</a>
+      <h2>Введите данные</h2>
+    </header>
+
+    <main class="modal__content">
+      <div class="form-field">
+        <label for="name">Ваше имя:</label>
+        <input required class="input__default" type="text" id="name" name="name">
+      </div>
+      <div class="form-field">
+        <label>Ваш день рождения:</label>
+        <input required type="number" class="input__date-birth" id="birth-day" name="name" placeholder="День"> -
+        <input required type="number" class="input__date-birth" id="birth-month" name="name" placeholder="Месяц"> -
+        <input required type="number" class="input__date-birth" id="birth-year" name="name" placeholder="Год">
+      </div>
+    </main>
+
+    <footer class="modal__footer">
+      <button id="modal-cancel" class="modal__cancel" title="Отмена">Отмена</button>
+      <button id="modal-save" class="modal__save" title="Сохранить">Сохранить данные</button>
+    </footer>
+  </div>
+
+<script>
+
+  /* ----- begin controller ---- */
+  function ModalController () {
+    
+    let myModalModel = null;
+    let myModalContainer = null;
+
+    this.init = function(model, container) { // получаем кнопки и вешаем обработчики
+      myModalModel = model;
+      myModalContainer = container;
+
+      const btnOpenModal = document.querySelector('#modal-open');
+      btnOpenModal.addEventListener('click', function (e) {
+        myModalModel.openModal();
+      })
+
+      const btnCloseModal = myModalContainer.querySelector('#modal-close');
+      const btnCancelModal = myModalContainer.querySelector('#modal-cancel');
+      const btnSaveModal = myModalContainer.querySelector('#modal-save');
+
+      myModalContainer.addEventListener('click', (event) => {
+        const eTarget = event.target.id;
+        switch (eTarget) {
+          case 'modal-close': myModalModel.closeModal(); break;
+          case 'modal-cancel': myModalModel.closeModal(); break;
+          case 'modal-save': this.saveModal(); break;
+        }
+      })
+    }
+
+    this.saveModal = function () {
+      const inputName = myModalContainer.querySelector('#name').value;
+      const inputDay =  Number(myModalContainer.querySelector('#birth-day').value);
+      const inputMonth = Number(myModalContainer.querySelector('#birth-month').value);
+      const inputYear = Number(myModalContainer.querySelector('#birth-year').value);
+
+      if (inputDay > 31 || inputDay < 1 ||
+          inputMonth > 12 || inputMonth < 1 ||
+          inputYear > 2023 || inputYear < 1900) {
+          
+        myModalModel.validateData();
+      } else {
+        myModalModel.saveModalData(inputName, inputDay, inputMonth, inputYear);
+      }
+    }
+
+    const btnClearData = document.querySelector('#clear-data');
+    btnClearData.addEventListener('click', () => {
+      myModalModel.clearData();
+    })
+  };
+/* ------ end controller ----- */
+
+/* ------- begin model ------- */
+  function ModalModel () {
+    let myModalContainer = null;
+    let myModalView = null;
+    let userData = {};
+
+    this.init = function(container, view) {
+      myModalContainer = container;
+      myModalView = view;
+
+      if (localStorage.getItem('userData') !== null) {
+        const localData = JSON.parse(localStorage.getItem('userData')); 
+        this.getData();
+      }
+    }
+
+    this.openModal = function() {
+      myModalView.show();
+    }
+
+    this.closeModal = function() {
+      myModalView.hide();
+      myModalView.clearForm();
+    }
+
+    this.saveModalData = function(name, day, month, year) { //получить данные из модалки и сохранить
+      userData['name'] = name;
+      userData['day'] = day;
+      userData['month'] = month;
+      userData['year'] = year;
+
+      this.storeData(userData);
+      myModalView.hide();
+    }
+
+    this.storeData = function(data) { // сохранить данные в localStorage
+      this.checkLocalStorage = function () {
+        const test = 'test';
+        try {
+          localStorage.setItem(test, test);
+          localStorage.removeItem(test);
+          return true;
+        } catch(e) {
+          return false;
+        }
+      }
+
+      if (this.checkLocalStorage() === true){
+        localStorage.setItem('userData', JSON.stringify(data));
+        this.getData();
+      } else {
+        myModalView.printViewData();
+      }
+    }
+
+    this.getData = function() { //достать данные из хранилища
+      const localData = JSON.parse(localStorage.getItem('userData'));
+      myModalView.printViewData(localData); 
+    }
+
+    this.updateData = function() {
+    }
+
+    this.clearData = function() { //очистить данные в хранилище
+      localStorage.removeItem('userData');
+      myModalView.clearViewData();
+    }
+
+    this.validateData = function() { //валидация значения дат
+      myModalView.dataInvalidWarning();
+      myModalView.hide();
+    }
+
+  }
+/* -------- end model -------- */
+
+/* ------- begin view -------- */
+function ModalView() {
+    let myModal = null;
+    let myModalOverlay = null;
+    let infoContainer = null;
+
+    this.init = function(container, overlay, pageContainer) {
+      myModal = container;
+      myModalOverlay = overlay;
+      infoContainer = pageContainer;
+    }
+
+    this.show = function () {
+      myModal.classList.remove('modal_closed');
+      myModalOverlay.classList.remove('modal_closed');
+    }
+
+    this.hide = function () {
+      myModal.classList.add('modal_closed');
+      myModalOverlay.classList.add('modal_closed');
+    }
+
+    this.clearForm = function () {
+      const inputName = myModal.querySelector('#name').value = '';
+      const inputDay =  myModal.querySelector('#birth-day').value = '';
+      const inputMonth = myModal.querySelector('#birth-month').value = '';
+      const inputYear = myModal.querySelector('#birth-year').value = '';
+    }
+
+    this.printViewData = function (data) { // вывести данные из хранилища в div.modal-data
+      if (data) {
+        infoContainer.textContent = `Привет ${data.name}!
+        Твой день рождения - день: ${data.day} / месяц: ${data.month} / год: ${data.year}`;
+        const btnClearData = document.querySelector('#clear-data');
+        btnClearData.style="display: block;"
+      } else {
+        infoContainer.textContent = 'Ошибка данных';
+      }
+    }
+
+    this.clearViewData = function () { // очистить или выдать дефолтное сообщение только для div.modal-data
+      infoContainer.textContent = 'Данные отсутствуют...';
+    }
+
+    this.dataInvalidWarning = function () {
+      infoContainer.textContent = 'Некорректное значение данных';
+    }
+  };
+/* -------- end view --------- */
+
+ 
+
+// глобальная инициализация
+
+  const appModalController = new ModalController();
+  const appModalModel = new ModalModel();
+  const appModalView = new ModalView();
+
+  const container = document.querySelector('#my-custom-modal');
+  const overlay = document.querySelector('#modal-overlay');
+  const pageContainer = document.querySelector('#modal-data');
+
+//вызвать init-методы...
+
+  appModalView.init(container, overlay, pageContainer);
+  appModalController.init(appModalModel, container);
+  appModalModel.init(container, appModalView);
+
+</script>
+</body>
+</html>

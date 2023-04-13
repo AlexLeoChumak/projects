@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task №19 (clock-canvas)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+	    <canvas id="clock" width="400" height="400"></canvas>
+
+	    <script>
+            'use strict';
+
+            const canv = document.querySelector('#clock');
+            const ctx = canv.getContext('2d');
+            const circleCenterCX = canv.offsetWidth / 2;
+            const circleCenterCY = canv.offsetHeight / 2; 
+            const radiusBigClock = canv.offsetHeight / 2.1;
+            const radiusCircle = canv.offsetHeight / 2.6;
+            const secondArrowHeight = canv.offsetHeight / 2.5;
+            const secondArrowWidth = canv.offsetHeight / 150;  
+            const minuteArrowHeight = canv.offsetHeight / 3.5;
+            const minuteArrowWidth = canv.offsetHeight / 70;
+            const hourArrowHeight =  canv.offsetHeight / 5;
+            const hourArrowWidth = canv.offsetHeight / 40;
+            const fontNumbers = canv.offsetHeight / 10 + 'px';
+            const digitalClockRadius = canv.offsetHeight / 7;
+            const fontSizeNumbers = canv.offsetHeight / 20 + 'px';
+            const hourDigits = 12;
+            const spaceBetweenNumbers = 30;
+            const miniCircleRadius = canv.offsetHeight / 15;
+            const miniCircleColor = 'limegreen';
+            let miniCircleCenterCX;
+            let miniCircleCenterCY;
+            let currentAngle = 0;
+            let angle;
+            let hoursDeg;
+            let minutesDeg;
+            let secondsDeg;
+
+            function clockBig() {
+                ctx.fillStyle = 'yellow';
+                ctx.beginPath();
+                ctx.arc(circleCenterCX, circleCenterCY, radiusBigClock, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.closePath();
+
+                for (let i = 1; i <= hourDigits; i++) {
+
+                    currentAngle += spaceBetweenNumbers;
+                    angle = currentAngle * Math.PI / 180;
+                    miniCircleCenterCX = Math.round(circleCenterCX + radiusCircle * Math.sin(angle));
+                    miniCircleCenterCY = Math.round(circleCenterCY - radiusCircle * Math.cos(angle));
+
+                    ctx.beginPath();
+                    ctx.fillStyle = miniCircleColor;
+                    ctx.arc(miniCircleCenterCX, miniCircleCenterCY, miniCircleRadius, 0, Math.PI * 2);
+                    ctx.closePath();
+                    ctx.fill();
+
+                    ctx.fillStyle ='black';
+                    ctx.font =`normal ${fontNumbers} 'Arial'`;
+                    ctx.textBaseline='middle';
+                    ctx.textAlign='center';
+                    ctx.fillText(i, miniCircleCenterCX, miniCircleCenterCY);
+                }
+            }
+
+            function secondArrow() {
+                const time = new Date();
+                secondsDeg = 6 * time.getSeconds();
+                ctx.lineWidth = secondArrowWidth;
+                ctx.lineCap = "round";
+                ctx.beginPath();
+                ctx.moveTo(circleCenterCX, circleCenterCY);
+                ctx.lineTo(circleCenterCX + secondArrowHeight * Math.sin(secondsDeg * Math.PI / 180), 
+                           circleCenterCY - secondArrowHeight * Math.cos(secondsDeg * Math.PI / 180));
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            function minuteArrow() {
+                const time = new Date();
+                ctx.lineWidth = minuteArrowWidth;
+                ctx.lineCap = "round";
+                minutesDeg = 6 * (time.getMinutes() + (1 / 60) * time.getSeconds());
+                ctx.beginPath();
+                ctx.moveTo(circleCenterCX, circleCenterCY);
+                ctx.lineTo(circleCenterCX + minuteArrowHeight * Math.sin(minutesDeg * Math.PI / 180), 
+                           circleCenterCY - minuteArrowHeight * Math.cos(minutesDeg * Math.PI / 180));
+                ctx.stroke();
+                ctx.closePath();
+            }
+            
+            function hourArrow() {
+                const time = new Date();
+                ctx.lineWidth = hourArrowWidth;
+                ctx.lineCap = "round";
+                hoursDeg = 30 * (time.getHours() + (1 / 60) * time.getMinutes());
+                ctx.beginPath();
+                ctx.moveTo(circleCenterCX, circleCenterCY);
+                ctx.lineTo(circleCenterCX + hourArrowHeight * Math.sin(hoursDeg  * Math.PI / 180), 
+                           circleCenterCY - hourArrowHeight * Math.cos(hoursDeg * Math.PI / 180));
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            function digitalWatch() {
+                const time = new Date();
+                ctx.beginPath();      
+                const digitalClock = time.toLocaleTimeString();
+                ctx.textBaseline = 'middle';
+                ctx.textAlign = 'center';
+                ctx.fillText(digitalClock, circleCenterCX, circleCenterCY - digitalClockRadius);	
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            setTimeout(function run() {
+                clockBig();
+                secondArrow();
+                minuteArrow();
+                hourArrow();
+                digitalWatch();
+                setTimeout(run, 1000)
+            });
+        </script>
+    </body>
+</html>

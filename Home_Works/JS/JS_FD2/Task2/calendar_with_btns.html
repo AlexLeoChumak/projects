@@ -89,7 +89,7 @@
                 showNowValue();
             }
 
-            // Переход к следующему месяцу
+            
             function nextMonth() {
                 if ( currentM == 11 ) {
                     currentM = 0;
@@ -100,7 +100,7 @@
                 showNowValue();
             }
 
-            // Переход к предыдущему месяцу
+            
             function previousMonth() {
                 if ( currentM == 0 ) {
                     currentM = 11;
@@ -115,7 +115,7 @@
                 getTitleCalendar(currentY, currentM);
             };
 
-            // Показать месяц (год, месяц)
+            
             function getTitleCalendar(year, month) {
                 let firstDayMonth = new Date(year, month, 7).getDay();
                 let lastDateMonth =  new Date(year, month + 1, 0).getDate();
@@ -130,18 +130,18 @@
 
                 pasteLayout += '</tr>';
 
-                // Записываем дни
+                
                 let i = 1;
                 do {
 
                 let dayOnWeek = new Date(year, month, i).getDay();
 
-                // Начать новую строку в понедельник
+                
                 if ( dayOnWeek == 1 ) {
                     pasteLayout += '<tr>';
                 }
                 
-                // Если первый день недели не понедельник показать последние дни предидущего месяца
+               
                 else if ( i == 1 ) {
                     pasteLayout += '<tr>';
                     let yesterday = lastDayPreviousMonth - firstDayMonth + 1;
@@ -154,11 +154,11 @@
 
                 pasteLayout += '<td>' + i + '</td>';
                 
-                // закрыть строку в воскресенье
+                
                 if ( dayOnWeek == 0 ) {
                     pasteLayout += '</tr>';
                 }
-                // Если последний день месяца не воскресенье, показать первые дни следующего месяца
+                
                 else if ( i == lastDateMonth ) {
                     let yesterday = 1;
                     for (dayOnWeek; dayOnWeek < 7; dayOnWeek++) {
@@ -170,17 +170,14 @@
                 i++;
                 } while (i <= lastDateMonth);
 
-                // Конец таблицы
                 pasteLayout += '</table>';
 
-                // Записываем pasteLayout в div
                 document.querySelector("h2").innerHTML = pasteTitle;
                 document.querySelector("#layout").innerHTML = pasteLayout;
             };
         
             showNowValue();
 
-            // Привязываем кнопки «Следующий» и «Предыдущий»
             btnNextMonth.addEventListener('click', nextMonth);
             btnPrevMonth.addEventListener('click', previousMonth);
             btnNextYear.addEventListener('click', nextYear);

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset=utf-8>
+        <title>Practical task #17 (clock)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                font-size: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .numbers{
+                text-align: center;
+                border-radius: 50%;
+                background-color: green;
+                position: absolute; 
+            }
+            .secondArrow {
+                position: absolute;
+                background-color: black;
+                transform-origin: center 160px;
+                width: 4px;
+                height: 170px;
+                border-radius: 10px;   
+            }
+            .minuteArrow {
+                width: 7px;
+                height: 140px;
+                border-radius: 10px;
+                position: absolute;
+                background-color: black;
+                transform-origin: center 130px;
+            }
+            .hourArrow {
+                background-color: black;
+                transform-origin: center 33px;
+                border-radius: 10px;
+                position: absolute;   
+            }
+            #clock{
+                background-color: yellow;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;  
+            }
+        </style>
+    </head>
+    <body>
+        <div id='clock'></div>
+    </body>  
+        <script>
+            'use strict';
+
+            const divClock = document.querySelector('#clock');
+            const hourArrow = document.createElement('div');
+            const minuteArrow = document.createElement('div');
+            const secondArrow = document.createElement('div');
+            const time = new Date();
+            const one = 1;
+            const two = 2;
+            const twoTwo = 2.2;
+            const three = 3;
+            const threeFive = 3.5;
+            const five = 5;
+            const six = 6;
+            const sixFive = 6.5;
+            const ten = 10;
+            const forty = 40;
+            const sixty = 60;
+            const seventy = 70;
+            const hundred = 100;
+            const thousand = 1000;
+            const radius = divClock.offsetWidth / two - 30;
+            const spaceBetweenNumbers = 30;
+            let currentAngle = 0;
+            const hourNumber = 12;
+            let i = 1;
+            let secondsDeg = 6 * time.getSeconds() - 6;
+            let minutesDeg = 6 * (time.getMinutes() + (1 / 60) * time.getSeconds());
+            let hoursDeg = 30 * (time.getHours() + (1 / 60) * time.getMinutes());
+            const divClockCenterX = divClock.offsetLeft + divClock.offsetWidth / two;
+            const divClockCenterY = divClock.offsetTop + divClock.offsetHeight / two;
+            
+            while (i <= hourNumber) {
+
+                const wrapChildElem = document.createElement('div');
+                let divClockChildrenCenterX;
+                let divClockChildrenCenterY;
+                let angleRadians;
+
+                currentAngle += spaceBetweenNumbers;
+                angleRadians = currentAngle / 180 * Math.PI;
+
+                divClock.append(wrapChildElem);
+                wrapChildElem.classList.add('numbers');
+                wrapChildElem.style.width = divClock.offsetWidth / ten + 'px';
+                wrapChildElem.style.height = divClock.offsetHeight / ten + 'px';
+                wrapChildElem.style.fontSize = divClock.offsetHeight / (ten * two) + 'px';
+                wrapChildElem.style.lineHeight = divClock.offsetHeight / ten + 'px';
+                wrapChildElem.innerHTML = i;
+
+                divClockChildrenCenterX = divClockCenterX + radius * Math.sin(angleRadians);
+                divClockChildrenCenterY = divClockCenterY - radius * Math.cos(angleRadians);
+                wrapChildElem.style.left = Math.round(divClockChildrenCenterX - wrapChildElem.offsetWidth/two) + 'px';
+                wrapChildElem.style.top = Math.round(divClockChildrenCenterY - wrapChildElem.offsetHeight/two) + 'px';
+                i++;
+            }
+
+            divClock.append(hourArrow, minuteArrow, secondArrow);
+
+            hourArrow.classList.add('hourArrow');
+            hourArrow.style.width = divClock.offsetWidth / forty + 'px';
+            hourArrow.style.height = divClock.offsetHeight / five + 'px';
+            hourArrow.style.transformOrigin = 'center' + ' ' + divClock.offsetHeight / sixFive + 'px';
+
+            minuteArrow.classList.add('minuteArrow');
+            minuteArrow.style.width = divClock.offsetWidth / seventy + 'px';
+            minuteArrow.style.height = divClock.offsetHeight / three + 'px';
+            minuteArrow.style.transformOrigin = 'center' + ' ' + divClock.offsetHeight / threeFive + 'px';
+
+            secondArrow.classList.add('secondArrow');
+            secondArrow.style.width = divClock.offsetWidth / hundred + 'px';
+            secondArrow.style.height = divClock.offsetHeight / two + 'px';
+            secondArrow.style.transformOrigin = 'center' + ' ' + divClock.offsetHeight / twoTwo + 'px';
+            
+
+            secondArrow.style.top = divClockCenterY - secondArrow.offsetHeight + ten + 'px';
+            secondArrow.style.left = divClockCenterX - secondArrow.offsetWidth / two + 'px';
+            minuteArrow.style.top = divClockCenterY - minuteArrow.offsetHeight + ten + 'px';
+            minuteArrow.style.left = divClockCenterX - minuteArrow.offsetWidth / two + 'px';
+            hourArrow.style.top = divClockCenterY - hourArrow.offsetHeight + ten + 'px';
+            hourArrow.style.left = divClockCenterX - hourArrow.offsetWidth / two + 'px';
+
+            function setPositionArrows() {
+                secondsDeg += six;
+                secondArrow.style.transform = 'rotate(' + secondsDeg + 'deg)';
+
+                minutesDeg += six * (one/sixty);
+                minuteArrow.style.transform = 'rotate(' + minutesDeg + 'deg)';
+
+                hoursDeg += six * (one / (sixty * six));
+                hourArrow.style.transform = 'rotate(' + hoursDeg + 'deg)';
+            }
+
+            setPositionArrows();
+            setTimeout(function run() {
+                setPositionArrows();
+                setTimeout(run, thousand)
+            });
+        </script>
+    </body> 
+</html>
