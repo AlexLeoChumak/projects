@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Modal default MVC</title>
+  <title>Modal default MVC Just Do It</title>
   <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -56,10 +56,19 @@
     
     let myModalModel = null;
     let myModalContainer = null;
+    let name = null;
+    let day = null;
+    let month = null;
+    let year = null;
+    let btnSave = null;
 
     this.init = function(model, container) { // получаем кнопки и вешаем обработчики
       myModalModel = model;
       myModalContainer = container;
+      name = inputName;
+      day = inputDay;
+      month = inputMonth;
+      year = inputYear;
 
       const btnOpenModal = document.querySelector('#modal-open');
       btnOpenModal.addEventListener('click', function (e) {
@@ -68,7 +77,7 @@
 
       const btnCloseModal = myModalContainer.querySelector('#modal-close');
       const btnCancelModal = myModalContainer.querySelector('#modal-cancel');
-      const btnSaveModal = myModalContainer.querySelector('#modal-save');
+      btnSave = btnSaveModal;
 
       myModalContainer.addEventListener('click', (event) => {
         const eTarget = event.target.id;
@@ -77,29 +86,45 @@
           case 'modal-cancel': myModalModel.closeModal(); break;
           case 'modal-save': this.saveModal(); break;
         }
-      })
+      });
+
+      name.addEventListener('input', this.disable);
+      day.addEventListener('input', this.disable);
+      month.addEventListener('input', this.disable);
+      year.addEventListener('input', this.disable);
     }
 
-    this.saveModal = function () {
-      const inputName = myModalContainer.querySelector('#name').value;
-      const inputDay =  Number(myModalContainer.querySelector('#birth-day').value);
-      const inputMonth = Number(myModalContainer.querySelector('#birth-month').value);
-      const inputYear = Number(myModalContainer.querySelector('#birth-year').value);
+    this.disable = function () {
+      name = inputName.value;
+      day = inputDay.value;
+      month = inputMonth.value;
+      year = inputYear.value;
 
-      if (inputDay > 31 || inputDay < 1 ||
-          inputMonth > 12 || inputMonth < 1 ||
-          inputYear > 2023 || inputYear < 1900) {
+      myModalModel.disable(name, day, month, year);
+    }
+    
+
+    this.saveModal = function () {
+
+      name = inputName.value;
+      day = Number(inputDay.value);
+      month = Number(inputMonth.value);
+      year = Number(inputYear.value);
+
+      if (day > 31 || day < 1 ||
+          month > 12 || month < 1 ||
+          year > 2023 || year < 1900) {
           
         myModalModel.validateData();
       } else {
-        myModalModel.saveModalData(inputName, inputDay, inputMonth, inputYear);
+        myModalModel.saveModalData(name, day, month, year);
       }
     }
 
     const btnClearData = document.querySelector('#clear-data');
     btnClearData.addEventListener('click', () => {
       myModalModel.clearData();
-    })
+    });
   };
 /* ------ end controller ----- */
 
@@ -163,12 +188,17 @@
       myModalView.printViewData(localData); 
     }
 
-    this.updateData = function() {
-    }
-
     this.clearData = function() { //очистить данные в хранилище
       localStorage.removeItem('userData');
       myModalView.clearViewData();
+    }
+
+    this.disable = function (nameInput, dateInput, monthInput, yearInput) {
+      if (nameInput && dateInput && monthInput && yearInput) {
+        myModalView.disableButton(false);
+      } else {
+         myModalView.disableButton(true);
+      }
     }
 
     this.validateData = function() { //валидация значения дат
@@ -184,11 +214,22 @@ function ModalView() {
     let myModal = null;
     let myModalOverlay = null;
     let infoContainer = null;
+    let name = null;
+    let day = null;
+    let month = null;
+    let year = null;
+    let buttonSave = null;
 
-    this.init = function(container, overlay, pageContainer) {
+    this.init = function (container, overlay, pageContainer) {
       myModal = container;
       myModalOverlay = overlay;
       infoContainer = pageContainer;
+
+      name = inputName.value;
+      day = inputDay.value;
+      month = inputMonth.value;
+      year = inputYear.value;
+      buttonSave = btnSaveModal.disabled = true;
     }
 
     this.show = function () {
@@ -201,11 +242,16 @@ function ModalView() {
       myModalOverlay.classList.add('modal_closed');
     }
 
+    this.disableButton = function(status) {
+      buttonSave = btnSaveModal;
+      buttonSave.disabled = status;
+    }
+
     this.clearForm = function () {
-      const inputName = myModal.querySelector('#name').value = '';
-      const inputDay =  myModal.querySelector('#birth-day').value = '';
-      const inputMonth = myModal.querySelector('#birth-month').value = '';
-      const inputYear = myModal.querySelector('#birth-year').value = '';
+      name = inputName.value = '';
+      day = inputDay.value = '';
+      month = inputMonth.value = '';
+      year = inputYear.value = '';
     }
 
     this.printViewData = function (data) { // вывести данные из хранилища в div.modal-data
@@ -213,7 +259,7 @@ function ModalView() {
         infoContainer.textContent = `Привет ${data.name}!
         Твой день рождения - день: ${data.day} / месяц: ${data.month} / год: ${data.year}`;
         const btnClearData = document.querySelector('#clear-data');
-        btnClearData.style="display: block;"
+        btnClearData.style = "display: inline-block;"
       } else {
         infoContainer.textContent = 'Ошибка данных';
       }
@@ -221,10 +267,12 @@ function ModalView() {
 
     this.clearViewData = function () { // очистить или выдать дефолтное сообщение только для div.modal-data
       infoContainer.textContent = 'Данные отсутствуют...';
+      this.clearForm();
     }
 
     this.dataInvalidWarning = function () {
       infoContainer.textContent = 'Некорректное значение данных';
+      this.clearForm();
     }
   };
 /* -------- end view --------- */
@@ -240,6 +288,12 @@ function ModalView() {
   const container = document.querySelector('#my-custom-modal');
   const overlay = document.querySelector('#modal-overlay');
   const pageContainer = document.querySelector('#modal-data');
+
+  const inputName = document.querySelector('#name');
+  const inputDay =  document.querySelector('#birth-day');
+  const inputMonth = document.querySelector('#birth-month');
+  const inputYear = document.querySelector('#birth-year');
+  const btnSaveModal = document.querySelector('#modal-save');
 
 //вызвать init-методы...
 
