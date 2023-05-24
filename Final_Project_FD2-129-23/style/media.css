@@ -109,7 +109,6 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin: 0 0 200px 0;
   }
 
   .game__progress {
@@ -198,7 +197,6 @@
 
   .work__data button {
     margin: 0 10px;
-    width: 80vw;
   }
 
   .work__data_question_edit h6,
@@ -458,6 +456,10 @@
   .work__data_question_edit h6,
   .work__data_question_edit p {
     font-size: 4vw;
+  }
+
+  .work__data button {
+    width: 50vw;
   }
 }
 

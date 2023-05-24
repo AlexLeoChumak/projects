@@ -793,7 +793,7 @@ export default class View {
         this.musicApplause.play();
   
         target.classList.remove('wait_answer');
-        this.question15.classList.add('background_green');
+        this.question15.classList.add('backgroundGreen');
       }, 5000);
   
       setTimeout(() => {
@@ -823,21 +823,21 @@ export default class View {
     }
   
     clearQuestionsBackground() {
-      this.question1.classList.remove('background_green');
-      this.question2.classList.remove('background_green');
-      this.question3.classList.remove('background_green');
-      this.question4.classList.remove('background_green');
-      this.question5.classList.remove('background_green');
-      this.question6.classList.remove('background_green');
-      this.question7.classList.remove('background_green');
-      this.question8.classList.remove('background_green');
-      this.question9.classList.remove('background_green');
-      this.question10.classList.remove('background_green');
-      this.question11.classList.remove('background_green');
-      this.question12.classList.remove('background_green');
-      this.question13.classList.remove('background_green');
-      this.question14.classList.remove('background_green');
-      this.question15.classList.remove('background_green');
+      this.question1.classList.remove('backgroundGreen');
+      this.question2.classList.remove('backgroundGreen');
+      this.question3.classList.remove('backgroundGreen');
+      this.question4.classList.remove('backgroundGreen');
+      this.question5.classList.remove('backgroundGreen');
+      this.question6.classList.remove('backgroundGreen');
+      this.question7.classList.remove('backgroundGreen');
+      this.question8.classList.remove('backgroundGreen');
+      this.question9.classList.remove('backgroundGreen');
+      this.question10.classList.remove('backgroundGreen');
+      this.question11.classList.remove('backgroundGreen');
+      this.question12.classList.remove('backgroundGreen');
+      this.question13.classList.remove('backgroundGreen');
+      this.question14.classList.remove('backgroundGreen');
+      this.question15.classList.remove('backgroundGreen');
       this.counterQuestions = 1;
     }
   
@@ -862,46 +862,46 @@ export default class View {
   
         switch (this.counterQuestions) {
           case 1:
-            this.question1.classList.add('background_green');
+            this.question1.classList.add('backgroundGreen');
             break;
           case 2:
-            this.question2.classList.add('background_green');
+            this.question2.classList.add('backgroundGreen');
             break;
           case 3:
-            this.question3.classList.add('background_green');
+            this.question3.classList.add('backgroundGreen');
             break;
           case 4:
-            this.question4.classList.add('background_green');
+            this.question4.classList.add('backgroundGreen');
             break;
           case 5:
-            this.question5.classList.add('background_green');
+            this.question5.classList.add('backgroundGreen');
             break;
           case 6:
-            this.question6.classList.add('background_green');
+            this.question6.classList.add('backgroundGreen');
             break;
           case 7:
-            this.question7.classList.add('background_green');
+            this.question7.classList.add('backgroundGreen');
             break;
           case 8:
-            this.question8.classList.add('background_green');
+            this.question8.classList.add('backgroundGreen');
             break;
           case 9:
-            this.question9.classList.add('background_green');
+            this.question9.classList.add('backgroundGreen');
             break;
           case 10:
-            this.question10.classList.add('background_green');
+            this.question10.classList.add('backgroundGreen');
             break;
           case 11:
-            this.question11.classList.add('background_green');
+            this.question11.classList.add('backgroundGreen');
             break;
           case 12:
-            this.question12.classList.add('background_green');
+            this.question12.classList.add('backgroundGreen');
             break;
           case 13:
-            this.question13.classList.add('background_green');
+            this.question13.classList.add('backgroundGreen');
             break;
           case 14:
-            this.question14.classList.add('background_green');
+            this.question14.classList.add('backgroundGreen');
             break;
         }
   

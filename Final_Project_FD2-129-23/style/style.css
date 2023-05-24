@@ -153,7 +153,6 @@ button {
   color: white;
   width: 50vw;
   padding: 20px;
-  margin: 0 0 200px 0;
 }
 
 .info__roots {
@@ -176,9 +175,6 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-item-align: start;
-  -ms-grid-row-align: start;
-  align-self: start;
 }
 
 .records li {
@@ -653,7 +649,7 @@ button {
   border-radius: 5px;
 }
 
-.background_green {
+.backgroundGreen {
   background: -o-radial-gradient(circle, rgba(0, 210, 21, 0.8015581232492998) 12%, rgba(42, 175, 0, 0.9164040616246498) 65%, rgba(22, 108, 0, 1) 100%);
   background: radial-gradient(circle, rgba(0, 210, 21, 0.8015581232492998) 12%, rgba(42, 175, 0, 0.9164040616246498) 65%, rgba(22, 108, 0, 1) 100%);
 }
