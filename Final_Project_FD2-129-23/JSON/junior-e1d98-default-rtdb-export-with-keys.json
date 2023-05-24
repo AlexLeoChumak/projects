@@ -1,0 +1,544 @@
+{
+  "question": {
+    "-NW1TIYXDGfXCaejOKhj": {
+      "a": "const",
+      "b": "let",
+      "c": "var",
+      "correctAnswer": "go",
+      "d": "go",
+      "fifty": "var",
+      "question": "Какого ключевого слова для объявлении переменной не существует в JavaScript?"
+    },
+    "-NW1UNG2ZBVE2zriqbd8": {
+      "a": "строки",
+      "b": "функции",
+      "c": "логические значения",
+      "correctAnswer": "функции",
+      "d": "числа",
+      "fifty": "числа",
+      "question": "К сложному типу данных в JavaScript относят ..."
+    },
+    "-NW1V0peAAgOBDp4nf0j": {
+      "a": "вопросительный",
+      "b": "тернарный",
+      "c": "бинарный",
+      "correctAnswer": "тернарный",
+      "d": "унарный",
+      "fifty": "вопросительный",
+      "question": "Как по-другому называют условный оператор ' ? ' ?"
+    },
+    "-NW1WqltstDNiTPV2yw2": {
+      "a": "for...of",
+      "b": "loop",
+      "c": "for",
+      "correctAnswer": "loop",
+      "d": "while",
+      "fifty": "for...of",
+      "question": "Какого цикла не существует в JavaScript?"
+    },
+    "-NW1YC113jyJ7_EcW8eC": {
+      "a": "//",
+      "b": "++",
+      "c": "--",
+      "correctAnswer": "--",
+      "d": "**",
+      "fifty": "++",
+      "question": "Какими символами обозначается оператор декремента в JavaScript?"
+    },
+    "-NW1_JgvHOTCuHFWvN9T": {
+      "a": "способы",
+      "b": "действия",
+      "c": "методы",
+      "correctAnswer": "методы",
+      "d": "переменные",
+      "fifty": "способы",
+      "question": "Как называются функции, находящиеся в объекте - { } - JavaScript?"
+    },
+    "-NW1dMoqINhcKSxn2Idw": {
+      "a": "2007",
+      "b": "2012",
+      "c": "2021",
+      "correctAnswer": "2015",
+      "d": "2015",
+      "fifty": "2021",
+      "question": "В каком году вышел стандарт JavaScript - ECMAScript 6?"
+    },
+    "-NW1fg6l2ix5-YLxplHh": {
+      "a": "ES3",
+      "b": "ES5",
+      "c": "ECMAScript 6",
+      "correctAnswer": "ECMAScript 6",
+      "d": "ES4",
+      "fifty": "ES5",
+      "question": "В каком стандарте JavaScript появились стрелочные функции - ' => ' ?"
+    },
+    "-NW1gKItGE2kIeIjIuja": {
+      "a": "undefined",
+      "b": "null",
+      "c": "is not defined",
+      "correctAnswer": "null",
+      "d": "error",
+      "fifty": "undefined",
+      "question": "Какое значение вернёт alert при нажатии кнопки 'Отмена' на нём?"
+    },
+    "-NW1ggxIby1HkUltsGpx": {
+      "a": "===",
+      "b": "==",
+      "c": "====",
+      "correctAnswer": "===",
+      "d": "=",
+      "fifty": "==",
+      "question": "Как обозначается строгое сравнение в JavaScript?"
+    },
+    "-NW1hXVE6vEqzSmvRlNx": {
+      "a": "***",
+      "b": "...",
+      "c": "---",
+      "correctAnswer": "...",
+      "d": "+++",
+      "fifty": "+++",
+      "question": "Как обозначается оператор расширения в JavaScript?"
+    },
+    "-NW1htxsp_Z8NnklOjud": {
+      "a": "step",
+      "b": "slow",
+      "c": "sign",
+      "correctAnswer": "switch",
+      "d": "switch",
+      "fifty": "sign",
+      "question": "Какая конструкция в JavaScript заменяет собой сразу несколько ' if ' ?"
+    },
+    "-NW1ib46x0A7DZcOPX06": {
+      "a": "break",
+      "b": "return",
+      "c": "var",
+      "correctAnswer": "return",
+      "d": "print",
+      "fifty": "break",
+      "question": "Какая инструкция в JavaScript используется для возврата значения?"
+    },
+    "-NW1io_DgA1XDK2Y9hZL": {
+      "a": "стек",
+      "b": "рекурсия",
+      "c": "дебоунсинг",
+      "correctAnswer": "рекурсия",
+      "d": "тротлинг",
+      "fifty": "дебоунсинг",
+      "question": "Как называется вызов функцией самой себя?"
+    },
+    "-NW1j-g2pRe962O-rh-l": {
+      "a": "push",
+      "b": "pop",
+      "c": "shift",
+      "correctAnswer": "push",
+      "d": "unshift",
+      "fifty": "shift",
+      "question": "Какой метод добавляет элементы в конец массива?"
+    },
+    "-NW1jJ7G_l-d6ne_oQ8z": {
+      "a": "push",
+      "b": "pop",
+      "c": "shift",
+      "correctAnswer": "unshift",
+      "d": "unshift",
+      "fifty": "pop",
+      "question": "Какой метод добавляет элементы в начало массива?"
+    },
+    "-NW1jkxKW0MXbAc0b84U": {
+      "a": "String",
+      "b": "Number",
+      "c": "Boolean",
+      "correctAnswer": "Number",
+      "d": "NaN",
+      "fifty": "NaN",
+      "question": "Какой метод используется для преобразования к числу?"
+    },
+    "-NW1jyk5k6cw9esrpk0T": {
+      "a": "возвращаемое значение из функции",
+      "b": "оператор равенства в методе",
+      "c": "контекст выполнения",
+      "correctAnswer": "ссылка на объект (а на какой, зависит от контекста вызова функции)",
+      "d": "ссылка на объект (а на какой, зависит от контекста вызова функции)",
+      "fifty": "контекст выполения",
+      "question": "Что такое 'this' в JavaScript?"
+    },
+    "-NW1kIl-tbr4PIWu3-x3": {
+      "a": "switch...case",
+      "b": "async/await",
+      "c": "if...else",
+      "correctAnswer": "try...catch",
+      "d": "try...catch",
+      "fifty": "async/await",
+      "question": "Какая конструкция позволяет 'отлавливать' ошибки в JavaScript?"
+    },
+    "-NW1kVujjISmjM-EeOMD": {
+      "a": "setTimeout",
+      "b": "setInterval",
+      "c": "setClock",
+      "correctAnswer": "setTimeout",
+      "d": "setAttribute",
+      "fifty": "setInterval",
+      "question": "Какой метод позволяет вызвать функцию один раз через определённый интервал времени?"
+    },
+    "-NW1kyRXqHiddW0Js3CD": {
+      "a": "Point 'n' Click",
+      "b": "Drag 'n' Drop",
+      "c": "List 'n' Item",
+      "correctAnswer": "Drag 'n' Drop",
+      "d": "Hit 'n' Run",
+      "fifty": "Point 'n' Click",
+      "question": "Как в JS называется способ захвата и переноса элемента мышью?"
+    },
+    "-NW1lODKmiDd17aQn-hu": {
+      "a": "map",
+      "b": "concat",
+      "c": "reduce",
+      "correctAnswer": "set",
+      "d": "set",
+      "fifty": "reduce",
+      "question": "Какой из этих вариантов является свойством - аксессором?"
+    },
+    "-NW1uMcFv_K134B18mFY": {
+      "a": "stopPropagation",
+      "b": "preventDefault",
+      "c": "stop",
+      "correctAnswer": "stopPropagation",
+      "d": "addEventListener",
+      "fifty": "preventDefault",
+      "question": "С помощью какого метода можно остановить всплытие события?"
+    },
+    "-NW1ual7v1cVM-wJUwR-": {
+      "a": "patch",
+      "b": "net",
+      "c": "fetch",
+      "correctAnswer": "fetch",
+      "d": "cookie",
+      "fifty": "cookie",
+      "question": "Более современный аналог метода XMLHttpRequest это ... "
+    },
+    "-NW1v8gWxamjFTnzBVTK": {
+      "a": "хранилище для данных",
+      "b": "слушатель событий",
+      "c": "прерывание запроса",
+      "correctAnswer": "хранилище для данных",
+      "d": "метод фокусировки",
+      "fifty": "прерывание запроса",
+      "question": "Local storage - это ... "
+    },
+    "-NW1vKpnKIwRxZO6sVrO": {
+      "a": "unload",
+      "b": "beforeunload",
+      "c": "load",
+      "correctAnswer": "load",
+      "d": "DOMContentLoaded",
+      "fifty": "DOMContentLoaded",
+      "question": "Как называется событие, при котором браузер уже загрузил HTML и внешние ресурсы?"
+    },
+    "-NW1vZHn6rvLS6h9L5IC": {
+      "a": "unload",
+      "b": "beforeunload",
+      "c": "load",
+      "correctAnswer": "beforeunload",
+      "d": "DOMContentLoaded",
+      "fifty": "DOMContentLoaded",
+      "question": "Как называется событие, возникающее при закрытии текущей вкладки в браузере?"
+    },
+    "-NW1vsnW_fDG3Vq5OBBV": {
+      "a": "preventDefault",
+      "b": "removeEventListener",
+      "c": "offSetWidth",
+      "correctAnswer": "preventDefault",
+      "d": "DOMContentLoaded",
+      "fifty": "removeEventListener",
+      "question": "Каким методом можно отменить действие браузера по умолчанию при обработке события?"
+    },
+    "-NW1w7BCsCf4JZ6ZdDDr": {
+      "a": "да",
+      "b": "нет",
+      "c": "не жми здесь",
+      "correctAnswer": "да",
+      "d": "и не здесь",
+      "fifty": "да",
+      "question": "Это 'счастливый' вопрос - просто нажми 'да' и пройдёшь дальше ) Везение для офера тоже нужно)"
+    },
+    "-NW1wIV0H_q3Q4_YdOAn": {
+      "a": "querySelector",
+      "b": "getElementsByName",
+      "c": "getElementsByTagName",
+      "correctAnswer": "querySelector",
+      "d": "getElementsByClassName",
+      "fifty": "getElementsByName",
+      "question": "Какой метод поиска элементов в DOM НЕ возвращает живую коллекцию"
+    },
+    "-NW1wT6l2PgOoyabGEJ4": {
+      "a": "append",
+      "b": "get",
+      "c": "before",
+      "correctAnswer": "get",
+      "d": "after",
+      "fifty": "after",
+      "question": "Какой из этих методов НЕ предназначен для добавления узлов или строк в html документ?"
+    },
+    "-NW1wjk1wNpW-ZBejrsG": {
+      "a": "new RegExp",
+      "b": "new Array",
+      "c": "new String",
+      "correctAnswer": "new RegExp",
+      "d": "new Error",
+      "fifty": "new String",
+      "question": "Для создания регулярного выражения используется конструкция ... ?"
+    },
+    "-NW1x-JrxcPDjZ2rqODz": {
+      "a": "создания нового элемента",
+      "b": "удаления массива",
+      "c": "поиска элемента в DOM",
+      "correctAnswer": "хранения шаблона HTML",
+      "d": "хранения шаблона HTML",
+      "fifty": "создания нового элемента",
+      "question": "Встроенный элемент template предназначен для ... "
+    },
+    "-NW1xH5DGNo9M3RZxu0f": {
+      "a": "setTimeout",
+      "b": "requestAnimationFrame",
+      "c": "setInterval",
+      "correctAnswer": "requestAnimationFrame",
+      "d": "insertAdjacentHTML",
+      "fifty": "setInterval",
+      "question": "Встроенный метод браузера, который рекомендован для создания JavaScript-анимаций?"
+    },
+    "-NW1xubsd795dNt0Ls1L": {
+      "a": "обеспечение политики безопасности",
+      "b": "передача данных по технологии Wi-Fi",
+      "c": "отмена действия по умолчанию",
+      "correctAnswer": "обмен данными между браузером и сервером через постоянное соединение",
+      "d": "обмен данными между браузером и сервером через постоянное соединение",
+      "fifty": "обеспечение политики безопасности",
+      "question": "Какую функцию выполняет протокол WebSocket?"
+    },
+    "-NW1yJ8LmpaXPQYZw4cS": {
+      "a": "корректор",
+      "b": "исполнитель",
+      "c": "активатор",
+      "correctAnswer": "исполнитель",
+      "d": "инактиватор",
+      "fifty": "активатор",
+      "question": "Как называется функция, переданная в конструкцию new Promise?"
+    },
+    "-NW1yZPK3erLANeWXcD3": {
+      "a": "fulfilled",
+      "b": "pending",
+      "c": "active",
+      "correctAnswer": "active",
+      "d": "rejected",
+      "fifty": "rejected",
+      "question": "Какого состояния НЕ существует в promise?"
+    },
+    "-NW1yj-bjhVV77cXECvN": {
+      "a": "get",
+      "b": "set",
+      "c": "next",
+      "correctAnswer": "next",
+      "d": "switch",
+      "fifty": "set",
+      "question": "Основной метод функций-генераторов?"
+    },
+    "-NW1z00FbdQS09pcALFX": {
+      "a": "get",
+      "b": "next",
+      "c": "bind",
+      "correctAnswer": "bind",
+      "d": "play",
+      "fifty": "next",
+      "question": "Метод для привязки определённого контекста?"
+    },
+    "-NW1zMjEQA2hZU7IwxEg": {
+      "a": "Vue",
+      "b": "Angular",
+      "c": "Profun",
+      "correctAnswer": "Profun",
+      "d": "React",
+      "fifty": "Vue",
+      "question": "Какого из перечисленных фреймворков НЕ существует?"
+    },
+    "-NW1zaeoo3Xt9xzchB-I": {
+      "a": "3",
+      "b": "'3'",
+      "c": "'12'",
+      "correctAnswer": "'12'",
+      "d": "12",
+      "fifty": "12",
+      "question": "Что будет выведено в консоли - console.log( '1' + 2 ) ?"
+    },
+    "-NW1zk3JJT0xyXjoD_p-": {
+      "a": "#",
+      "b": "*",
+      "c": "/",
+      "correctAnswer": "#",
+      "d": "^",
+      "fifty": "/",
+      "question": "С какого символа начинаются названия приватных свойств и методов?"
+    },
+    "-NW1zsuOHXq1gqrTthhb": {
+      "a": "resolve",
+      "b": "value",
+      "c": "error",
+      "correctAnswer": "resolve",
+      "d": "result",
+      "fifty": "result",
+      "question": "Название колбэка promise, предоставляемого самим JavaScript?"
+    },
+    "-NW2--QORDYDxIxSxY_x": {
+      "a": "error",
+      "b": "result",
+      "c": "reject",
+      "correctAnswer": "reject",
+      "d": "value",
+      "fifty": "value",
+      "question": "Название колбэка promise, предоставляемого самим JavaScript?"
+    },
+    "-NW2-DjDmtTyHoYDT6xP": {
+      "a": "click",
+      "b": "mouseup",
+      "c": "contextmenu",
+      "correctAnswer": "contextmenu",
+      "d": "mousemove",
+      "fifty": "mousemove",
+      "question": "Какое событие возникает при нажатии правой кнопкой мыши по элементу?"
+    },
+    "-NW2-NDupcZchBjjeCzQ": {
+      "a": "touchstart",
+      "b": "touchgo",
+      "c": "touchbegin",
+      "correctAnswer": "touchstart",
+      "d": "touchrun",
+      "fifty": "touchrun",
+      "question": "Какое событие возникает при прикосновении пальца к элементу на сенсорном экране?"
+    },
+    "-NW2-iTVampJfi-YN9gi": {
+      "a": "input",
+      "b": "change",
+      "c": "submit",
+      "correctAnswer": "select",
+      "d": "select",
+      "fifty": "submit",
+      "question": "Какое событие возникает при выделении текста в текстовом поле?"
+    },
+    "-NW206qScA3YOUmCna5u": {
+      "a": "getDay",
+      "b": "getTime",
+      "c": "getSeconds",
+      "correctAnswer": "getTime",
+      "d": "getMilliseconds",
+      "fifty": "getMilliseconds",
+      "question": "Какой метод возвращает количество миллисекунд, прошедших от 1 января 1970 года?"
+    },
+    "-NW20Ng1M1sZ07tOFmAT": {
+      "a": "reverse",
+      "b": "join",
+      "c": "sort",
+      "correctAnswer": "reverse",
+      "d": "splice",
+      "fifty": "join",
+      "question": "Какой метод массивов изменяет порядок элементов на противоположный?"
+    },
+    "-NW20_B5JG9nrMyPlDt-": {
+      "a": "replace",
+      "b": "trim",
+      "c": "lastIndexOf",
+      "correctAnswer": "trim",
+      "d": "toUpperCase",
+      "fifty": "toUpperCase",
+      "question": "Какой метод массивов удаляет все пробельные символы в начале и в конце строки?"
+    },
+    "-NW20k9WymvzxaHF4RnB": {
+      "a": "sqrt",
+      "b": "floor",
+      "c": "round",
+      "correctAnswer": "ceil",
+      "d": "ceil",
+      "fifty": "round",
+      "question": "Какой метод Math возвращает значение, округлённое в большую сторону до целого числа?"
+    },
+    "-NW20vF9pXRpWyAhlEpg": {
+      "a": "инкапсуляция",
+      "b": "репликация",
+      "c": "наследование",
+      "correctAnswer": "репликация",
+      "d": "полиморфизм",
+      "fifty": "полиморфизм",
+      "question": "Какой из вариантов НЕ относится к трём важнейшим принципам ООП?"
+    },
+    "-NW216sKY-k1ActOqKpk": {
+      "a": "canvas",
+      "b": "main",
+      "c": "article",
+      "correctAnswer": "canvas",
+      "d": "br",
+      "fifty": "main",
+      "question": "Какой тег можно использовать как холст для отрисовки графики, анимаций и видео в HTML документе?"
+    },
+    "-NW21NAjvg5MJBJoKIWo": {
+      "a": "Number",
+      "b": "BigInt",
+      "c": "Num",
+      "correctAnswer": "BigInt",
+      "d": "Float",
+      "fifty": "Number",
+      "question": "Специальный числовой тип, предоставляющий возможность работать с целыми числами произвольной длины?"
+    },
+    "-NW21ZMHPMjqU8lpCWvu": {
+      "a": "Number.js",
+      "b": "Node.js",
+      "c": "Num.js",
+      "correctAnswer": "Node.js",
+      "d": "Float.js",
+      "fifty": "Float.js",
+      "question": "С помощью какого инструмента можно создавать серверные приложения на JavaScript?"
+    },
+    "-NW21mYI02Ew2ZsTyYmc": {
+      "a": "classList",
+      "b": "className",
+      "c": "classAll",
+      "correctAnswer": "className",
+      "d": "class",
+      "fifty": "classList",
+      "question": "С помощью какой команды можно заменить всю строку с CSS классами?"
+    },
+    "-NW21z4jKRixhlXUoiPj": {
+      "a": "instanceon",
+      "b": "instancetype",
+      "c": "instanceall",
+      "correctAnswer": "instanceof",
+      "d": "instanceof",
+      "fifty": "instancetype",
+      "question": "Какой оператор позволяет проверить принадлежность объекта указанному классу?"
+    },
+    "-NW229-YPpxVwArzTK9e": {
+      "a": "next",
+      "b": "toString",
+      "c": "stringify",
+      "correctAnswer": "stringify",
+      "d": "toLowerCase",
+      "fifty": "toString",
+      "question": "Какой из перечисленных методов есть у JSON?"
+    },
+    "-NW22I2TwbqmiU6JwAOX": {
+      "a": "slice",
+      "b": "shift",
+      "c": "includes",
+      "correctAnswer": "includes",
+      "d": "findIndex",
+      "fifty": "findIndex",
+      "question": "Какой метод массивов возвращает true, если в массиве имеется элемент, в противном случае false?"
+    },
+    "-NW22VG7GSImIQFJmHUd": {
+      "a": "split",
+      "b": "join",
+      "c": "reduceRight",
+      "correctAnswer": "split",
+      "d": "map",
+      "fifty": "join",
+      "question": "Какой метод массивов преобразует строку в массив?"
+    }
+  }
+}
