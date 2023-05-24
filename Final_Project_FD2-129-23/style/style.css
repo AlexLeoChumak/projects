@@ -8,10 +8,14 @@
 body {
   font-family: 'Comfortaa', cursive;
   font-size: 20px;
-  background: -o-radial-gradient(#aa0fb5, #1f1013);
-  background: radial-gradient(#aa0fb5, #1f1013);
+  background: -o-radial-gradient(#990fb5, #1f1013);
+  background: radial-gradient(#990fb5, #1f1013);
   overflow-x: hidden;
   text-align: center;
+}
+
+button {
+  background: transparent;
 }
 
 input::placeholder,
@@ -1275,7 +1279,8 @@ button {
 
 .game__animate_wave {
   position: absolute;
-  left: 0;
+  /*  */
+  left: calc(50 - 100%); 
   width: 200%;
   height: 100%;
   background-repeat: repeat no-repeat;
@@ -1283,6 +1288,8 @@ button {
   -webkit-transform-origin: center bottom;
   -ms-transform-origin: center bottom;
   transform-origin: center bottom;
+  /*  */
+  overflow-x: hidden;
 }
 
 .game__animate_wave_top {
@@ -1319,7 +1326,19 @@ button {
 }
 
 .disabled_active {
+  cursor: not-allowed;
+}
+
+.disabled_active_hints {
+  background: url(../images/disabled.png) no-repeat center;
+  background-size: contain;
   cursor: not-allowed !important;
+}
+
+.disabled_active_btn_submit {
+  background: url(../images/disabled.png) no-repeat center, rgba(156, 0, 106, 0.7);
+  background-size: contain;
+  cursor: not-allowed;
 }
 
 .game__animate_winner_cat {
@@ -1761,7 +1780,6 @@ path#f3-l9 {
 
 .game__hints_btns {
   cursor: pointer;
-  background: transparent;
   color: white;
   border: none;
   -webkit-transition: .4s;
@@ -1771,11 +1789,11 @@ path#f3-l9 {
   font-size: .8vw;
 }
 
-.game__hints_btns:hover {
+/* .game__hints_btns:hover {
   background: transparent;
   color: #fc00f8;
   border: none;
-}
+} */
 
 .game__field_hints_wrapper_btns:before {
   content: "";
@@ -2190,12 +2208,7 @@ path#f3-l9 {
   background-color: rgb(206, 0, 141);
 }
 
-.soundOn {
-  background: url(../images/green.png) no-repeat left center, rgba(156, 0, 106, 0.7);
-  background-size: contain;
-}
-
 .soundOff {
-  background: url(../images/red.png) no-repeat left center, rgba(156, 0, 106, 0.7);
+  background: url(../images/disabled.png) no-repeat center, rgba(156, 0, 106, 0.7);
   background-size: contain;
 }

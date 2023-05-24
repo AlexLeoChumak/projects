@@ -94,11 +94,11 @@ export default class View {
               <img src="images/logo.png" id="menuLogo" class="menu__logo" alt="logo" title="logo">
               <form>
                   <input id="menuInputName" class="menu__input_name btn" type="text" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ..." title="Введите имя не короче 2-х любых символов">
-                  <button id="menuButtonSubmitName" class="btn disabled_active" type="button" title="Чтобы начать игру, введите имя не короче 2-х любых символов">НАЧАТЬ ИГРУ</button>
-                  <button id="menuBtnAutorization" type="button" class="btn" title="Админ-доступ">Админ-доступ</button>
+                  <button id="menuButtonSubmitName" class="btn disabled_active_btn_submit" type="button" title="Чтобы начать игру, введите имя не короче 2-х любых символов">НАЧАТЬ ИГР</button>
+                  <button id="menuBtnAutorization" type="button" class="btn" title="Админ-доступ">Админ - доступ</button>
               </form>
   
-              <button id="menuBtnSound" type="button" class="btn soundOn" title="Звук">Звук</button>
+              <button id="menuBtnSound" type="button" class="btn soundOn" title="Отключить или включить звук">Звук вкл / выкл</button>
               <button id="menuBtnRecords" type="button" class="btn" title="Лучшие результаты игроков">Рекорды</button>
               <button id="menuBtnInfoRoots" type="button" class="btn" title="Информация об игре и правила игры">Об игре</button>
           </div>
@@ -669,38 +669,38 @@ export default class View {
   
     disabledBtnSubmitName() {
       this.btnSubmitName.setAttribute('disabled', true);
-      this.btnSubmitName.classList.add('disabled_active');
+      this.btnSubmitName.classList.add('disabled_active_btn_submit');
     }
     unDisabledBtnSubmitName() {
       this.btnSubmitName.removeAttribute('disabled');
-      this.btnSubmitName.classList.remove('disabled_active');
+      this.btnSubmitName.classList.remove('disabled_active_btn_submit');
     }
   
     disabledBtnFiftyFifty() {
       this.btnFiftyFifty.setAttribute('disabled', true);
-      this.btnFiftyFifty.classList.add('disabled_active');
+      this.btnFiftyFifty.classList.add('disabled_active_hints');
     }
     unDisabledBtnFiftyFifty() {
       this.btnFiftyFifty.removeAttribute('disabled');
-      this.btnFiftyFifty.classList.remove('disabled_active');
+      this.btnFiftyFifty.classList.remove('disabled_active_hints');
     }
   
     disabledBtnExit() {
       this.btnExit.setAttribute('disabled', true);
-      this.btnExit.classList.add('disabled_active');
+      this.btnExit.classList.add('disabled_active_hints');
     }
     unDisabledBtnExit() {
       this.btnExit.removeAttribute('disabled');
-      this.btnExit.classList.remove('disabled_active');
+      this.btnExit.classList.remove('disabled_active_hints');
     }
   
     disabledBtnHelpJS() {
       this.btnHelpJS.setAttribute('disabled', true);
-      this.btnHelpJS.classList.add('disabled_active');
+      this.btnHelpJS.classList.add('disabled_active_hints');
     }
     unDisabledBtnHelpJS() {
       this.btnHelpJS.removeAttribute('disabled');
-      this.btnHelpJS.classList.remove('disabled_active');
+      this.btnHelpJS.classList.remove('disabled_active_hints');
     }
   
     disabledOptionA() {
@@ -1096,8 +1096,6 @@ export default class View {
       if (this.stateSound === true) {
   
         this.stateSound = false;
-  
-        this.menuBtnSound.classList.remove('soundOn');
         this.menuBtnSound.classList.add('soundOff');
   
         this.musicStart.muted = true;
@@ -1140,8 +1138,6 @@ export default class View {
       else {
   
         this.stateSound = true;
-  
-        this.menuBtnSound.classList.add('soundOn');
         this.menuBtnSound.classList.remove('soundOff');
   
         this.musicStart.muted = false;
