@@ -95,7 +95,7 @@ export default class View {
               <form>
                   <input id="menuInputName" class="menu__input_name btn" type="text" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ..." title="Введите имя не короче 2-х любых символов">
                   <button id="menuButtonSubmitName" class="btn disabled_active" type="button" title="Чтобы начать игру, введите имя не короче 2-х любых символов">НАЧАТЬ ИГРУ</button>
-                  <button id="menuBtnAutorization" type="button" class="btn" title="Админ-доступ">Админ-досту</button>
+                  <button id="menuBtnAutorization" type="button" class="btn" title="Админ-доступ">Админ-доступ</button>
               </form>
   
               <button id="menuBtnSound" type="button" class="btn soundOn" title="Звук">Звук</button>
