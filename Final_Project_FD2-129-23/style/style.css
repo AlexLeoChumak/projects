@@ -10,7 +10,7 @@ body {
   font-size: 20px;
   background: -o-radial-gradient(#aa0fb5, #1f1013);
   background: radial-gradient(#aa0fb5, #1f1013);
-  overflow: hidden;
+  overflow-x: hidden;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@ button {
   width: 100%;
   max-width: 1920px;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .menu__logo {
