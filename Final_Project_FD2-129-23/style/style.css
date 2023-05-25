@@ -653,7 +653,7 @@ button {
   border-radius: 5px;
 }
 
-.backgroundGreen {
+.background_green {
   background: -o-radial-gradient(circle, rgba(0, 210, 21, 0.8015581232492998) 12%, rgba(42, 175, 0, 0.9164040616246498) 65%, rgba(22, 108, 0, 1) 100%);
   background: radial-gradient(circle, rgba(0, 210, 21, 0.8015581232492998) 12%, rgba(42, 175, 0, 0.9164040616246498) 65%, rgba(22, 108, 0, 1) 100%);
 }
@@ -665,7 +665,7 @@ button {
   color: white;
   position: absolute;
   top: 10%;
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   z-index: 50;
 }
 

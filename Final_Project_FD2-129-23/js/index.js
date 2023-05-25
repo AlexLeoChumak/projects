@@ -1,10 +1,12 @@
 import Model from './model.js';
 import View from './view.js';
 import Controller from './controller.js';
+
 const container = document.querySelector('#app');
 const viewApp = new View();
 const modelApp = new Model();
 const controllerApp = new Controller();
+
 if (!window.navigator.onLine) {
   document.body.innerHTML = `<div id="errorMessage">
                                 Извините, возникли технические проблемы.<br>
