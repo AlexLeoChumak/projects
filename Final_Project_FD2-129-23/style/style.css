@@ -429,7 +429,7 @@ button {
   width: 8vw;
   height: 6vh;
   font-size: .8vw;
-  margin: 0 5px 20px;
+  margin: 20px auto;
 }
 
 .game__btn_try_again {
@@ -670,6 +670,9 @@ button {
 }
 
 .game__title_you_wrong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 20%;
 }
 
@@ -1203,120 +1206,6 @@ button {
     transform: translate(0, 400px) scale(1, 1);
     opacity: 0;
   }
-}
-
-@-webkit-keyframes move_wave {
-  0% {
-    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
-    transform: translateX(0) translateZ(0) scaleY(1)
-  }
-
-  50% {
-    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
-    transform: translateX(-25%) translateZ(0) scaleY(0.55)
-  }
-
-  100% {
-    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
-    transform: translateX(-50%) translateZ(0) scaleY(1)
-  }
-}
-
-@keyframes move_wave {
-  0% {
-    -webkit-transform: translateX(0) translateZ(0) scaleY(1);
-    transform: translateX(0) translateZ(0) scaleY(1)
-  }
-
-  50% {
-    -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55);
-    transform: translateX(-25%) translateZ(0) scaleY(0.55)
-  }
-
-  100% {
-    -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
-    transform: translateX(-50%) translateZ(0) scaleY(1)
-  }
-}
-
-.game__animate_after_loss {
-  /* overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0; */
-  margin: 0 auto;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-}
-
-.game__animate_wave_inner {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  bottom: -1px;
-  /* background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #86377b), color-stop(80%, #27273c));
-  background-image: -o-linear-gradient(bottom, #86377b 20%, #27273c 80%);
-  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%); */
-}
-
-.game__animate_wave_bg_top {
-  z-index: 15;
-  opacity: 0.5;
-}
-
-.game__animate_wave_bg_middle {
-  z-index: 10;
-  opacity: 0.75;
-}
-
-.game__animate_wave_bg_bottom {
-  z-index: 5;
-}
-
-.game__animate_wave {
-  position: absolute;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat no-repeat;
-  background-position: 0 bottom;
-  -webkit-transform-origin: center bottom;
-  -ms-transform-origin: center bottom;
-  transform-origin: center bottom;
-  /*  */
-  overflow-x: hidden;
-}
-
-.game__animate_wave_top {
-  background-size: 50% 100px;
-}
-
-.game__animate_wave .game__animate_wave_top {
-  animation: move-wave 3s;
-  -webkit-animation: move-wave 3s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.game__animate_wave_middle {
-  background-size: 50% 120px;
-}
-
-.game__animate_wave .game__animate_wave_middle {
-  -webkit-animation: move_wave 10s linear infinite;
-  animation: move_wave 10s linear infinite;
-}
-
-.game__animate_wave_bottom {
-  background-size: 50% 100px;
-}
-
-.game__animate_wave .game__animate_wave_bottom {
-  -webkit-animation: move_wave 15s linear infinite;
-  animation: move_wave 15s linear infinite;
 }
 
 .hidden {

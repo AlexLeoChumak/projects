@@ -187,7 +187,8 @@ export default class Model {
 
   checkCorrectAnswer(e) {
     if (e.srcElement.innerText === this.randomQuestion.correctAnswer) {
-
+      this.scorePlayer++;
+      
       if (this.counterQuestions === 14) { // может тут?
         this.myView.waitingLostCorrectAnswer(e);
         this.counterQuestions = 0;
@@ -205,10 +206,8 @@ export default class Model {
         }, 9500);
       }
       this.counterQuestions++;
-      this.scorePlayer++;
 
-    }
-    else {
+    } else {
       this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
       this.myView.waitingWrongAnswer(e, this.randomQuestion.correctAnswer);
       this.arrRepeatRandomNumber = [];

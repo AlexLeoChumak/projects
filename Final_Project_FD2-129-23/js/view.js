@@ -15,7 +15,6 @@ export default class View {
   //   this.btnHelpJS = null;
   //   this.btnExit = null;
   //   this.youWrong = null;
-  //   this.animateWrongAnswer = null;
   //   this.flyToOfferTitle = null;
   //   this.animateBetweenQuestions = null;
   //   this.counterQuestions = null;
@@ -343,19 +342,8 @@ export default class View {
           <div class="game__animate_star game__animate_star_16"></div>
       </div>
 
-      <div id="gameTitleYouWrong" class="game__title_you_wrong hidden">Вы проиграли! Попробуйте сыграть ещё раз! Test
+      <div id="gameTitleYouWrong" class="game__title_you_wrong hidden">Вы проиграли! Попробуйте сыграть ещё раз!
           <button id="gameBtnTryAgain" class="game__btn_try_again" type="button">Начать</button>
-      </div>
-      <div id="gameAnimateWaves" class="game__animate_after_loss game__animate_wave hidden">
-          <div class="game__animate_wave_inner game__animate_wave_bg_top">
-              <div class="game__animate_wave game__animate_wave_top" style="background-image: url('images/wave-top.png')"></div>
-          </div>
-          <div class="game__animate_wave_inner game__animate_wave_bg_middle">
-              <div class="game__animate_wave game__animate_wave_middle" style="background-image: url('images/wave-mid.png')"></div>
-          </div>
-          <div class="game__animate_wave_inner game__animate_wave_bg_bottom">
-              <div class="game__animate_wave game__animate_wave_bottom" style="background-image: url('images/wave-bot.png')"></div>
-          </div>
       </div>
 
       <div id="gameCongratulateTitle" class="game__title_congratulate hidden"> Поздравляем! Вы победили! И готовы к джоб-офферу!</div>
@@ -516,7 +504,6 @@ export default class View {
     this.btnHelpJS = this.myContainer.querySelector('#gameFieldHintsHelpJS');
     this.btnExit = this.myContainer.querySelector('#gameFieldExit');
     this.youWrong = this.myContainer.querySelector('#gameTitleYouWrong');
-    this.animateWrongAnswer = this.myContainer.querySelector('#gameAnimateWaves');
     this.zoneQuestion = this.myContainer.querySelector('#gameFieldQuestion');
     this.optionA = this.myContainer.querySelector('#gameFieldAnswerA');
     this.optionB = this.myContainer.querySelector('#gameFieldAnswerB');
@@ -587,7 +574,6 @@ export default class View {
     this.progressGameMobileScreen.classList.add('hidden');
     this.inputName.value = '';
     this.youWrong.classList.add('hidden');
-    this.animateWrongAnswer.classList.add('hidden');
 
     this.disabledBtnSubmitName();
     this.unDisabledBtnHelpJS();
@@ -966,6 +952,7 @@ export default class View {
     setTimeout(() => {
       target.classList.add('wrong_answer');
       this.musicWrongAnswer.play();
+      navigator.vibrate(1000);
 
       target.classList.remove('wait_answer');
     }, 5000);
@@ -997,7 +984,6 @@ export default class View {
 
   showAnimationWrongAnswer() {
     this.youWrong.classList.remove('hidden');
-    this.animateWrongAnswer.classList.remove('hidden');
 
     this.gameField.classList.add('hidden');
     this.progressGame.classList.add('hidden');
