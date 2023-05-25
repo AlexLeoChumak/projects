@@ -94,7 +94,7 @@ export default class View {
               <img src="images/logo.png" id="menuLogo" class="menu__logo" alt="logo" title="logo">
               <form>
                   <input id="menuInputName" class="menu__input_name btn" type="text" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ..." title="Введите имя не короче 2-х любых символов">
-                  <button id="menuButtonSubmitName" class="btn disabled_active_btn_submit" type="button" title="Чтобы начать игру, введите имя не короче 2-х любых символов">НАЧАТЬ ИГР</button>
+                  <button id="menuButtonSubmitName" class="btn disabled_active_btn_submit" type="button" title="Чтобы начать игру, введите имя не короче 2-х любых символов">НАЧАТЬ ИГРУ</button>
                   <button id="menuBtnAutorization" type="button" class="btn" title="Админ-доступ">Админ - доступ</button>
               </form>
   
@@ -343,7 +343,7 @@ export default class View {
               <div class="game__animate_star game__animate_star_16"></div>
           </div>
   
-          <div id="gameTitleYouWrong" class="game__title_you_wrong hidden">Вы проиграли! Попробуйте сыграть ещё раз!
+          <div id="gameTitleYouWrong" class="game__title_you_wrong hidden">Вы проиграли! Попробуйте сыграть ещё раз! Test
               <button id="gameBtnTryAgain" class="game__btn_try_again" type="button">Начать</button>
           </div>
           <div id="gameAnimateWaves" class="game__animate_after_loss game__animate_wave hidden">
