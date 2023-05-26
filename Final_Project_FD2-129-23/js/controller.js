@@ -4,7 +4,9 @@ export default class Controller {
     this.myModel = model;
     this.myContainer = container;
 
-    window.addEventListener('load', () => this.myContainer.querySelector('.spinner').classList.add('hidden'));
+    window.addEventListener('load', () => {
+      this.myContainer.querySelector('.spinner').classList.add('hidden')
+    });
     window.onbeforeunload = this.beforeUnload.bind(this);
     window.performance = this.reloadPage();
 
