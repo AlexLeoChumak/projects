@@ -7,20 +7,9 @@ import {
   push,
   update
 }
-from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js';
 
 export default class Model {
-  // constructor() {
-  //   this.myView = null;
-  //   this.myContainer = null;
-  //   this.namePlayer = null;
-  //   this.arrQuestions = null;
-  //   this.randomQuestion = null;
-  //   this.arrWithQuestion = null;
-  //   this.arrRepeatRandomNumber = null;
-  //   this.counterQuestions = null;
-  //   this.scorePlayer = null;
-  // }
 
   init(view, container) {
     this.myView = view;
@@ -29,7 +18,7 @@ export default class Model {
     this.counterQuestions = 0;
     this.scorePlayer = 0;
 
-    this.getLightQuestions();
+    this.getQuestions();
     this.getRecordsPlayers();
   };
 
@@ -57,7 +46,7 @@ export default class Model {
     }
   };
 
-  getLightQuestions() {
+  getQuestions() {
     try {
       const db = getDatabase();
       const questions = ref(db, 'question/');
@@ -189,8 +178,9 @@ export default class Model {
     if (e.srcElement.innerText === this.randomQuestion.correctAnswer) {
       this.scorePlayer++;
       
-      if (this.counterQuestions === 14) { // может тут?
-        this.myView.waitingLostCorrectAnswer(e);
+      if (this.counterQuestions === 14) {
+        this.myView.waitingStatusAnswer(e, 'last-question');
+
         this.counterQuestions = 0;
         this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
 
@@ -199,7 +189,7 @@ export default class Model {
         }, 9500);
       }
       else {
-        this.myView.waitingCorrectAnswer(e);
+        this.myView.waitingStatusAnswer(e, true);
 
         setTimeout(() => {
           this.randomСhoiceQuestion(this.arrWithQuestion);
@@ -209,7 +199,8 @@ export default class Model {
 
     } else {
       this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
-      this.myView.waitingWrongAnswer(e, this.randomQuestion.correctAnswer);
+
+      this.myView.waitingStatusAnswer(e, false, this.randomQuestion.correctAnswer);
       this.arrRepeatRandomNumber = [];
     }
   };
@@ -248,7 +239,7 @@ export default class Model {
 
     return update(ref(db), updates).then(() => {
         console.log('Вопрос успешно загружен в БД');
-        this.getLightQuestions();
+        this.getQuestions();
         this.updateFieldWithDataQuestions();
       })
       .catch((error) => {
@@ -276,7 +267,7 @@ export default class Model {
     return update(ref(db), updates).then(() => {
 
         console.log('Вопрос успешно обновлён в БД');
-        this.getLightQuestions();
+        this.getQuestions();
         this.updateFieldWithDataQuestions();
       })
       .catch((error) => {
@@ -294,7 +285,7 @@ export default class Model {
 
     return update(ref(db), updates).then(() => {
         console.log('Вопрос успешно удалён из БД');
-        this.getLightQuestions();
+        this.getQuestions();
         this.updateFieldWithDataQuestions();
       })
       .catch((error) => {

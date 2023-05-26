@@ -14,6 +14,55 @@ body {
   text-align: center;
 }
 
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+@keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+
+
 button {
   background: transparent;
 }
@@ -667,6 +716,15 @@ button {
   top: 10%;
   font-size: 1.5vw;
   z-index: 50;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+}
+
+.error button {
+  margin: 10px auto 0;
 }
 
 .game__title_you_wrong {

@@ -1,34 +1,10 @@
 export default class Controller {
-  // constructor() {
-  //   this.myModel = null;
-  //   this.myContainer = null;
-  //   this.inputName = null;
-  //   this.btnSubmitName = null;
-  //   this.btnTryAgain = null;
-  //   this.btnInfoRoots = null;
-  //   this.btnInfoRootsReturn = null;
-  //   this.btnRecords = null;
-  //   this.btnRecordsReturn = null;
-  //   this.menuBtnAutorization = null;
-  //   this.autorizationLoginName = null;
-  //   this.autorizationLoginPassword = null;
-  //   this.workInData = null;
-  //   this.targetQuestionDiv = null;
-
-  //   this.workInDataInputQuestion = null;
-  //   this.workInDataInputCorrectAnswer = null;
-  //   this.workInDataInputA = null;
-  //   this.workInDataInputB = null;
-  //   this.workInDataInputC = null;
-  //   this.workInDataInputD = null;
-  //   this.workInDataInputFifty = null;
-  //   this.arrInputs = null;
-  // }
 
   init(model, container) {
     this.myModel = model;
     this.myContainer = container;
 
+    window.addEventListener('load', () => this.myContainer.querySelector('.spinner').classList.add('hidden'));
     window.onbeforeunload = this.beforeUnload.bind(this);
     window.performance = this.reloadPage();
 
@@ -73,6 +49,9 @@ export default class Controller {
 
     this.autorizationLoginName.addEventListener('click', this.clearMessageWrongPassword.bind(this));
     this.autorizationLoginPassword.addEventListener('click', this.clearMessageWrongPassword.bind(this));
+
+    window.addEventListener('offline', () => alert('Интернет-соединение потеряно. Проверьте подключение'));
+    window.addEventListener('online', () => alert('Интернет-соединение восстановлено'));
   };
 
   clearMessageWrongPassword() {
@@ -117,7 +96,7 @@ export default class Controller {
   };
 
   drawGameField() {
-    location.hash = "Play";
+    location.hash = 'Play';
     this.myModel.modelDrawGameField();
 
     this.inputName.removeEventListener('input', function valInput() {
@@ -126,11 +105,11 @@ export default class Controller {
   };
 
   showMenuAutorization() {
-    location.hash = "Autorization";
+    location.hash = 'Autorization';
   }
 
   returnAutorizationToMain() {
-    location.hash = "Menu";
+    location.hash = 'Menu';
     this.myModel.hideFieldWorkInDataQuestions();
   }
 
@@ -164,10 +143,14 @@ export default class Controller {
           targetQuestion.querySelector('.updateCorrectAnswer').textContent,
           targetQuestion.querySelector('.updateQuestionFifty').textContent,
           targetQuestion.querySelector('.idKeyQuestion').textContent);
+
+        alert('Вопрос успешно обновлён');
         break;
 
       case 'workDataBtnRemove':
         this.myModel.removeQuestion(targetQuestion.querySelector('.idKeyQuestion').textContent, targetQuestion);
+
+        alert('Вопрос успешно удалён');
         break;
     }
   }
@@ -223,7 +206,6 @@ export default class Controller {
       case 'menuBtnSound':
         this.controlSound();
         break;
-
       case 'menuBtnAutorization':
         this.showMenuAutorization();
         break;
@@ -267,6 +249,9 @@ export default class Controller {
       case 'gameFieldAnswerD':
         this.myModel.checkCorrectAnswer(e);
         break;
+      case 'recordsBtnReturn404':
+        this.showInfoRootsReturn();
+        break;
     }
   };
 
@@ -289,17 +274,11 @@ export default class Controller {
       case 'Home':
         this.tryAgain();
         break;
-
       case 'F8':
         this.myModel.hintsFiftyFifty();
         break;
       case 'F9':
         this.myModel.hintsHelpJS();
-        break;
-      case 'End':
-        this.myContainer.removeEventListener('keyup', this.clickGameFieldKeyboard.bind(this));
-        this.myContainer.removeEventListener('click', this.clickGameField.bind(this));
-        this.myModel.exitGame();
         break;
     }
   };
