@@ -104,10 +104,6 @@ export default class Controller {
     location.hash = 'InfoAndRoots';
   }
 
-  tryAgain() {
-    this.myModel.tryAgain();
-  };
-
   validationInput(name) {
     this.myModel.validateNamePlayer(name);
   };
@@ -239,9 +235,6 @@ export default class Controller {
       case 'workInDataBtnAddQuestion':
         this.checkInputsQuestion();
         break;
-      case 'gameBtnTryAgain':
-        this.tryAgain();
-        break;
       case 'gameFieldHintsFifty':
         this.myModel.hintsFiftyFifty();
         break;
@@ -269,16 +262,6 @@ export default class Controller {
       case 'modalClose':
       case 'overlay':
         this.myModel.closeModalWindow();
-        break;
-      case 'exitConfirmation':
-        this.myModel.exitGame(true);
-        this.statePopstate = false;
-        this.myContainer.removeEventListener('click', this.clickGameField.bind(this));
-        this.autorizationLoginName.removeEventListener('click', this.clearMessageWrongPassword.bind(this));
-        this.autorizationLoginPassword.removeEventListener('click', this.clearMessageWrongPassword.bind(this));
-        break;
-      case 'exitCancel':
-        this.myModel.exitGame(false);
         break;
     }
   };

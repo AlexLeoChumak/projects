@@ -12,7 +12,6 @@ export default class View {
       <audio id='music_player_think' src='music/player-think.mp3' loop></audio>
       <audio id='music_fifty' src='music/50-50.mp3'></audio>
       <audio id='music_helpJS'  src='music/helpJS.mp3'></audio>
-      <audio id='music_exit' src='music/exit.mp3'></audio>
       <audio id='music_answer_accept' src='music/answer_accept.mp3'></audio>
       <audio id='music_correct' src='music/correct.mp3'></audio>
       <audio id='music_wrong' src='music/wrong.mp3'></audio>
@@ -110,31 +109,31 @@ export default class View {
           </div>
 
           <div id='gameField' class='game__field'>
-              <p id='gamePlayerName' class='game__field_hints_title'></p>
-              <div class='game__field_hints'>
+            <p id='gamePlayerName' class='game__field_hints_title'></p>
+            <div class='game__field_hints'>
 
-                  <span class='game__field_hints_wrapper_btns'>
-                      <button id='gameFieldHintsFifty' class='game__hints_btns' title='Подсказка: убирает два неверных ответа' type='button'>50/50</button>
-                  </span>
-                  <span class='game__field_hints_wrapper_btns'>
-                      <button id='gameFieldHintsHelpJS' class='game__hints_btns' title='Подсказка: оставляет только верный ответ' type='button'>помощь JS</button>
-                  </span>
-                  <span class='game__field_hints_wrapper_btns'>
-                      <button  id='gameFieldExit' class='game__hints_btns' title='Выйти из игры (Вы потеряете игровой прогресс)' type='button'>выход</button>
-                  </span>
-              </div>
-              
-              <div id='gameFieldQuestion' class='game__field_question'></div>
-              <div class='game__field_answer_options'>
-                  <div class='game__field_answer_options_left_side'>
-                      <button id='gameFieldAnswerA' class='game__field_answer_option' title='game__field'></button>
-                      <button id='gameFieldAnswerB' class='game__field_answer_option' title='game__field'></button>
-                  </div>
-                  <div class='game__field_answer_options_right_side'>
-                      <button id='gameFieldAnswerC' class='game__field_answer_option' title='game__field'></button>
-                      <button id='gameFieldAnswerD' class='game__field_answer_option' title='game__field'></button>
-                  </div>
-              </div>
+                <span class='game__field_hints_wrapper_btns'>
+                    <button id='gameFieldHintsFifty' class='game__hints_btns' title='Подсказка: убирает два неверных ответа' type='button'>50/50</button>
+                </span>
+                <span class='game__field_hints_wrapper_btns'>
+                    <button id='gameFieldHintsHelpJS' class='game__hints_btns' title='Подсказка: оставляет только верный ответ' type='button'>помощь JS</button>
+                </span>
+                <span class='game__field_hints_wrapper_btns'>
+                    <button  id='gameFieldExit' class='game__hints_btns' title='Выйти из игры (Вы потеряете игровой прогресс)' type='button'>выход</button>
+                </span>
+            </div>
+            
+            <div id='gameFieldQuestion' class='game__field_question'></div>
+            <div class='game__field_answer_options'>
+                <div class='game__field_answer_options_left_side'>
+                    <button id='gameFieldAnswerA' class='game__field_answer_option' title='game__field'></button>
+                    <button id='gameFieldAnswerB' class='game__field_answer_option' title='game__field'></button>
+                </div>
+                <div class='game__field_answer_options_right_side'>
+                    <button id='gameFieldAnswerC' class='game__field_answer_option' title='game__field'></button>
+                    <button id='gameFieldAnswerD' class='game__field_answer_option' title='game__field'></button>
+                </div>
+            </div>
           </div>
 
           <div id='gameProgressMobileScreen' class='game__progress_mobile_screen'></div>
@@ -273,9 +272,7 @@ export default class View {
           <div class='game__animate_star game__animate_star_16'></div>
       </div>
 
-      <div id='gameTitleYouWrong' class='game__title_you_wrong hidden'>Вы проиграли!<br> Попробуйте сыграть ещё раз!
-          <button id='gameBtnTryAgain' class='game__btn_try_again' type='button'>Начать</button>
-      </div>
+      <div id='gameTitleYouWrong' class='game__title_you_wrong hidden'>Вы проиграли!<br> Нажмите "Перезагрузить", чтобы сыграть ещё раз!</div>
 
       <div id='gameCongratulateTitle' class='game__title_congratulate hidden'> Поздравляем! Вы победили! И готовы к джоб-офферу!</div>
       <svg id='gameAnimateWinnerCat' class='game__animate_winner_cat hidden' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 787.3 433.8'>
@@ -427,8 +424,6 @@ export default class View {
       <div id="modal" class="modal hidden">
         <img id="modalClose" class="modal__cross" src="./images/close-window.png" alt="close" title="close">
         <p id="modal__message"></p>
-        <button id='exitConfirmation' class='hidden' type='button'>ок</button>
-        <button id='exitCancel' class='hidden' type='button'>отмена</button>
       </div>
       <div id="overlay" class="overlay hidden"></div>
       
@@ -488,7 +483,6 @@ export default class View {
     this.musicPlayerThink = this.myContainer.querySelector('#music_player_think');
     this.musicFiftyFifty = this.myContainer.querySelector('#music_fifty');
     this.musicHelpJS = this.myContainer.querySelector('#music_helpJS');
-    this.musicExit = this.myContainer.querySelector('#music_exit');
     this.musicAnswerAccept = this.myContainer.querySelector('#music_answer_accept');
     this.musicCorrectAnswer = this.myContainer.querySelector('#music_correct');
     this.musicWrongAnswer = this.myContainer.querySelector('#music_wrong');
@@ -681,12 +675,6 @@ export default class View {
     this.unDisabledOptionD();
   };
 
-  soundExit() {
-    this.musicPlayerThink.pause();
-    this.musicPlayerThink.currentTime = 0;
-    this.musicExit.play();
-  };
-
   disabledBtn(state) {
     if (state) {
       this.disabledBtnSubmitName();
@@ -809,17 +797,7 @@ export default class View {
       navigator.vibrate(500);
 
       setTimeout(() => {
-        this.congratulateTitle.classList.add('hidden');
-        this.animateCongratulateWin.classList.add('hidden');
-        this.showFormAutorization();
-
-        if (!this.hintFiftyState) {
-          this.unDisabledBtnFiftyFifty();
-        }
-
-        if (!this.hintHelpJSState) {
-          this.unDisabledBtnHelpJS();
-        }
+        location.reload();
       }, 9000);
     }, 9500);
   }
@@ -908,20 +886,24 @@ export default class View {
     }, 6300);
 
     setTimeout(() => {
-      this.showAnimationWrongAnswer();
+      this.showScreenWrongAnswer();
       this.undisabledOptionsHints();
       this.unDisabledAllBtnsAndOptionsAnswer();
       this.clearQuestionsBackground();
     }, 11000);
   };
 
-  showAnimationWrongAnswer() {
+  showScreenWrongAnswer() {
     this.youWrong.classList.remove('hidden');
 
     this.gameField.classList.add('hidden');
     this.progressGame.classList.add('hidden');
     this.progressGameMobileScreen.classList.add('hidden');
     this.animateBackgroundCnt.classList.add('hidden');
+
+    setTimeout(() => {
+      location.reload();
+    }, 2500);
   };
 
   showErrorApp() {
@@ -1026,7 +1008,6 @@ export default class View {
       this.musicPlayerThink,
       this.musicFiftyFifty,
       this.musicHelpJS,
-      this.musicExit,
       this.musicAnswerAccept,
       this.musicCorrectAnswer,
       this.musicWrongAnswer,
@@ -1065,15 +1046,12 @@ export default class View {
     this.modalMessage.textContent = '';
   }
 
-  showModalWindowWithBtns(message) {
-    this.showModalWindow(message);
-    this.exitConfirmation.classList.remove('hidden');
-    this.exitCancel.classList.remove('hidden');
-  }
-
-  closeModalWindowWithBtns() {
-    this.closeModalWindow();
-    this.exitConfirmation.classList.add('hidden');
-    this.exitCancel.classList.add('hidden');
+  showConfirmAboutExitGame() {
+    const answerConfirm = confirm('Выйти? Игровой прогресс будет утерян');
+    if (answerConfirm) {
+      location.reload();
+    } else {
+      return;
+    }
   }
 }

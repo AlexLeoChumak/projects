@@ -133,38 +133,11 @@ export default class Model {
         .catch((error) => {
           console.log(`Ошибка внесения имени в БД. Ошибка: ${error}`);
         });
-
-      this.scorePlayer = 0;
     }
     catch (e) {
       this.myView.showErrorApp();
       console.log(e);
     }
-  };
-
-  exitGame(state) {
-    if (state === true) {
-      // this.myView.soundExit();
-      // this.myView.closeModalWindowWithBtns();
-      // this.myView.clearQuestionsBackground();
-      // this.myView.showFormAutorization();
-      // this.randomСhoiceQuestion(this.arrWithQuestion);
-      // this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
-      // this.counterQuestions = 0;
-      // this.scorePlayer = 0;
-      // this.arrRepeatRandomNumber = [];
-
-      window.location.reload();
-    } 
-    else {
-      this.myView.closeModalWindowWithBtns();
-      return;
-    }
-  };
-
-  tryAgain() {
-    this.myView.showFormAutorization();
-    this.counterQuestions = 0;
   };
 
   hintsFiftyFifty() {
@@ -311,6 +284,7 @@ export default class Model {
   }
 
   checkExitGame() {
-    this.myView.showModalWindowWithBtns('Вы уверены? В случае выхода вы потеряете весь прогресс');
+    this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
+    this.myView.showConfirmAboutExitGame();
   }
 }
