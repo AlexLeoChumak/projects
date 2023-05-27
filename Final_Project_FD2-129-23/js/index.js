@@ -13,10 +13,13 @@ if (!window.navigator.onLine) {
                                 Попробуйте загрузить позднее
                               </div>`;
 } else {
+
   viewApp.init(container);
   modelApp.init(viewApp, container);
   controllerApp.init(modelApp, container);
-  window.onhashchange = switchToStateFromURLHash;
+
+  window.addEventListener("hashchange", switchToStateFromURLHash);
+
   let SPAState = {};
 
   function switchToStateFromURLHash() {
@@ -27,16 +30,14 @@ if (!window.navigator.onLine) {
     const cntGame = container.querySelector('#game');
     const cntError = container.querySelector('#errorNotFound');
     const cntAutorization = container.querySelector('#autorization');
+    const cntworkInData = container.querySelector('#workInData');
     let stateStr = URLHash.slice(1);
 
     if (stateStr != '') {
-      SPAState = {
-        pagename: stateStr
-      };
+      SPAState = {pagename: stateStr};
     } else {
-      SPAState = {
-        pagename: 'Menu'
-      };
+      SPAState = {pagename: 'Menu'};
+      location.hash = 'Menu';
     }
 
     switch (SPAState.pagename) {
@@ -47,6 +48,7 @@ if (!window.navigator.onLine) {
         cntGame.classList.add('hidden');
         cntError.classList.add('hidden');
         cntAutorization.classList.add('hidden');
+        cntworkInData.classList.add('hidden');
         break;
       case 'Records':
         cntMenu.classList.add('hidden');
@@ -55,6 +57,7 @@ if (!window.navigator.onLine) {
         cntGame.classList.add('hidden');
         cntError.classList.add('hidden');
         cntAutorization.classList.add('hidden');
+        cntworkInData.classList.add('hidden');
         break;
       case 'InfoAndRoots':
         cntMenu.classList.add('hidden');
@@ -63,6 +66,7 @@ if (!window.navigator.onLine) {
         cntGame.classList.add('hidden');
         cntError.classList.add('hidden');
         cntAutorization.classList.add('hidden');
+        cntworkInData.classList.add('hidden');
         break;
       case 'Play':
         cntMenu.classList.add('hidden');
@@ -71,6 +75,7 @@ if (!window.navigator.onLine) {
         cntGame.classList.remove('hidden');
         cntError.classList.add('hidden');
         cntAutorization.classList.add('hidden');
+        cntworkInData.classList.add('hidden');
         break;
       case 'Autorization':
         cntMenu.classList.add('hidden');
@@ -87,9 +92,30 @@ if (!window.navigator.onLine) {
         cntGame.classList.add('hidden');
         cntError.classList.remove('hidden');
         cntAutorization.classList.add('hidden');
+        cntworkInData.classList.add('hidden');
         break;
     }
+
+    function switchToState(newState) {
+      const stateStr = newState.pagename;
+      location.hash = stateStr;
+    }
+    function switchToMenuPage() {
+      switchToState( { pagename: 'Menu' } );
+    }
+    function switchToRecordsPage() {
+      switchToState( { pagename: 'Records' } );
+    }
+    function switchToInfoAndRootsPage() {
+      switchToState( { pagename: 'InfoAndRoots' } );
+    }
+    function switchToPlayPage() {
+      switchToState( { pagename: 'Play' } );
+    }
+    function switchToAutorizationPage() {
+      switchToState( { pagename: 'Autorization' } );
+    }
   }
-  
+
   switchToStateFromURLHash();
 }

@@ -20,6 +20,7 @@ body {
   left: calc(50vw - 32.5px);
   animation: rotator 1.4s linear infinite;
 }
+
 @keyframes rotator {
   0% {
     transform: rotate(0deg);
@@ -28,12 +29,14 @@ body {
     transform: rotate(270deg);
   }
 }
+
 .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
   transform-origin: center;
   animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
 }
+
 @keyframes colors {
   0% {
     stroke: #4285F4;
@@ -51,6 +54,7 @@ body {
     stroke: #4285F4;
   }
 }
+
 @keyframes dash {
   0% {
     stroke-dashoffset: 187;
@@ -64,7 +68,6 @@ body {
     transform: rotate(450deg);
   }
 }
-
 
 button {
   background: transparent;
@@ -2022,7 +2025,8 @@ path#f3-l9 {
   background: #d0d0d0;
 }
 
-.autorization__form button {
+.autorization__form button,
+.modal button {
   text-transform: uppercase;
   outline: 0;
   background-color: rgba(156, 0, 106, 0.7);
@@ -2032,7 +2036,7 @@ path#f3-l9 {
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  transition: .3s;
   cursor: pointer;
   margin: 0 0 10px 0;
   border-radius: 5px;
@@ -2040,8 +2044,11 @@ path#f3-l9 {
 
 .autorization__form button:hover,
 .autorization__form button:active,
-.autorization__form button:focus {
-  background-color: rgba(128, 0, 87, 0.7);
+.autorization__form button:focus,
+.modal button:hover,
+.modal button:active,
+.modal button:focus {
+  background-color: rgb(133, 0, 117);
 }
 
 .work__data {
@@ -2159,4 +2166,48 @@ path#f3-l9 {
 .soundOff {
   background: url(../images/disabled.png) no-repeat center, rgba(156, 0, 106, 0.7);
   background-size: contain;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal {
+  width: 100vw;
+  max-width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.modal__cross {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.modal__cross:hover {
+  transform: scale(1.1)
+}
+
+.modal button:first-of-type {
+  margin: 15px 0;
 }

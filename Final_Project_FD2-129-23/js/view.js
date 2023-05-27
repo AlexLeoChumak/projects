@@ -78,10 +78,12 @@ export default class View {
               <br>
               Горячие клавиши:<br>
               <br>
+              S - включить / выключить звук;<br>
+              A - раздел администрирования;<br>
               F2 - рекорды игроков;<br>
               F4 - описание, правила игры и горячие клавиши;<br>
-              Esc - выход в главное меню из разделов 'Рекорды' и 'Об игре';<br>
-              Home - при проигрыше возвращает в главное меню для возобновления игры;<br>
+              E - выход из игры;<br>
+              R - выход из всех разделов, кроме игры и админ-доступа;<br>
               F8 - подсказка '50/50';<br>
               F9 - подсказка 'помощь JavaScript';<br>
               <br>
@@ -422,6 +424,14 @@ export default class View {
           <div class='work__data_field_for_question_list'></div>
       </div>
       
+      <div id="modal" class="modal hidden">
+        <img id="modalClose" class="modal__cross" src="./images/close-window.png" alt="close" title="close">
+        <p id="modal__message"></p>
+        <button id='exitConfirmation' class='hidden' type='button'>ок</button>
+        <button id='exitCancel' class='hidden' type='button'>отмена</button>
+      </div>
+      <div id="overlay" class="overlay hidden"></div>
+      
       <div id='errorNotFound' class='error hidden'>
         <p>Извините, запрашиваемая Вами страница не найдена</p>
         <button id='recordsBtnReturn404' class='btn btn__return' type='button'>главное меню</button>
@@ -458,8 +468,13 @@ export default class View {
     this.autorizationLoginPassword = this.myContainer.querySelector('#loginPassword');
     this.divForQuestionsList = this.myContainer.querySelector('.work__data_field_for_question_list');
     this.menuBtnSound = this.myContainer.querySelector('#menuBtnSound');
-    this.stateSound = true;
+    this.modalWindow = this.myContainer.querySelector('#modal');
+    this.modalMessage = this.myContainer.querySelector('#modal__message');
+    this.modalOverlay = this.myContainer.querySelector('#overlay');
+    this.exitConfirmation = this.myContainer.querySelector('#exitConfirmation');
+    this.exitCancel = this.myContainer.querySelector('#exitCancel');
     this.counterQuestions = 0;
+    this.stateSound = true;
 
     this.workInDataInputQuestion = this.myContainer.querySelector('#workInDataInputQuestion');
     this.workInDataInputCorrectAnswer = this.myContainer.querySelector('#workInDataInputCorrectAnswer');
@@ -1036,5 +1051,29 @@ export default class View {
 
       arrAudioElem.forEach(elem => elem.muted = false);
     }
+  }
+
+  showModalWindow(message) {
+    this.modalWindow.classList.remove('hidden');
+    this.modalOverlay.classList.remove('hidden');
+    this.modalMessage.textContent = message;
+  }
+
+  closeModalWindow() {
+    this.modalWindow.classList.add('hidden');
+    this.modalOverlay.classList.add('hidden');
+    this.modalMessage.textContent = '';
+  }
+
+  showModalWindowWithBtns(message) {
+    this.showModalWindow(message);
+    this.exitConfirmation.classList.remove('hidden');
+    this.exitCancel.classList.remove('hidden');
+  }
+
+  closeModalWindowWithBtns() {
+    this.closeModalWindow();
+    this.exitConfirmation.classList.add('hidden');
+    this.exitCancel.classList.add('hidden');
   }
 }

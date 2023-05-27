@@ -70,7 +70,7 @@ export default class Model {
     }
     catch (error) {
       console.log(error);
-      alert('Извините, произошла ошибка, попробуйте загрузить приложение позднее');
+      this.showModalMessage('Извините, произошла ошибка, попробуйте загрузить приложение позднее');
       this.myView.showFormAutorization()
     }
   };
@@ -78,7 +78,6 @@ export default class Model {
   showQuestionInGameField(data, arr, number) {
     if (arr.includes(number)) {
       this.randomСhoiceQuestion(data);
-      console.log('Значение повторилось');
     }
     else {
       arr.push(number);
@@ -143,20 +142,22 @@ export default class Model {
     }
   };
 
-  exitGame() {
-    const exit = confirm('Вы уверены? В случае выхода вы потеряете весь прогресс');
+  exitGame(state) {
+    if (state === true) {
+      // this.myView.soundExit();
+      // this.myView.closeModalWindowWithBtns();
+      // this.myView.clearQuestionsBackground();
+      // this.myView.showFormAutorization();
+      // this.randomСhoiceQuestion(this.arrWithQuestion);
+      // this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
+      // this.counterQuestions = 0;
+      // this.scorePlayer = 0;
+      // this.arrRepeatRandomNumber = [];
 
-    if (exit) {
-      this.myView.soundExit();
-      this.myView.clearQuestionsBackground();
-      this.myView.showFormAutorization();
-      this.randomСhoiceQuestion(this.arrWithQuestion);
-      this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
-      this.counterQuestions = 0;
-      this.scorePlayer = 0;
-      this.arrRepeatRandomNumber = [];
-    }
+      window.location.reload();
+    } 
     else {
+      this.myView.closeModalWindowWithBtns();
       return;
     }
   };
@@ -299,5 +300,17 @@ export default class Model {
 
   controlSound() {
     this.myView.controlSound();
+  }
+
+  showModalMessage(message) {
+    this.myView.showModalWindow(message); 
+  }
+
+  closeModalWindow() {
+    this.myView.closeModalWindow();
+  }
+
+  checkExitGame() {
+    this.myView.showModalWindowWithBtns('Вы уверены? В случае выхода вы потеряете весь прогресс');
   }
 }

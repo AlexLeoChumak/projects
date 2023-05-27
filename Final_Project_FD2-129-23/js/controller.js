@@ -5,10 +5,8 @@ export default class Controller {
     this.myContainer = container;
 
     window.addEventListener('load', () => {
-      this.myContainer.querySelector('.spinner').classList.add('hidden')
+      this.myContainer.querySelector('.spinner').classList.add('hidden');
     });
-    window.onbeforeunload = this.beforeUnload.bind(this);
-    window.performance = this.reloadPage();
 
     this.inputName = this.myContainer.querySelector('#menuInputName');
     this.btnSubmitName = this.myContainer.querySelector('#menuButtonSubmitName');
@@ -21,6 +19,7 @@ export default class Controller {
     this.autorizationLoginName = this.myContainer.querySelector('#loginName');
     this.autorizationLoginPassword = this.myContainer.querySelector('#loginPassword');
     this.workInData = this.myContainer.querySelector('#workInData');
+    this.statePopstate = false;
 
     this.workInDataInputQuestion = this.myContainer.querySelector('#workInDataInputQuestion');
     this.workInDataInputCorrectAnswer = this.myContainer.querySelector('#workInDataInputCorrectAnswer');
@@ -46,15 +45,43 @@ export default class Controller {
     }.bind(this));
 
     this.myContainer.setAttribute('tabindex', 0);
-    this.myContainer.addEventListener('keyup', this.clickGameFieldKeyboard.bind(this));
     this.myContainer.addEventListener('click', this.clickGameField.bind(this));
 
     this.autorizationLoginName.addEventListener('click', this.clearMessageWrongPassword.bind(this));
     this.autorizationLoginPassword.addEventListener('click', this.clearMessageWrongPassword.bind(this));
 
-    window.addEventListener('offline', () => alert('Интернет-соединение потеряно. Проверьте подключение'));
-    window.addEventListener('online', () => alert('Интернет-соединение восстановлено'));
+    window.addEventListener('offline', () => {
+      this.myModel.showModalMessage('Интернет-соединение потеряно. Можно продолжить игру без сохранения результата');
+    });
+
+    window.addEventListener('online', () => {
+      this.myModel.showModalMessage('Интернет-соединение восстановлено. Результаты игры будут сохранены');
+    });
+
+    this.checkUnload();
+    window.performance = this.reloadPage();
   };
+
+  reloadPage() {
+    if (location.hash === '#Play') {
+      location.hash = 'Menu';
+    }
+  }
+
+  checkUnload() {
+    window.addEventListener('beforeunload', (e) => {
+      if (location.hash === '#Play') {
+        e.returnValue = 'У вас есть несохранённые изменения!';
+      }
+    });
+
+    window.addEventListener('popstate', () => {
+        if (location.hash === '#Menu' && this.statePopstate) {
+          window.history.forward();
+          this.myModel.checkExitGame();
+        }
+    });
+  }
 
   clearMessageWrongPassword() {
     this.myModel.clearMessageWrongPassword();
@@ -69,24 +96,12 @@ export default class Controller {
     location.hash = 'Records';
   }
 
-  reloadPage() {
-    if (location.hash === '#Play') {
-      location.hash = 'Menu';
-    }
-  }
-
   showInfoRootsReturn() {
     location.hash = 'Menu';
   }
 
   showInfoRoots() {
     location.hash = 'InfoAndRoots';
-  }
-
-  beforeUnload(e) {
-    if (location.hash === '#Play') {
-      e.returnValue = 'У вас есть несохранённые изменения!';
-    }
   }
 
   tryAgain() {
@@ -100,6 +115,7 @@ export default class Controller {
   drawGameField() {
     location.hash = 'Play';
     this.myModel.modelDrawGameField();
+    this.statePopstate = true;
 
     this.inputName.removeEventListener('input', function valInput() {
       this.validationInput(this.inputName.value);
@@ -108,6 +124,7 @@ export default class Controller {
 
   showMenuAutorization() {
     location.hash = 'Autorization';
+    this.myModel.hideFieldWorkInDataQuestions();
   }
 
   returnAutorizationToMain() {
@@ -146,13 +163,12 @@ export default class Controller {
           targetQuestion.querySelector('.updateQuestionFifty').textContent,
           targetQuestion.querySelector('.idKeyQuestion').textContent);
 
-        alert('Вопрос успешно обновлён');
+          this.myModel.showModalMessage('Вопрос успешно обновлён');
         break;
 
       case 'workDataBtnRemove':
         this.myModel.removeQuestion(targetQuestion.querySelector('.idKeyQuestion').textContent, targetQuestion);
-
-        alert('Вопрос успешно удалён');
+        this.myModel.showModalMessage('Вопрос успешно удалён');
         break;
     }
   }
@@ -161,12 +177,12 @@ export default class Controller {
     for (let i = 0; i < this.arrInputs.length; i++) {
 
       if (this.arrInputs[i].value === '') {
-        return alert('Заполните все поля');
+        return this.myModel.showModalMessage('Заполните все поля');
       }
     }
 
     this.addValueInputNewQuestionInDataBase();
-    alert('Вопрос отправлен в базу данных. Статус выполнения отобразится в консоли');
+    this.myModel.showModalMessage('Вопрос отправлен в базу данных. Статус выполнения отобразится в консоли');
   }
 
   addValueInputNewQuestionInDataBase() {
@@ -233,11 +249,7 @@ export default class Controller {
         this.myModel.hintsHelpJS();
         break;
       case 'gameFieldExit':
-        this.myContainer.removeEventListener('keyup', this.clickGameFieldKeyboard.bind(this));
-        this.myContainer.removeEventListener('click', this.clickGameField.bind(this));
-        this.autorizationLoginName.removeEventListener('click', this.clearMessageWrongPassword.bind(this));
-        this.autorizationLoginPassword.removeEventListener('click', this.clearMessageWrongPassword.bind(this));
-        this.myModel.exitGame();
+        this.myModel.checkExitGame();
         break;
       case 'gameFieldAnswerA':
         this.myModel.checkCorrectAnswer(e);
@@ -254,33 +266,19 @@ export default class Controller {
       case 'recordsBtnReturn404':
         this.showInfoRootsReturn();
         break;
-    }
-  };
-
-  clickGameFieldKeyboard(e) {
-    e.preventDefault();
-
-    switch (e.code) {
-      case 'F2':
-        this.showRecords();
+      case 'modalClose':
+      case 'overlay':
+        this.myModel.closeModalWindow();
         break;
-      case 'F4':
-        this.showInfoRoots();
+      case 'exitConfirmation':
+        this.myModel.exitGame(true);
+        this.statePopstate = false;
+        this.myContainer.removeEventListener('click', this.clickGameField.bind(this));
+        this.autorizationLoginName.removeEventListener('click', this.clearMessageWrongPassword.bind(this));
+        this.autorizationLoginPassword.removeEventListener('click', this.clearMessageWrongPassword.bind(this));
         break;
-      case 'Escape':
-        this.showRecordsReturn();
-        break;
-      case 'Escape':
-        this.showInfoRootsReturn();
-        break;
-      case 'Home':
-        this.tryAgain();
-        break;
-      case 'F8':
-        this.myModel.hintsFiftyFifty();
-        break;
-      case 'F9':
-        this.myModel.hintsHelpJS();
+      case 'exitCancel':
+        this.myModel.exitGame(false);
         break;
     }
   };
