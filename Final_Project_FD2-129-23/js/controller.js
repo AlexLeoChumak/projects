@@ -46,6 +46,7 @@ export default class Controller {
 
     this.myContainer.setAttribute('tabindex', 0);
     this.myContainer.addEventListener('click', this.clickGameField.bind(this));
+    this.myContainer.addEventListener('keyup', this.keyUpGameField.bind(this));
 
     this.autorizationLoginName.addEventListener('click', this.clearMessageWrongPassword.bind(this));
     this.autorizationLoginPassword.addEventListener('click', this.clearMessageWrongPassword.bind(this));
@@ -96,7 +97,7 @@ export default class Controller {
     location.hash = 'Records';
   }
 
-  showInfoRootsReturn() {
+  returnToMainMenu() {
     location.hash = 'Menu';
   }
 
@@ -209,7 +210,7 @@ export default class Controller {
         this.showInfoRoots();
         break;
       case 'infoRootsBtnReturn':
-        this.showInfoRootsReturn();
+        this.returnToMainMenu();
         break;
       case 'menuBtnRecords':
         this.showRecords();
@@ -257,11 +258,51 @@ export default class Controller {
         this.myModel.checkCorrectAnswer(e);
         break;
       case 'recordsBtnReturn404':
-        this.showInfoRootsReturn();
+        this.returnToMainMenu();
         break;
       case 'modalClose':
       case 'overlay':
         this.myModel.closeModalWindow();
+        break;
+    }
+  };
+
+  keyUpGameField(e) {
+    e.preventDefault();
+
+    switch (e.code) {
+      case 'KeyQ':
+        switch (location.hash) {
+          case '#Menu': this.inputName.focus(); console.log('ok'); break;   
+        }
+        break;
+      case 'KeyE':
+        switch (location.hash) {
+          case '#Menu': this.showMenuAutorization(); break;   
+        }
+        break;
+      case 'KeyA':
+        switch (location.hash) {
+          case '#Menu': this.controlSound(); break;   
+        }
+        break;
+      case 'KeyS':
+        switch (location.hash) {
+          case '#Menu': this.showRecords(); break;   
+        }
+        break;
+      case 'KeyD':
+        switch (location.hash) {
+          case '#Menu': this.showInfoRoots(); break;   
+        }
+        break;
+      case 'Escape':
+        switch (location.hash) {
+          case '#Menu': location.reload(); break;
+          case '#Autorization': this.returnToMainMenu(); break;
+          case '#Records': this.returnToMainMenu(); break;
+          case '#InfoAndRoots': this.returnToMainMenu(); break;
+        }
         break;
     }
   };

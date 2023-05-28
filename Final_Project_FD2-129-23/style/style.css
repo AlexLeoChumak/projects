@@ -18,14 +18,30 @@ body {
   position: absolute;
   top: 50vw;
   left: calc(50vw - 32.5px);
+  -webkit-animation: rotator 1.4s linear infinite;
   animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
 }
 
 @keyframes rotator {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
+    -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
   }
 }
@@ -33,25 +49,72 @@ body {
 .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
   transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
   animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+
+  25% {
+    stroke: #DE3E35;
+  }
+
+  50% {
+    stroke: #F7C223;
+  }
+
+  75% {
+    stroke: #1B9A59;
+  }
+
+  100% {
+    stroke: #4285F4;
+  }
 }
 
 @keyframes colors {
   0% {
     stroke: #4285F4;
   }
+
   25% {
     stroke: #DE3E35;
   }
+
   50% {
     stroke: #F7C223;
   }
+
   75% {
     stroke: #1B9A59;
   }
+
   100% {
     stroke: #4285F4;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
   }
 }
 
@@ -59,18 +122,38 @@ body {
   0% {
     stroke-dashoffset: 187;
   }
+
   50% {
     stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
+
   100% {
     stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
     transform: rotate(450deg);
   }
 }
 
 button {
   background: transparent;
+}
+
+input::-webkit-input-placeholder {
+  font-family: 'Comfortaa', cursive;
+}
+
+input::-moz-placeholder {
+  font-family: 'Comfortaa', cursive;
+}
+
+input:-ms-input-placeholder {
+  font-family: 'Comfortaa', cursive;
+}
+
+input::-ms-input-placeholder {
+  font-family: 'Comfortaa', cursive;
 }
 
 input::placeholder,
@@ -100,6 +183,7 @@ button {
   width: 15vw;
   top: 1vh;
   left: calc(50% - 7.5vw);
+  -webkit-animation: logoScale 10000ms linear infinite;
   animation: logoScale 10000ms linear infinite;
 }
 
@@ -264,150 +348,76 @@ button {
 
 .game__line1 {
   -webkit-animation: lineDown 8s infinite linear;
-  -moz-animation: lineDown 8s infinite linear;
-  -o-animation: lineDown 8s infinite linear;
   animation: lineDown 8s infinite linear;
   -webkit-transform: scale(1.0);
-  -moz-transform: scale(1.0);
-  -o-transform: scale(1.0);
+  -ms-transform: scale(2.0);
   transform: scale(2.0);
 }
 
 .game__line2 {
   -webkit-animation: lineDown 14s infinite linear;
-  -moz-animation: lineDown 14s infinite linear;
-  -o-animation: lineDown 14s infinite linear;
   animation: lineDown 14s infinite linear;
   -webkit-transform: scale(1.6);
-  -moz-transform: scale(1.6);
-  -o-transform: scale(1.6);
+  -ms-transform: scale(1.6);
   transform: scale(1.6);
   left: 18%;
 }
 
 .game__line3 {
   -webkit-animation: lineDown 5s infinite linear;
-  -moz-animation: lineDown 5s infinite linear;
-  -o-animation: lineDown 5s infinite linear;
   animation: lineDown 5s infinite linear;
   -webkit-transform: scale(.5);
-  -moz-transform: scale(.5);
-  -o-transform: scale(.5);
+  -ms-transform: scale(.5);
   transform: scale(.5);
   left: -23%;
 }
 
 .game__line4 {
   -webkit-animation: lineDown 9s infinite linear;
-  -moz-animation: lineDown 9s infinite linear;
-  -o-animation: lineDown 9s infinite linear;
   animation: lineDown 9s infinite linear;
   -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
   left: -39%;
 }
 
 .game__line5 {
   -webkit-animation: lineDown 16s infinite linear;
-  -moz-animation: lineDown 16s infinite linear;
-  -o-animation: lineDown 16s infinite linear;
   animation: lineDown 16s infinite linear;
   -webkit-transform: scale(2.2);
-  -moz-transform: scale(2.2);
-  -o-transform: scale(2.2);
+  -ms-transform: scale(2.2);
   transform: scale(2.2);
   left: -55%;
 }
 
 .game__line6 {
   -webkit-animation: lineDown 6s infinite linear;
-  -moz-animation: lineDown 6s infinite linear;
-  -o-animation: lineDown 6s infinite linear;
   animation: lineDown 6s infinite linear;
   -webkit-transform: scale(.8);
-  -moz-transform: scale(.8);
-  -o-transform: scale(.8);
+  -ms-transform: scale(.8);
   transform: scale(.8);
   left: -75%;
 }
 
 .game__line7 {
   -webkit-animation: lineDown 10s infinite linear;
-  -moz-animation: lineDown 10s infinite linear;
-  -o-animation: lineDown 10s infinite linear;
   animation: lineDown 10s infinite linear;
   -webkit-transform: scale(3.2);
-  -moz-transform: scale(3.2);
-  -o-transform: scale(3.2);
+  -ms-transform: scale(3.2);
   transform: scale(3.2);
   left: 43%;
 }
 
 .game__line8 {
   -webkit-animation: lineDown 9s infinite linear;
-  -moz-animation: lineDown 9s infinite linear;
-  -o-animation: lineDown 9s infinite linear;
   animation: lineDown 9s infinite linear;
   -webkit-transform: scale(1.7);
-  -moz-transform: scale(1.7);
-  -o-transform: scale(1.7);
+  -ms-transform: scale(1.7);
   transform: scale(1.7);
   left: 57%;
 }
 
 @-webkit-keyframes lineDown {
-  0% {
-    top: -100vh;
-    opacity: 0;
-  }
-
-  25% {
-    opacity: 1;
-  }
-
-  50% {
-    top: 0vh;
-    opacity: .8;
-  }
-
-  75% {
-    opacity: 1;
-  }
-
-  100% {
-    top: 100vh;
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes lineDown {
-  0% {
-    top: -100vh;
-    opacity: 0;
-  }
-
-  25% {
-    opacity: 1;
-  }
-
-  50% {
-    top: 0vh;
-    opacity: .8;
-  }
-
-  75% {
-    opacity: 1;
-  }
-
-  100% {
-    top: 100vh;
-    opacity: 0;
-  }
-}
-
-@-o-keyframes lineDown {
   0% {
     top: -100vh;
     opacity: 0;
@@ -725,7 +735,12 @@ button {
 }
 
 .error {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -734,8 +749,15 @@ button {
 }
 
 .game__title_you_wrong {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   top: 20%;
 }
@@ -811,8 +833,8 @@ button {
   height: 94px;
   top: 62px;
   left: 0px;
-  background: -webkit-gradient(linear, left top, right top, from(#f3f3f3), color-stop(65%, #f3f3f3), color-stop(65%, #e0e0e0), to(#e0e0e0));
   background: -o-linear-gradient(left, #f3f3f3 0%, #f3f3f3 65%, #e0e0e0 65%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#f3f3f3), color-stop(65%, #f3f3f3), color-stop(65%, #e0e0e0), to(#e0e0e0));
   background: linear-gradient(to right, #f3f3f3 0%, #f3f3f3 65%, #e0e0e0 65%, #e0e0e0 100%);
 }
 
@@ -1753,8 +1775,8 @@ path#f3-l9 {
   left: 0;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(white));
   background: -o-linear-gradient(left, transparent, white);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(white));
   background: linear-gradient(to right, transparent, white);
   -webkit-animation: btnAnimate-right 2s linear infinite;
   animation: btnAnimate-right 2s linear infinite;
@@ -1770,8 +1792,8 @@ path#f3-l9 {
   right: 0;
   width: 2px;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
   background: -o-linear-gradient(top, transparent, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
   background: linear-gradient(to bottom, transparent, white);
   -webkit-animation: btnAnimate-bottom 2s linear infinite;
   animation: btnAnimate-bottom 2s linear infinite;
@@ -1797,8 +1819,8 @@ path#f3-l9 {
   left: 0;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(transparent), to(white));
   background: -o-linear-gradient(right, transparent, white);
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(white));
   background: linear-gradient(to left, transparent, white);
   -webkit-animation: btnAnimate-left 2s linear infinite;
   animation: btnAnimate-left 2s linear infinite;
@@ -1811,8 +1833,8 @@ path#f3-l9 {
   left: 0;
   width: 2px;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(white));
   background: -o-linear-gradient(bottom, transparent, white);
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(white));
   background: linear-gradient(to top, transparent, white);
   -webkit-animation: btnAnimate-top 2s linear infinite;
   animation: btnAnimate-top 2s linear infinite;
@@ -1824,26 +1846,26 @@ path#f3-l9 {
 }
 
 .game__field_hints_wrapper_btns:hover:before {
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#fc00f8));
   background: -o-linear-gradient(left, transparent, #fc00f8);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#fc00f8));
   background: linear-gradient(to right, transparent, #fc00f8);
 }
 
 .game__field_hints_wrapper_btns:hover:after {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fc00f8));
   background: -o-linear-gradient(top, transparent, #fc00f8);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fc00f8));
   background: linear-gradient(to bottom, transparent, #fc00f8);
 }
 
 .game__field_hints_wrapper_btns button:hover:before {
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fc00f8));
   background: -o-linear-gradient(bottom, transparent, #fc00f8);
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fc00f8));
   background: linear-gradient(to top, transparent, #fc00f8);
 }
 
 .game__field_hints_wrapper_btns button:hover:after {
-  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#fc00f8));
   background: -o-linear-gradient(right, transparent, #fc00f8);
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#fc00f8));
   background: linear-gradient(to left, transparent, #fc00f8);
 }
 
@@ -1859,26 +1881,26 @@ path#f3-l9 {
 }
 
 .game__field_hints_wrapper_btns:active:before {
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(red));
   background: -o-linear-gradient(left, transparent, red);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(red));
   background: linear-gradient(to right, transparent, red);
 }
 
 .game__field_hints_wrapper_btns:active:after {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(red));
   background: -o-linear-gradient(top, transparent, red);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(red));
   background: linear-gradient(to bottom, transparent, red);
 }
 
 .game__field_hints_wrapper_btns button:active:before {
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(red));
   background: -o-linear-gradient(bottom, transparent, red);
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(red));
   background: linear-gradient(to top, transparent, red);
 }
 
 .game__field_hints_wrapper_btns button:active:after {
-  background: -webkit-gradient(linear, right top, left top, from(transparent), to(red));
   background: -o-linear-gradient(right, transparent, red);
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(red));
   background: linear-gradient(to left, transparent, red);
 }
 
@@ -2001,6 +2023,7 @@ path#f3-l9 {
   padding: 45px;
   text-align: center;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -2011,8 +2034,11 @@ path#f3-l9 {
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 5px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -2036,6 +2062,8 @@ path#f3-l9 {
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
   cursor: pointer;
   margin: 0 0 10px 0;
@@ -2053,6 +2081,8 @@ path#f3-l9 {
 
 .work__data {
   color: white;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
   align-self: start;
   font-size: 1vw;
   padding: 20px;
@@ -2065,6 +2095,8 @@ path#f3-l9 {
 }
 
 .work__data_questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2086,6 +2118,8 @@ path#f3-l9 {
 }
 
 .work__data_controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px white solid;
   border-radius: 5px;
@@ -2096,8 +2130,15 @@ path#f3-l9 {
 }
 
 .work__data_field_for_input_question {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 10px;
   border: 1px white solid;
@@ -2117,6 +2158,8 @@ path#f3-l9 {
   margin: 0 0 10px 0;
   width: 70vw;
   cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -2140,6 +2183,22 @@ path#f3-l9 {
 
 .work__data button:hover {
   background-color: rgba(134, 0, 91, 0.8);
+}
+
+.work__data_field_for_input_question input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.work__data_field_for_input_question input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.work__data_field_for_input_question input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.work__data_field_for_input_question input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .work__data_field_for_input_question input::placeholder {
@@ -2185,9 +2244,12 @@ path#f3-l9 {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1001;
-  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+  -webkit-box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
   text-align: center;
   padding: 30px;
   border-radius: 5px;
@@ -2201,10 +2263,14 @@ path#f3-l9 {
   top: 10px;
   right: 10px;
   cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
 .modal__cross:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1)
 }
 
