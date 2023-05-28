@@ -917,7 +917,7 @@ export default class View {
 
     if (state) {
       for (let i = 0; i < data.length; i++) {
-        if (i === 30) {
+        if (i === 15) {
           return;
         }
         this.cntRecordsOl.insertAdjacentHTML('beforeend', `<li>Имя: ${data[i].username} , очков: ${data[i].score}</li>`);
