@@ -1762,12 +1762,6 @@ path#f3-l9 {
   font-size: .8vw;
 }
 
-/* .game__hints_btns:hover {
-  background: transparent;
-  color: #fc00f8;
-  border: none;
-} */
-
 .game__field_hints_wrapper_btns:before {
   content: "";
   position: absolute;
@@ -2011,8 +2005,6 @@ path#f3-l9 {
   }
 
 }
-
-/* форма регистрации */
 
 .autorization__form {
   position: relative;
