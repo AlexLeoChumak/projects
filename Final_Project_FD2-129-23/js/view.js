@@ -37,7 +37,7 @@ export default class View {
                   <input id='loginPassword' type='password' placeholder='ПАРОЛЬ'>
                   <button id='autorizationBtnConfirm' type='button'>ОК</button>
                   <button id='autorizationBtnToMain' type='button'>на главную</button>
-                  <p id='showErrorLogin' class='hidden'>Неверное имя и(или) пароль</p>
+                  <p id='showErrorLogin' class='hidden'>Неверный логин и(или) пароль</p>
               </form>
           </div>  
       </div>
