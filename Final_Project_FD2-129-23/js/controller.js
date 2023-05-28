@@ -271,27 +271,27 @@ export default class Controller {
     e.preventDefault();
 
     switch (e.code) {
-      case 'KeyQ':
+      case 'Backslash':
         switch (location.hash) {
-          case '#Menu': this.inputName.focus(); console.log('ok'); break;   
+          case '#Menu': this.inputName.focus(); break;   
         }
         break;
-      case 'KeyE':
+      case 'NumpadDivide':
         switch (location.hash) {
           case '#Menu': this.showMenuAutorization(); break;   
         }
         break;
-      case 'KeyA':
+      case 'NumpadMultiply':
         switch (location.hash) {
           case '#Menu': this.controlSound(); break;   
         }
         break;
-      case 'KeyS':
+      case 'NumpadSubtract':
         switch (location.hash) {
           case '#Menu': this.showRecords(); break;   
         }
         break;
-      case 'KeyD':
+      case 'NumpadAdd':
         switch (location.hash) {
           case '#Menu': this.showInfoRoots(); break;   
         }
