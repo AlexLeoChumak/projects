@@ -8,14 +8,14 @@ export default class View {
         <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
       </svg>
       
-      <audio id='music_start' src='music/startGame.mp3'></audio>
-      <audio id='music_player_think' src='music/player-think.mp3' loop></audio>
-      <audio id='music_fifty' src='music/50-50.mp3'></audio>
-      <audio id='music_helpJS'  src='music/helpJS.mp3'></audio>
-      <audio id='music_answer_accept' src='music/answer_accept.mp3'></audio>
-      <audio id='music_correct' src='music/correct.mp3'></audio>
-      <audio id='music_wrong' src='music/wrong.mp3'></audio>
-      <audio id='music_applause' src='music/applause.mp3'></audio>
+      <audio id='music_start' src='music/startGame.mp3' preload="auto"></audio>
+      <audio id='music_player_think' src='music/player-think.mp3' loop preload="auto"></audio>
+      <audio id='music_fifty' src='music/50-50.mp3' preload="auto"></audio>
+      <audio id='music_helpJS'  src='music/helpJS.mp3' preload="auto"></audio>
+      <audio id='music_answer_accept' src='music/answer_accept.mp3' preload="auto"></audio>
+      <audio id='music_correct' src='music/correct.mp3' preload="auto"></audio>
+      <audio id='music_wrong' src='music/wrong.mp3' preload="auto"></audio>
+      <audio id='music_applause' src='music/applause.mp3' preload="auto"></audio>
 
       <div id='menu' class='menu hidden'>
           <img src='images/logo.png' id='menuLogo' class='menu__logo' alt='logo' title='logo'>
