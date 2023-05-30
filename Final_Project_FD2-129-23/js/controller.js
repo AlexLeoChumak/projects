@@ -78,7 +78,6 @@ export default class Controller {
 
     window.addEventListener('popstate', () => {
         if (location.hash === '#Menu' && this.statePopstate) {
-          window.history.forward();
           this.myModel.checkExitGame();
         }
     });
