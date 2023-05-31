@@ -504,6 +504,23 @@ export default class View {
     this.question13 = this.myContainer.querySelector('.game__progress_question_13');
     this.question14 = this.myContainer.querySelector('.game__progress_question_14');
     this.question15 = this.myContainer.querySelector('.game__progress_question_15');
+    this.arrQuestion = [
+      this.question1,
+      this.question2,
+      this.question3,
+      this.question4,
+      this.question5,
+      this.question6,
+      this.question7,
+      this.question8,
+      this.question9,
+      this.question10,
+      this.question11,
+      this.question12,
+      this.question13,
+      this.question14,
+      this.question15
+    ]
   };
 
   showFormAutorization() {
@@ -726,53 +743,7 @@ export default class View {
       this.counterQuestions++;
       this.progressGameMobileScreen.innerHTML = `правильные ответы: ${this.counterQuestions}`;
 
-      switch (this.counterQuestions) {
-        case 1:
-          this.question1.classList.add('background_green');
-          break;
-        case 2:
-          this.question2.classList.add('background_green');
-          break;
-        case 3:
-          this.question3.classList.add('background_green');
-          break;
-        case 4:
-          this.question4.classList.add('background_green');
-          break;
-        case 5:
-          this.question5.classList.add('background_green');
-          break;
-        case 6:
-          this.question6.classList.add('background_green');
-          break;
-        case 7:
-          this.question7.classList.add('background_green');
-          break;
-        case 8:
-          this.question8.classList.add('background_green');
-          break;
-        case 9:
-          this.question9.classList.add('background_green');
-          break;
-        case 10:
-          this.question10.classList.add('background_green');
-          break;
-        case 11:
-          this.question11.classList.add('background_green');
-          break;
-        case 12:
-          this.question12.classList.add('background_green');
-          break;
-        case 13:
-          this.question13.classList.add('background_green');
-          break;
-        case 14:
-          this.question14.classList.add('background_green');
-          break;
-        case 15:
-          this.question15.classList.add('background_green');
-          break;
-      }
+      this.arrQuestion[this.counterQuestions - 1].classList.add('background_green');
     }, 5000);
 
     if (status === 'last-question') {
@@ -787,7 +758,6 @@ export default class View {
       this.gameField.classList.add('hidden');
       this.progressGame.classList.add('hidden');
       this.animateBackgroundCnt.classList.add('hidden');
-      this.clearQuestionsBackground();
 
       this.musicStart.play();
       this.congratulateTitle.classList.remove('hidden');
@@ -799,25 +769,6 @@ export default class View {
         location.reload();
       }, 9000);
     }, 9500);
-  }
-
-  clearQuestionsBackground() {
-    this.question1.classList.remove('background_green');
-    this.question2.classList.remove('background_green');
-    this.question3.classList.remove('background_green');
-    this.question4.classList.remove('background_green');
-    this.question5.classList.remove('background_green');
-    this.question6.classList.remove('background_green');
-    this.question7.classList.remove('background_green');
-    this.question8.classList.remove('background_green');
-    this.question9.classList.remove('background_green');
-    this.question10.classList.remove('background_green');
-    this.question11.classList.remove('background_green');
-    this.question12.classList.remove('background_green');
-    this.question13.classList.remove('background_green');
-    this.question14.classList.remove('background_green');
-    this.question15.classList.remove('background_green');
-    this.counterQuestions = 0;
   }
 
   showAnotherCorrectAnswer() {
@@ -888,7 +839,6 @@ export default class View {
       this.showScreenWrongAnswer();
       this.undisabledOptionsHints();
       this.unDisabledAllBtnsAndOptionsAnswer();
-      this.clearQuestionsBackground();
     }, 11000);
   };
 
