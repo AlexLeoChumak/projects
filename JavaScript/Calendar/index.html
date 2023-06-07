@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        body {
+        padding: 20px;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #container {
+        width: 100%;
+        }
+        table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0 auto;
+        }
+        .weekend {
+        color: white;
+        background-color: rgb(255, 0, 0);
+        }
+        button {
+        margin: 0 15px;
+        padding: 5px 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 5px;
+        }
+        select {
+        margin: 0 10px 0 0;
+        padding: 5px 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 5px;
+        }
+        label {
+        margin: 0 10px 0 0;
+        }
+        td {
+        padding: 10px 20px;
+        border: none;
+        border: 1px solid black;
+        }
+        thead {
+        font-weight: bold;
+        background-color: rgb(149, 149, 149);
+        }
+        .highlight, 
+        .paint {
+        background-color: rgb(230, 248, 127);
+        }
+        div, h1 {
+        display: inline-block;
+        }
+        div {
+        position: relative;
+        width: 450px;
+        }
+        .prevYear {
+        position: absolute;
+        top: 30px;
+        left: -10px;
+        }
+        .nextYear {
+        position: absolute;
+        top: 30px;
+        right: -10px;
+        }
+        .prevMonth {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        }
+        .nextMonth {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id='container'></div>
+    <script>
+        let currentMonth; 
+        let currentYear;
+        const title = document.createElement('header');
+        const monthsSelect = document.createElement('select');
+        const monthsLabel = document.createElement('label');
+        const yearLabel = document.createElement('label');
+        const selectYear = document.createElement('select');
+        const drawCalendar = document.createElement('button');
+        const removeCalendar = document.createElement('button');
+        const months = ['Выбрать месяц', 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']; 
+        const years = (() => {
+            const arrYears = ['Выбрать год'];
+
+            for (let i = 1980; i <= 2023; i++) {
+                arrYears.push(i);
+            }
+
+            return arrYears;
+        })();
+
+        monthsSelect.setAttribute('id', 'month');
+        monthsLabel.innerHTML = 'Месяц';
+        monthsLabel.setAttribute('for', 'month');
+        yearLabel.innerHTML = 'Год';
+        yearLabel.setAttribute('for', 'year');
+        selectYear.setAttribute('id', 'year');
+        drawCalendar.setAttribute('type', 'button');
+        drawCalendar.setAttribute('id', 'create');
+        drawCalendar.disabled = true;
+        drawCalendar.innerHTML = 'Создать';
+        removeCalendar.setAttribute('type', 'button');
+        removeCalendar.setAttribute('id', 'delete');
+        removeCalendar.disabled = true;
+        removeCalendar.innerHTML = 'Удалить';
+
+        for (let i = 1; i <= months.length; i++) {
+        let option = document.createElement('option');
+
+        option.innerHTML = months[i - 1];
+        monthsSelect.append(option);
+        }
+
+        for (let i = 1; i <= years.length; i++) {
+        let option = document.createElement('option');
+        option.innerHTML = years[i - 1];
+        selectYear.append(option);
+        }
+
+        drawCalendar.addEventListener('click', function() {
+        const itemMonth = document.querySelector('#month');
+        const selectionMonth = itemMonth.options[itemMonth.selectedIndex].text;
+        const inputMonth = months.indexOf(selectionMonth);
+        const itemYear = document.querySelector('#year');
+        const enterYear = itemYear.options[itemYear.selectedIndex].text;
+
+        drawNewCalendar(inputMonth, +enterYear);
+        removeCalendar.disabled = false;   
+        });
+
+        removeCalendar.addEventListener('click', function() {
+        const someCalendars = document.querySelectorAll('.wrapper');
+        if (someCalendars.length <= 1) {
+            removeCalendar.disabled = true;
+        }
+
+        let firstCalendar = someCalendars[0].remove();
+        });
+
+        function drawNewCalendar(month, year, thisWrap) {
+        currentMonth = month;
+        currentYear = year;
+        let wrapper;
+
+        if (thisWrap != null) {
+            wrapper = thisWrap;
+            wrapper.querySelector('table').remove();
+            wrapper.querySelector('div').remove();
+
+        } else {
+            wrapper = document.createElement('div');
+            wrapNewLine = document.createElement('br');
+
+            wrapper.classList.add('wrapper');
+        }
+
+        const block = document.createElement('div');
+        const titleDate = document.createElement('h2');
+        const titleDateMonth = document.createElement('span');
+        const titleDateYear = document.createElement('span');
+        const titleDateNameYear = document.createElement('span');
+        const prevMonth = document.createElement('button');
+        const nextMonth = document.createElement('button');
+        const prevYear = document.createElement('button');
+        const nextYear = document.createElement('button');
+
+        titleDateMonth.classList.add('headingMonth');
+        titleDateYear.classList.add('headingYear');
+        titleDateNameYear.innerHTML = 'года';
+        prevMonth.innerHTML = '<';
+        prevMonth.classList.add('prevMonth');
+        nextMonth.innerHTML = '>';
+        nextMonth.classList.add('nextMonth');
+        prevYear.innerHTML = '<<';
+        prevYear.classList.add('prevYear');
+        nextYear.innerHTML = '>>';
+        nextYear.classList.add('nextYear');
+
+        titleDate.append(titleDateMonth);
+        titleDate.append(titleDateYear);
+        titleDate.append(titleDateNameYear);
+        block.append(titleDate);
+        block.append(prevYear);
+        block.append(prevMonth);
+        block.append(nextMonth);
+        block.append(nextYear);
+        wrapper.append(block);
+
+        if (thisWrap == undefined){
+
+            document.querySelector('#container').append(wrapper, wrapNewLine);
+        }
+        const clickPrevMonth = wrapper.querySelector('button.prevMonth');
+        const clickNextMonth = wrapper.querySelector('button.nextMonth');
+        const clickPrevYear = wrapper.querySelector('button.prevYear');
+        const clickNextYear = wrapper.querySelector('button.nextYear');
+
+        clickPrevMonth.addEventListener('click', function(event) {
+
+            let thisWrap = event.target.parentElement.parentElement;
+
+            let nameOfMonth = thisWrap.querySelector('.headingMonth').innerHTML.trim();
+            currentMonth = months.indexOf(nameOfMonth);
+
+            if (currentMonth == 1) {
+            drawNewCalendar(12, year-1, thisWrap);
+            }
+            else {
+            drawNewCalendar(month-1, year, thisWrap);
+            }
+        });
+
+        clickNextMonth.addEventListener('click', function(event) {
+
+            let thisWrap = event.target.parentElement.parentElement;
+
+            let nameOfMonth = thisWrap.querySelector('.headingMonth').innerHTML.trim();
+            currentMonth = months.indexOf(nameOfMonth);
+
+            if (currentMonth == 12) {
+            drawNewCalendar(1, year + 1, thisWrap);
+            }
+            else {
+            drawNewCalendar(month + 1, year, thisWrap);
+            }
+        });
+
+        clickPrevYear.addEventListener('click', function(event) {
+
+            let thisWrap = event.target.parentElement.parentElement;
+            drawNewCalendar(month, year - 1, thisWrap);
+        });
+
+        clickNextYear.addEventListener('click', function(event) {
+
+            let thisWrap = event.target.parentElement.parentElement;
+            drawNewCalendar(month, year + 1, thisWrap);
+        });
+
+        let headingMonth = wrapper.querySelector('.headingMonth');
+        headingMonth.innerHTML = `${months[month]} `;
+        let headingYear = wrapper.querySelector('.headingYear');
+        headingYear.innerHTML =`${year} `;
+
+
+        let tableAll = document.createElement('table');
+        let headTable = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+
+        tableAll.append(headTable);
+        tableAll.append(tbody);
+        wrapper.append(tableAll);
+
+        let selectedTd;
+        let coloredTd;
+
+        let thisTable = wrapper.querySelector('tbody');
+
+        thisTable.addEventListener('mouseover', function(event) {
+            let target = event.target;
+            if (target.tagName != 'TD') return;
+            highlight(target);
+        })
+
+        thisTable.addEventListener('mouseout', function(event) {
+            event.target.classList.remove('highlight');
+        })
+
+        thisTable.addEventListener('click', function(event) {
+            let target = event.target;
+            if (target.tagName != 'TD') return;
+            setcolor(target);
+        })
+
+        function highlight(td) {
+            if (selectedTd) {
+            selectedTd.classList.remove('highlight');
+            }
+            selectedTd = td;
+            selectedTd.classList.add('highlight');
+        }
+
+        function setcolor(td) {
+            if (coloredTd) {
+            coloredTd.classList.remove('paint');
+            }
+            coloredTd = td;
+            coloredTd.classList.add('paint');
+        }
+
+
+        let weekDays = document.createElement('tr');
+        let daysOfWeek = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
+        for (let i = 0; i < daysOfWeek.length; i++) {
+            let day = document.createElement('td');
+            day.innerHTML = daysOfWeek[i];
+            weekDays.append(day);
+        }
+
+        headTable.append(weekDays);
+
+        let beginMonth = getDayConverted(new Date(year, month-1, 1));
+        let montsDays = new Date(year, month, 0).getDate();
+        let overMonth = getDayConverted(new Date(year, month-1, montsDays));
+        let doWeExpectEmptyCell = true;
+
+        for (let j = 1; j <= montsDays;) {
+
+            let prevWeek = document.createElement('tr');
+            for (let i = 0; i <= 6; i++) {
+
+            let montsDaysPrev = new Date(year, month-1, 0).getDate();
+
+            if (i < beginMonth && doWeExpectEmptyCell) {
+                let eachDate = document.createElement('td');
+                eachDate.innerHTML = montsDaysPrev - beginMonth + 1 + i;
+                eachDate.classList.add('prev');
+                prevWeek.append(eachDate);
+                continue;
+            }
+
+            doWeExpectEmptyCell = false;
+
+            let eachDate = document.createElement('td');
+            eachDate.innerHTML = j;
+            if (getDayConverted(new Date(year, month-1, j)) >= 5) {
+                eachDate.classList.add('weekend');
+            }
+            prevWeek.append(eachDate);
+
+            if (getDayConverted(new Date(year, month-1, j)) == 6 || j >= montsDays) {
+                j++;
+                break;
+            }
+            j++
+            }
+
+            if (j > montsDays) {
+
+            for (let i = overMonth, count = 1; i < 6; i++, count++) {
+
+                let cellClear = document.createElement('td');
+                cellClear.innerHTML = count;
+                cellClear.classList.add('prev');
+                prevWeek.append(cellClear);
+            }
+            }
+            tbody.append(prevWeek);
+        }
+        }
+
+        title.append(monthsLabel);
+        title.append(monthsSelect);
+        title.append(yearLabel);
+        title.append(selectYear);
+        title.append(drawCalendar);
+        title.append(removeCalendar);
+
+        document.querySelector('#container').append(title);
+
+        function getDayConverted(d) {
+        const date = new Date(d);
+        const day = date.getDay();
+        return day === 0 ? day + 6 : day - 1;
+        }
+
+        let inputMonth = document.querySelector('#month');
+        let inputYear = document.querySelector('#year');
+
+        inputMonth.addEventListener('change', checkDisable);
+        inputYear.addEventListener('change', checkDisable);
+
+        function checkDisable() {
+
+        if (inputMonth.value === 'Выбрать месяц' || inputYear.value === 'Выбрать год') {
+            drawCalendar.disabled = true;
+        }
+        else {
+            drawCalendar.disabled = false;;
+        }
+        };
+    </script>
+</body>
+</html>
