@@ -187,17 +187,14 @@ class Controller {
   }
 
   selectImage = (e) => {
-    console.log('addEventListener(click, this.selectImage);');
     this.myModel.selectImage(e.target.dataset.id);
   };
 
   closeModal = () => {
-    console.log('addEventListener(click, this.closeModal);');
     this.myModel.closeModal();
   };
 
   filteredTypesPictures = (e) => {
-    console.log('addEventListener(click, this.filteredTypesPictures);');
     this.myModel.filteredTypesPictures(e.target.value);
     this.clearEventListeners();
   };
