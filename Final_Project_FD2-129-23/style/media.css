@@ -541,7 +541,7 @@
 
 /* новые стили */
 
-@media screen and (min-width: 1070px) and (min-height: 2300px) {
+@media screen and (min-width: 1070px) and (min-height: 1800px) {
   .menu {
     display: flex;
     flex-direction: column;

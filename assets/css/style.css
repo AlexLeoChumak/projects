@@ -207,3 +207,75 @@ a:hover {
     max-width: 1400px;
   }
 }
+
+@media screen and (min-width: 1070px) and (min-height: 1800px) {
+  h1 {
+    font-size: 100px;
+    margin-bottom: 100px;
+  }
+  .burger.text-nowrap {
+    transform: scale(5);
+  }
+  .custom-navbar > .container {
+    width: 95%;
+    padding-right: 50px;
+  }
+  p {
+    font-size: 50px;
+  }
+  .row > * {
+    font-size: 50px;
+  }
+  .row > h3 {
+    font-size: 80px;
+    margin: 20px 0;
+  }
+  .row > h6 {
+    font-size: 60px;
+    margin: 20px 0;
+  }
+  .section {
+    padding: 15px;
+  }
+  a {
+    font-size: 60px;
+  }
+  hr {
+    margin-bottom: 100px;
+  }
+  .col-sm-12.social.text-center {
+    margin: 40px 0;
+  }
+  .btn.btn-primary.mt-3 {
+    width: 50vw;
+    height: 5vh;
+    font-size: 50px;
+  }
+  .btn.btn-primary.mt-3 span {
+    color: white;
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a[href='mailto:alexey.leo.chumak@gmail.com'],
+  a[href="https://github.com/AlexLeoChumak"],
+  a[href="https://www.linkedin.com/in/alexeychumak/"]
+  {
+    margin: 100px 150px 100px 0;
+    transform: scale(2);
+  }
+  a[href="https://www.instagram.com/alex_leo_chumak/"]
+  {
+    transform: scale(2);
+    margin: 100px 0;
+  }
+  .text-center.mt-5.mb-3 a[href="https://github.com/AlexLeoChumak"]
+  {
+    margin: 0 auto;
+  }
+  .custom-navmenu h3 {
+    font-size: 70px;
+  }
+}
