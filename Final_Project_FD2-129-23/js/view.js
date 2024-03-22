@@ -1,5 +1,4 @@
 export default class View {
-
   init(container) {
     this.myContainer = container;
 
@@ -437,7 +436,9 @@ export default class View {
     this.gameField = this.myContainer.querySelector('#gameField');
     this.progressGame = this.myContainer.querySelector('#gameProgress');
     this.inputName = this.myContainer.querySelector('#menuInputName');
-    this.btnSubmitName = this.myContainer.querySelector('#menuButtonSubmitName');
+    this.btnSubmitName = this.myContainer.querySelector(
+      '#menuButtonSubmitName'
+    );
     this.btnFiftyFifty = this.myContainer.querySelector('#gameFieldHintsFifty');
     this.btnHelpJS = this.myContainer.querySelector('#gameFieldHintsHelpJS');
     this.btnExit = this.myContainer.querySelector('#gameFieldExit');
@@ -447,13 +448,25 @@ export default class View {
     this.optionB = this.myContainer.querySelector('#gameFieldAnswerB');
     this.optionC = this.myContainer.querySelector('#gameFieldAnswerC');
     this.optionD = this.myContainer.querySelector('#gameFieldAnswerD');
-    this.flyToOfferTitle = this.myContainer.querySelector('#gameTitleFlyToOffer');
-    this.animateBetweenQuestions = this.myContainer.querySelector('#gameAnimateBetweemQuestions');
-    this.congratulateTitle = this.myContainer.querySelector('#gameCongratulateTitle');
-    this.animateCongratulateWin = this.myContainer.querySelector('#gameAnimateWinnerCat');
+    this.flyToOfferTitle = this.myContainer.querySelector(
+      '#gameTitleFlyToOffer'
+    );
+    this.animateBetweenQuestions = this.myContainer.querySelector(
+      '#gameAnimateBetweemQuestions'
+    );
+    this.congratulateTitle = this.myContainer.querySelector(
+      '#gameCongratulateTitle'
+    );
+    this.animateCongratulateWin = this.myContainer.querySelector(
+      '#gameAnimateWinnerCat'
+    );
     this.cntRecordsOl = this.myContainer.querySelector('#recordsOl');
-    this.animateBackgroundCnt = this.myContainer.querySelector('#gameAnimateBackgroundCnt');
-    this.progressGameMobileScreen = this.myContainer.querySelector('#gameProgressMobileScreen');
+    this.animateBackgroundCnt = this.myContainer.querySelector(
+      '#gameAnimateBackgroundCnt'
+    );
+    this.progressGameMobileScreen = this.myContainer.querySelector(
+      '#gameProgressMobileScreen'
+    );
     this.errorNotFound = this.myContainer.querySelector('#errorNotFound');
     this.gamePlayerName = this.myContainer.querySelector('#gamePlayerName');
     this.autorization = this.myContainer.querySelector('#autorization');
@@ -461,8 +474,11 @@ export default class View {
     this.workInData = this.myContainer.querySelector('#workInData');
     this.errorLogin = this.myContainer.querySelector('#showErrorLogin');
     this.autorizationLoginName = this.myContainer.querySelector('#loginName');
-    this.autorizationLoginPassword = this.myContainer.querySelector('#loginPassword');
-    this.divForQuestionsList = this.myContainer.querySelector('.work__data_field_for_question_list');
+    this.autorizationLoginPassword =
+      this.myContainer.querySelector('#loginPassword');
+    this.divForQuestionsList = this.myContainer.querySelector(
+      '.work__data_field_for_question_list'
+    );
     this.menuBtnSound = this.myContainer.querySelector('#menuBtnSound');
     this.modalWindow = this.myContainer.querySelector('#modal');
     this.modalMessage = this.myContainer.querySelector('#modal__message');
@@ -472,38 +488,78 @@ export default class View {
     this.counterQuestions = 0;
     this.stateSound = true;
 
-    this.workInDataInputQuestion = this.myContainer.querySelector('#workInDataInputQuestion');
-    this.workInDataInputCorrectAnswer = this.myContainer.querySelector('#workInDataInputCorrectAnswer');
+    this.workInDataInputQuestion = this.myContainer.querySelector(
+      '#workInDataInputQuestion'
+    );
+    this.workInDataInputCorrectAnswer = this.myContainer.querySelector(
+      '#workInDataInputCorrectAnswer'
+    );
     this.workInDataInputA = this.myContainer.querySelector('#workInDataInputA');
     this.workInDataInputB = this.myContainer.querySelector('#workInDataInputB');
     this.workInDataInputC = this.myContainer.querySelector('#workInDataInputC');
     this.workInDataInputD = this.myContainer.querySelector('#workInDataInputD');
-    this.workInDataInputFifty = this.myContainer.querySelector('#workInDataInputFifty');
+    this.workInDataInputFifty = this.myContainer.querySelector(
+      '#workInDataInputFifty'
+    );
 
     this.musicStart = this.myContainer.querySelector('#music_start');
-    this.musicPlayerThink = this.myContainer.querySelector('#music_player_think');
+    this.musicPlayerThink = this.myContainer.querySelector(
+      '#music_player_think'
+    );
     this.musicFiftyFifty = this.myContainer.querySelector('#music_fifty');
     this.musicHelpJS = this.myContainer.querySelector('#music_helpJS');
-    this.musicAnswerAccept = this.myContainer.querySelector('#music_answer_accept');
+    this.musicAnswerAccept = this.myContainer.querySelector(
+      '#music_answer_accept'
+    );
     this.musicCorrectAnswer = this.myContainer.querySelector('#music_correct');
     this.musicWrongAnswer = this.myContainer.querySelector('#music_wrong');
     this.musicApplause = this.myContainer.querySelector('#music_applause');
 
-    this.question1 = this.myContainer.querySelector('.game__progress_question_1');
-    this.question2 = this.myContainer.querySelector('.game__progress_question_2');
-    this.question3 = this.myContainer.querySelector('.game__progress_question_3');
-    this.question4 = this.myContainer.querySelector('.game__progress_question_4');
-    this.question5 = this.myContainer.querySelector('.game__progress_question_5');
-    this.question6 = this.myContainer.querySelector('.game__progress_question_6');
-    this.question7 = this.myContainer.querySelector('.game__progress_question_7');
-    this.question8 = this.myContainer.querySelector('.game__progress_question_8');
-    this.question9 = this.myContainer.querySelector('.game__progress_question_9');
-    this.question10 = this.myContainer.querySelector('.game__progress_question_10');
-    this.question11 = this.myContainer.querySelector('.game__progress_question_11');
-    this.question12 = this.myContainer.querySelector('.game__progress_question_12');
-    this.question13 = this.myContainer.querySelector('.game__progress_question_13');
-    this.question14 = this.myContainer.querySelector('.game__progress_question_14');
-    this.question15 = this.myContainer.querySelector('.game__progress_question_15');
+    this.question1 = this.myContainer.querySelector(
+      '.game__progress_question_1'
+    );
+    this.question2 = this.myContainer.querySelector(
+      '.game__progress_question_2'
+    );
+    this.question3 = this.myContainer.querySelector(
+      '.game__progress_question_3'
+    );
+    this.question4 = this.myContainer.querySelector(
+      '.game__progress_question_4'
+    );
+    this.question5 = this.myContainer.querySelector(
+      '.game__progress_question_5'
+    );
+    this.question6 = this.myContainer.querySelector(
+      '.game__progress_question_6'
+    );
+    this.question7 = this.myContainer.querySelector(
+      '.game__progress_question_7'
+    );
+    this.question8 = this.myContainer.querySelector(
+      '.game__progress_question_8'
+    );
+    this.question9 = this.myContainer.querySelector(
+      '.game__progress_question_9'
+    );
+    this.question10 = this.myContainer.querySelector(
+      '.game__progress_question_10'
+    );
+    this.question11 = this.myContainer.querySelector(
+      '.game__progress_question_11'
+    );
+    this.question12 = this.myContainer.querySelector(
+      '.game__progress_question_12'
+    );
+    this.question13 = this.myContainer.querySelector(
+      '.game__progress_question_13'
+    );
+    this.question14 = this.myContainer.querySelector(
+      '.game__progress_question_14'
+    );
+    this.question15 = this.myContainer.querySelector(
+      '.game__progress_question_15'
+    );
     this.arrQuestion = [
       this.question1,
       this.question2,
@@ -519,9 +575,9 @@ export default class View {
       this.question12,
       this.question13,
       this.question14,
-      this.question15
-    ]
-  };
+      this.question15,
+    ];
+  }
 
   showFormAutorization() {
     location.hash = 'Menu';
@@ -543,7 +599,7 @@ export default class View {
     this.hintFiftyState = false;
     this.hintHelpJSState = false;
     this.counterQuestions = 0;
-  };
+  }
 
   removeFormAutorization() {
     this.musicStart.pause();
@@ -551,7 +607,7 @@ export default class View {
 
     this.mainMenu.classList.add('hidden');
     this.drawGameField();
-  };
+  }
 
   drawGameField() {
     this.musicPlayerThink.play();
@@ -562,10 +618,9 @@ export default class View {
     this.animateBackgroundCnt.classList.remove('hidden');
     this.progressGameMobileScreen.classList.remove('hidden');
     this.progressGameMobileScreen.innerHTML = 'правильные ответы: 0';
-  };
+  }
 
   showQuestionInGameField(objQuestion) {
-
     this.zoneQuestion.innerHTML = objQuestion.question;
     this.optionA.innerHTML = `${objQuestion.a}`;
     this.optionB.innerHTML = `${objQuestion.b}`;
@@ -573,14 +628,14 @@ export default class View {
     this.optionD.innerHTML = `${objQuestion.d}`;
 
     this.clearOptionsClass();
-  };
+  }
 
   clearOptionsClass() {
     this.optionA.className = 'game__field_answer_option';
     this.optionB.className = 'game__field_answer_option';
     this.optionC.className = 'game__field_answer_option';
     this.optionD.className = 'game__field_answer_option';
-  };
+  }
 
   showHintsFiftyFifty(answerOne, answerTwo) {
     this.musicFiftyFifty.play();
@@ -595,7 +650,7 @@ export default class View {
     this.disabledOptionD();
 
     this.hintFiftyState = true;
-  };
+  }
 
   showHintsHelpJS(correctAnswer) {
     this.musicHelpJS.play();
@@ -611,7 +666,7 @@ export default class View {
     this.disabledOptionD();
 
     this.hintHelpJSState = true;
-  };
+  }
 
   disabledBtnSubmitName() {
     this.btnSubmitName.setAttribute('disabled', true);
@@ -689,16 +744,15 @@ export default class View {
     this.unDisabledOptionB();
     this.unDisabledOptionC();
     this.unDisabledOptionD();
-  };
+  }
 
   disabledBtn(state) {
     if (state) {
       this.disabledBtnSubmitName();
-    }
-    else {
+    } else {
       this.unDisabledBtnSubmitName();
     }
-  };
+  }
 
   disabledAllBtnsAndOptionsAnswer() {
     this.disabledBtnExit();
@@ -706,7 +760,7 @@ export default class View {
     this.disabledOptionB();
     this.disabledOptionC();
     this.disabledOptionD();
-  };
+  }
 
   unDisabledAllBtnsAndOptionsAnswer() {
     this.unDisabledBtnExit();
@@ -714,7 +768,7 @@ export default class View {
     this.unDisabledOptionB();
     this.unDisabledOptionC();
     this.unDisabledOptionD();
-  };
+  }
 
   waitingStatusAnswer(e, status, answer) {
     this.disabledAllBtnsAndOptionsAnswer();
@@ -743,7 +797,9 @@ export default class View {
       this.counterQuestions++;
       this.progressGameMobileScreen.innerHTML = `правильные ответы: ${this.counterQuestions}`;
 
-      this.arrQuestion[this.counterQuestions - 1].classList.add('background_green');
+      this.arrQuestion[this.counterQuestions - 1].classList.add(
+        'background_green'
+      );
     }, 5000);
 
     if (status === 'last-question') {
@@ -785,7 +841,7 @@ export default class View {
         this.unDisabledBtnHelpJS();
       }
     }, 9500);
-  };
+  }
 
   showAnimationCorrectAnswer() {
     this.flyToOfferTitle.classList.remove('hidden');
@@ -807,7 +863,7 @@ export default class View {
 
       this.musicPlayerThink.play();
     }, 3000);
-  };
+  }
 
   showWrongAnswer(e, correctAnswer) {
     setTimeout(() => {
@@ -840,7 +896,7 @@ export default class View {
       this.undisabledOptionsHints();
       this.unDisabledAllBtnsAndOptionsAnswer();
     }, 11000);
-  };
+  }
 
   showScreenWrongAnswer() {
     this.youWrong.classList.remove('hidden');
@@ -853,7 +909,7 @@ export default class View {
     setTimeout(() => {
       location.reload();
     }, 2500);
-  };
+  }
 
   showErrorApp() {
     this.myContainer.innerHTML = `<div id='errorMessage'>
@@ -870,16 +926,18 @@ export default class View {
         if (i === 15) {
           return;
         }
-        this.cntRecordsOl.insertAdjacentHTML('beforeend', `<li>Имя: ${data[i].username} , очков: ${data[i].score}</li>`);
+        this.cntRecordsOl.insertAdjacentHTML(
+          'beforeend',
+          `<li>Имя: ${data[i].username} , очков: ${data[i].score}</li>`
+        );
       }
-    }
-    else {
+    } else {
       this.cntRecordsOl.innerHTML = `Нет данных`;
     }
   }
 
   showNamePlayer(name) {
-    this.gamePlayerName.innerHTML = `ИГРОК : ${name} &nbsp;&nbsp;|&nbsp;&nbsp; ПОДСКАЗКИ`;
+    this.gamePlayerName.innerHTML = `ИГРОК : ${name}`;
   }
 
   showScreenWorkWithData(data) {
@@ -889,28 +947,45 @@ export default class View {
 
     if (data) {
       for (let i = 0; i < data.length; i++) {
-        this.divForQuestionsList.insertAdjacentHTML('beforeend',
+        this.divForQuestionsList.insertAdjacentHTML(
+          'beforeend',
 
-        `<div class='work__data_questions'>
+          `<div class='work__data_questions'>
           <div class='work__data_question_edit'>
             <h6>Ключ : <span class='idKeyQuestion'>${data[i][0]}</span></h6><br>
-            <h6>Вопрос ${i+1} : <span class='updateQuestion' contenteditable='true'>${data[i][1].question}</span></h6>
-            <p>Вариант ответа - 1 : <span class='updateQuestionA' contenteditable='true'>${data[i][1].a}</span></p>
-            <p>Вариант ответа - 2 : <span class='updateQuestionB' contenteditable='true'>${data[i][1].b}</span></p>
-            <p>Вариант ответа - 3 : <span class='updateQuestionC' contenteditable='true'>${data[i][1].c}</span></p>
-            <p>Вариант ответа - 4 : <span class='updateQuestionD' contenteditable='true'>${data[i][1].d}</span></p>
-            <p>Правильный ответ : <span class='updateCorrectAnswer' contenteditable='true'>${data[i][1].correctAnswer}</span></p>
-            <p>Вариант для подсказки 50/50 : <span class='updateQuestionFifty' contenteditable='true'>${data[i][1].fifty}</span></p>
+            <h6>Вопрос ${
+              i + 1
+            } : <span class='updateQuestion' contenteditable='true'>${
+            data[i][1].question
+          }</span></h6>
+            <p>Вариант ответа - 1 : <span class='updateQuestionA' contenteditable='true'>${
+              data[i][1].a
+            }</span></p>
+            <p>Вариант ответа - 2 : <span class='updateQuestionB' contenteditable='true'>${
+              data[i][1].b
+            }</span></p>
+            <p>Вариант ответа - 3 : <span class='updateQuestionC' contenteditable='true'>${
+              data[i][1].c
+            }</span></p>
+            <p>Вариант ответа - 4 : <span class='updateQuestionD' contenteditable='true'>${
+              data[i][1].d
+            }</span></p>
+            <p>Правильный ответ : <span class='updateCorrectAnswer' contenteditable='true'>${
+              data[i][1].correctAnswer
+            }</span></p>
+            <p>Вариант для подсказки 50/50 : <span class='updateQuestionFifty' contenteditable='true'>${
+              data[i][1].fifty
+            }</span></p>
             
             <div class='work__data_controller'>
               <button class='workDataBtnUpdate' type='button' title='Обновить вопрос'>Обновить вопрос</button>
               <button class='workDataBtnRemove' type='button' title='Удалить вопрос'>Удалить вопрос</button>
             </div>
           </div>   
-        </div>`);
+        </div>`
+        );
       }
-    }
-    else {
+    } else {
       this.divForQuestionsList.innerHTML = `Нет данных, без них приложение неработоспособно`;
     }
   }
@@ -933,10 +1008,10 @@ export default class View {
       this.workInDataInputB,
       this.workInDataInputC,
       this.workInDataInputD,
-      this.workInDataInputFifty
-    ]
+      this.workInDataInputFifty,
+    ];
 
-    arrInputElem.forEach(elem => elem.value = '');
+    arrInputElem.forEach((elem) => (elem.value = ''));
   }
 
   removeQuestion(node) {
@@ -953,33 +1028,30 @@ export default class View {
 
   controlSound() {
     const arrAudioElem = [
-      this.musicStart, 
+      this.musicStart,
       this.musicPlayerThink,
       this.musicFiftyFifty,
       this.musicHelpJS,
       this.musicAnswerAccept,
       this.musicCorrectAnswer,
       this.musicWrongAnswer,
-      this.musicApplause
-    ]
+      this.musicApplause,
+    ];
 
     if (this.stateSound === true) {
-
       this.stateSound = false;
       this.menuBtnSound.classList.add('soundOff');
 
-      arrAudioElem.forEach(elem => {
+      arrAudioElem.forEach((elem) => {
         elem.muted = true;
         elem.pause();
         elem.currentTime = 0;
       });
-
     } else {
-
       this.stateSound = true;
       this.menuBtnSound.classList.remove('soundOff');
 
-      arrAudioElem.forEach(elem => elem.muted = false);
+      arrAudioElem.forEach((elem) => (elem.muted = false));
     }
   }
 

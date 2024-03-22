@@ -5,22 +5,20 @@ import {
   onValue,
   child,
   push,
-  update
-}
-from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js';
+  update,
+} from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js';
 
 export default class Model {
-
   init(view, container) {
     this.myView = view;
     this.myContainer = container;
     this.arrRepeatRandomNumber = [];
-    this.counterQuestions = 0;
+    this.counterQuestions = 14;
     this.scorePlayer = 0;
 
     this.getQuestions();
     this.getRecordsPlayers();
-  };
+  }
 
   getRecordsPlayers() {
     try {
@@ -34,17 +32,15 @@ export default class Model {
           const dataArr = Object.values(data);
           dataArr.sort((a, b) => b.score - a.score);
           this.myView.showRecordsPlayers(dataArr, true);
-        }
-        else {
+        } else {
           this.myView.showRecordsPlayers(null, false);
         }
       });
-    }
-    catch (e) {
+    } catch (e) {
       this.myView.showErrorApp();
       console.log(e);
     }
-  };
+  }
 
   getQuestions() {
     try {
@@ -55,31 +51,34 @@ export default class Model {
         this.arrWithQuestion = snapshot.val();
         this.arrWithQuestion = Object.entries(this.arrWithQuestion);
       });
-    }
-    catch (e) {
+    } catch (e) {
       this.myView.showErrorApp();
       console.log(e);
     }
-  };
+  }
 
   randomСhoiceQuestion(data) {
-    this.randomNumber = Math.floor(Math.random() * ((data.length - 1) - 0)) + 0;
+    this.randomNumber = Math.floor(Math.random() * (data.length - 1 - 0)) + 0;
 
     try {
-      this.showQuestionInGameField(data, this.arrRepeatRandomNumber, this.randomNumber);
-    }
-    catch (error) {
+      this.showQuestionInGameField(
+        data,
+        this.arrRepeatRandomNumber,
+        this.randomNumber
+      );
+    } catch (error) {
       console.log(error);
-      this.showModalMessage('Извините, произошла ошибка, попробуйте загрузить приложение позднее');
-      this.myView.showFormAutorization()
+      this.showModalMessage(
+        'Извините, произошла ошибка, попробуйте загрузить приложение позднее'
+      );
+      this.myView.showFormAutorization();
     }
-  };
+  }
 
   showQuestionInGameField(data, arr, number) {
     if (arr.includes(number)) {
       this.randomСhoiceQuestion(data);
-    }
-    else {
+    } else {
       arr.push(number);
 
       if (data) {
@@ -94,11 +93,11 @@ export default class Model {
 
   saveName(name) {
     this.namePlayer = name;
-  };
+  }
 
   removeName() {
     this.namePlayer = '';
-  };
+  }
 
   showName() {
     this.myView.showNamePlayer(this.namePlayer);
@@ -107,51 +106,53 @@ export default class Model {
   modelDrawGameField() {
     this.randomСhoiceQuestion(this.arrWithQuestion);
     this.myView.removeFormAutorization();
-  };
+  }
 
   validateNamePlayer(name) {
     if (name.length > 1) {
       this.saveName(name.toUpperCase());
       this.myView.disabledBtn(false);
-    }
-    else {
+    } else {
       this.removeName();
       this.myView.disabledBtn(true);
     }
-  };
+  }
 
   setDataBaseNamePlayer(name, score) {
     try {
       const db = getDatabase();
 
       set(ref(db, 'players/' + name), {
-          username: name,
-          score: score
-        }).then(() => {
+        username: name,
+        score: score,
+      })
+        .then(() => {
           console.log('Имя успешно внесено в БД');
         })
         .catch((error) => {
           console.log(`Ошибка внесения имени в БД. Ошибка: ${error}`);
         });
-    }
-    catch (e) {
+    } catch (e) {
       this.myView.showErrorApp();
       console.log(e);
     }
-  };
+  }
 
   hintsFiftyFifty() {
-    this.myView.showHintsFiftyFifty(this.randomQuestion.fifty, this.randomQuestion.correctAnswer);
-  };
+    this.myView.showHintsFiftyFifty(
+      this.randomQuestion.fifty,
+      this.randomQuestion.correctAnswer
+    );
+  }
 
   hintsHelpJS() {
     this.myView.showHintsHelpJS(this.randomQuestion.correctAnswer);
-  };
+  }
 
   checkCorrectAnswer(e) {
     if (e.srcElement.innerText === this.randomQuestion.correctAnswer) {
       this.scorePlayer++;
-      
+
       if (this.counterQuestions === 14) {
         this.myView.waitingStatusAnswer(e, 'last-question');
 
@@ -161,8 +162,7 @@ export default class Model {
         setTimeout(() => {
           this.randomСhoiceQuestion(this.arrWithQuestion);
         }, 9500);
-      }
-      else {
+      } else {
         this.myView.waitingStatusAnswer(e, true);
 
         setTimeout(() => {
@@ -170,17 +170,22 @@ export default class Model {
         }, 9500);
       }
       this.counterQuestions++;
-
     } else {
       this.setDataBaseNamePlayer(this.namePlayer, this.scorePlayer);
 
-      this.myView.waitingStatusAnswer(e, false, this.randomQuestion.correctAnswer);
+      this.myView.waitingStatusAnswer(
+        e,
+        false,
+        this.randomQuestion.correctAnswer
+      );
       this.arrRepeatRandomNumber = [];
     }
-  };
+  }
 
   checkCorrectDataAutorization(state) {
-    state ? this.myView.showScreenWorkWithData(this.arrWithQuestion) : this.myView.showInfoWrongPassword();
+    state
+      ? this.myView.showScreenWorkWithData(this.arrWithQuestion)
+      : this.myView.showInfoWrongPassword();
   }
 
   updateFieldWithDataQuestions() {
@@ -191,8 +196,15 @@ export default class Model {
     this.myView.clearMessageWrongPassword();
   }
 
-  pushNewQuestionInDataBase(question, optA, optB, optC, optD, correctAnswer, fifty) {
-
+  pushNewQuestionInDataBase(
+    question,
+    optA,
+    optB,
+    optC,
+    optD,
+    correctAnswer,
+    fifty
+  ) {
     this.myView.clearInputFieldNewQuestion();
 
     const db = getDatabase();
@@ -204,14 +216,15 @@ export default class Model {
       c: optC,
       d: optD,
       correctAnswer: correctAnswer,
-      fifty: fifty
-    }
+      fifty: fifty,
+    };
 
     const newQuestionKey = push(child(ref(db), 'question')).key;
     const updates = {};
     updates['/question/' + newQuestionKey] = objQuestion;
 
-    return update(ref(db), updates).then(() => {
+    return update(ref(db), updates)
+      .then(() => {
         console.log('Вопрос успешно загружен в БД');
         this.getQuestions();
         this.updateFieldWithDataQuestions();
@@ -222,7 +235,6 @@ export default class Model {
   }
 
   updateQuestion(question, optA, optB, optC, optD, correctAnswer, fifty, key) {
-
     const db = getDatabase();
     const updates = {};
 
@@ -233,13 +245,13 @@ export default class Model {
       c: optC,
       d: optD,
       correctAnswer: correctAnswer,
-      fifty: fifty
-    }
+      fifty: fifty,
+    };
 
     updates['/question/' + key] = objQuestion;
 
-    return update(ref(db), updates).then(() => {
-
+    return update(ref(db), updates)
+      .then(() => {
         console.log('Вопрос успешно обновлён в БД');
         this.getQuestions();
         this.updateFieldWithDataQuestions();
@@ -257,7 +269,8 @@ export default class Model {
 
     this.myView.removeQuestion(node);
 
-    return update(ref(db), updates).then(() => {
+    return update(ref(db), updates)
+      .then(() => {
         console.log('Вопрос успешно удалён из БД');
         this.getQuestions();
         this.updateFieldWithDataQuestions();
@@ -276,7 +289,7 @@ export default class Model {
   }
 
   showModalMessage(message) {
-    this.myView.showModalWindow(message); 
+    this.myView.showModalWindow(message);
   }
 
   closeModalWindow() {
