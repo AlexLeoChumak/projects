@@ -359,8 +359,8 @@
 
 @media all and (max-width: 550px) {
   .menu__logo {
-    width: 38vw;
-    left: calc(50% - 19vw);
+    width: 30vw;
+    left: calc(50% - 15vw);
   }
 
   .menu__input_name,
@@ -488,7 +488,7 @@
 @media all and (max-width: 400px) {
   .menu__logo {
     width: 30vw;
-    left: calc(50% - 20vw);
+    left: calc(50% - 15vw);
   }
 
   .info__roots p {
@@ -539,9 +539,17 @@
   }
 }
 
+@media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+  .menu__logo {
+    height: 15vw;
+    width: auto;
+    left: calc(50% - 7.5vw);
+  }
+}
+
 /* новые стили */
 
-/* @media only screen and (max-width: 767px) {
+/* @media only screen and (max-device-width: 480px) and (orientation: portrait) {
   .menu {
     display: flex;
     flex-direction: column;

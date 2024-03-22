@@ -208,7 +208,7 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (orientation: portrait) {
   h1 {
     font-size: 100px;
     margin-bottom: 100px;
@@ -250,6 +250,7 @@ a:hover {
     width: 50vw;
     height: 5vh;
     font-size: 50px;
+    color: white;
   }
   .btn.btn-primary.mt-3 span {
     color: white;
@@ -278,4 +279,4 @@ a:hover {
   .custom-navmenu h3 {
     font-size: 70px;
   }
-}
+} */
