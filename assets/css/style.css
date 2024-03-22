@@ -208,7 +208,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1100px) and (min-height: 2400px) {
+@media (min-width: 412px) and (min-height: 756px) {
   h1 {
     font-size: 100px;
     margin-bottom: 100px;
