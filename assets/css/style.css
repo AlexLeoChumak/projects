@@ -179,3 +179,31 @@ a:hover {
   color: #000;
   transform: scale(1.2);
 }
+
+/* Для экранов шириной 576px и больше */
+@media (min-width: 576px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+/* Для экранов шириной 768px и больше */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* Для экранов шириной 992px и больше */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Для экранов шириной 1200px и больше */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
