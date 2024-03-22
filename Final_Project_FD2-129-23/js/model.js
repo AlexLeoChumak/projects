@@ -13,7 +13,7 @@ export default class Model {
     this.myView = view;
     this.myContainer = container;
     this.arrRepeatRandomNumber = [];
-    this.counterQuestions = 14;
+    this.counterQuestions = 0;
     this.scorePlayer = 0;
 
     this.getQuestions();
