@@ -33,7 +33,7 @@ a:hover {
 }
 
 .section {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
 }
 
 .margin-top-bottom {
@@ -60,10 +60,13 @@ a:hover {
   width: 100%;
 }
 
-@media (max-width: 780px) {
-  .custom-navbar > .container {
-    padding-right: 15px;
-    padding-left: 15px;
+header .container {
+  padding: 0;
+}
+
+@media (max-width: 1450px) {
+  header .container {
+    padding: 0 1rem;
   }
 }
 
