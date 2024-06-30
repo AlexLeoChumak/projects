@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Pong Animation</title>
+    <style>
+      .image {
+        position: absolute;
+        width: 100px; /* Ширина изображения */
+        height: auto; /* Автоматическое масштабирование высоты */
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Создание массива изображений
+      var images = ['image1.png', 'image2.png', 'image3.png'];
+
+      // Создание и добавление изображений на страницу в случайных позициях
+      images.forEach(function (imageSrc) {
+        var img = new Image();
+        img.src = imageSrc;
+        img.classList.add('image');
+        img.style.top = Math.random() * (window.innerHeight - 100) + 'px'; // случайное начальное положение по вертикали
+        img.style.left = Math.random() * (window.innerWidth - 100) + 'px'; // случайное начальное положение по горизонтали
+        document.body.appendChild(img);
+        animateImage(img); // Запуск анимации для каждой картинки
+      });
+
+      // Функция для анимации изображения
+      function animateImage(img) {
+        var dx = (Math.random() * 2 - 1) * 5; // Случайное смещение по горизонтали
+        var dy = (Math.random() * 2 - 1) * 5; // Случайное смещение по вертикали
+
+        function move() {
+          var rect = img.getBoundingClientRect(); // Получение координат изображения
+          var newX = rect.left + dx; // Новая позиция по горизонтали
+          var newY = rect.top + dy; // Новая позиция по вертикали
+
+          // Отталкивание от краев экрана и изменение направления
+          if (newX < 0 || newX + img.width >= window.innerWidth) {
+            dx = -dx;
+          }
+          if (newY < 0 || newY + img.height >= window.innerHeight) {
+            dy = -dy;
+          }
+
+          // Перемещение изображения
+          img.style.left = newX + 'px';
+          img.style.top = newY + 'px';
+
+          // Рекурсивный вызов функции для продолжения анимации
+          requestAnimationFrame(move);
+        }
+
+        // Запуск анимации
+        move();
+      }
+    </script>
+  </body>
+</html>
